@@ -6,7 +6,7 @@ Player.Chatted:connect(function(cht)
     if cht:match(".exec") then
 wait(0.2)
 for count = 1, 1, 2 do
-game.Players:Chat('{Xi$tance} | Successfuly Executed Xi$tence')
+game.Players:Chat('{Xi$tence} | Successfully Executed Xi$tence')
 end       
  end  
 end) 
@@ -42,7 +42,7 @@ game.Players:Chat([[--          or else it will show your name
 
 ]]..Message) -- Customize What name\
 wait(0.2)
-Message = "                                                 [Xi$tance] | shoutout to n_pkk for stealing my 'hard earned' limiteds" --Message here (also do not change the space below)
+Message = "                                                 [Xi$tence] | shoutout to n_pkk for stealing my 'hard earned' limiteds"   here (also do not change the space below)
 game.Players:Chat([[--          or else it will show your name
 
 
@@ -196,7 +196,7 @@ Player.Chatted:connect(function(cht)
     if cht:match(".knives") then 
 wait(0.2)
  for count = 1, 1, 2 do
-game.Players:Chat('[Xi$tance] Choose Knife  .Tesla .Laser .Yt .Quick .Illum')
+game.Players:Chat('[Xi$tence] Choose Knife  .Tesla .Laser .Yt .Quick .Illum')
 end
  end
 end)
@@ -326,7 +326,7 @@ Player.Chatted:connect(function(cht)
     if cht:match(".creator") then
 wait(0.2)
 for count = 1, 1, 2 do
-game.Players:Chat('[Xi$tance] | Script Made By CliqqaphonkOO15')
+game.Players:Chat('[Xi$tence | Script Made By CliqqaphonkOO15')                                                                 
 end       
  end  
 end)                                                                                                                             
@@ -336,7 +336,7 @@ Player.Chatted:connect(function(cht)
     if cht:match(".dis") then
 wait(0.2)
 for count = 1, 1, 2 do
-game.Players:Chat('[Xi$tance] | CliqqaphonkOO15')
+game.Players:Chat('[Xi$tence] | CliqqaphonkOO15')
 end       
  end  
 end)
@@ -347,7 +347,7 @@ Player.Chatted:connect(function(cht)
     if cht:match(".creds") then
 wait(0.2)
 for count = 1, 1, 2 do
-game.Players:Chat('[Xi$tance] | Big thanks to gIockvert for helping, AND A SPECIAL THANKS TO n_pkk FOR STEALING MY LIMITEDS')
+game.Players:Chat('[Xi$tence] | Big thanks to gIockvert for helping, AND A SPECIAL THANKS TO n_pkk FOR STEALING MY LIMITEDS')
 end       
  end  
 end)
@@ -513,27 +513,27 @@ Player.Chatted:connect(function(cht)
 end)
 local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "                             >LOADING<  Xi$tance V3    >47%<                     ",
+        [1] = "                             >LOADING<  Xi$tence V3    >47%<                     ",
         [2] = "All"
     }
     remote:FireServer(unpack(args))
 wait(1)
 local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "                             >LOADING<  Xi$tance V3    >82%<                     ",
+        [1] = "                             >LOADING<  Xi$tence V3    >82%<                     ",
         [2] = "All"
     }
 wait(2)
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "                               >LOADED<    Xi$tance V3                            ",
+        [1] = "                               >LOADED<    Xi$tence V3                            ",
         [2] = "All"
     }
     remote:FireServer(unpack(args))
 wait(1)	
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "[Xi$tance] Made By 666Zvck",
+        [1] = "[Xi$tence] Made By 666Zvck",
         [2] = "All"
     }
     remote:FireServer(unpack(args))
