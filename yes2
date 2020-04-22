@@ -6,12 +6,12 @@ Player.Chatted:connect(function(cht)
     if cht:match(".exec") then
 wait(0.2)
 for count = 1, 1, 2 do
-game.Players:Chat('{Xi$tance} | Successfuly Executed Xi$tance')
+game.Players:Chat('{Xi$tance} | Successfuly Executed Xi$tence')
 end       
  end  
 end) 
 wait(0.2)
-Message = "                                                 [Xi$tance] | Made by 666Zvck // CliqqaphonkOO15" -- Message here (also do not change the space below)
+Message = "                                                 [Xi$tence] | Made by 666Zvck // CliqqaphonkOO15" -- Message here (also do not change the space below)
 game.Players:Chat([[--          or else it will show your name
 
 
