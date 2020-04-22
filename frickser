@@ -5,15 +5,18 @@ local TextLabel_2 = Instance.new("TextLabel")
 local Loudness = Instance.new("TextBox")
 local SongId = Instance.new("TextBox")
 local Destroy = Instance.new("TextButton")
+
 boombox.Name = "boombox"
 boombox.Parent = game:GetService('CoreGui')
+
 Frame.Parent = boombox
 Frame.Active = true
 Frame.Draggable = true
-Frame.BackgroundColor3 = Color3.new(0.108, 0.118, 0.156)
+Frame.BackgroundColor3 = Color3.new(0.108, 0.126, 0.156)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.204987794, 0, 0.572298348, 0)
 Frame.Size = UDim2.new(0.213138685, 0, 0.244596645, 0)
+
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.new(0.56, 0, 1)
 TextLabel.BorderSizePixel = 0
@@ -23,17 +26,19 @@ TextLabel.Font = Enum.Font.SourceSans
 TextLabel.Text = ""
 TextLabel.TextColor3 = Color3.new(0, 0, 0)
 TextLabel.TextSize = 14
+
 TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.new(0.0745098, 0.705882, 1)
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel_2.BackgroundTransparency = 1
 TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(0.0199771691, 0, 0.0486144871, 0)
 TextLabel_2.Size = UDim2.new(0.951483667, 0, 0.106951833, 0)
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "            Radio fucker by Cliqqaphonk#7149"
-TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.Text = "Radio fucker by Cliqqaphonk#0015"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
 TextLabel_2.TextSize = 18
-TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Center
+
 Loudness.Name = "Loudness"
 Loudness.Parent = Frame
 Loudness.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
@@ -45,6 +50,7 @@ Loudness.PlaceholderText = "radio number (1-150)"
 Loudness.Text = ""
 Loudness.TextColor3 = Color3.new(1, 1, 1)
 Loudness.TextSize = 14
+
 SongId.Name = "SongId"
 SongId.Parent = Frame
 SongId.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
@@ -56,6 +62,7 @@ SongId.PlaceholderText = "audio id"
 SongId.Text = ""
 SongId.TextColor3 = Color3.new(1, 1, 1)
 SongId.TextSize = 14
+
 Destroy.Name = "Destroy"
 Destroy.Parent = Frame
 Destroy.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
