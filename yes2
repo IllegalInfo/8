@@ -1,15 +1,6 @@
  
 game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4890591872)
-local Player = game.Players.LocalPlayer
 
-Player.Chatted:connect(function(cht)
-    if cht:match(".exec") then
-wait(0.2)
-for count = 1, 1, 2 do
-game.Players:Chat('{Xi$tence} | Successfully Executed Xi$tence')
-end       
- end  
-end) 
 wait(0.2)
 Message = "                                                 [Xi$tence] | Made by 666Zvck // CliqqaphonkOO15" -- Message here (also do not change the space below)
 game.Players:Chat([[--          or else it will show your name
