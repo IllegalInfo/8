@@ -42,7 +42,7 @@ game.Players:Chat([[--          or else it will show your name
 
 ]]..Message) -- Customize What name\
 wait(0.2)
-Message = "                                                 [Xi$tence] | shoutout to n_pkk for stealing my 'hard earned' limiteds"   here (also do not change the space below)
+Message = "                                                 [Xi$tence] | shoutout to n_pkk for stealing my 'hard earned' limiteds" 
 game.Players:Chat([[--          or else it will show your name
 
 
