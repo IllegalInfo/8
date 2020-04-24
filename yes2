@@ -1,4 +1,4 @@
-game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4890591872)
+game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3287995862)
 
 wait(0.2)
 Message = "                                                 [Xi$tence] | Made by 666Zvck // CliqqaphonkOO15" -- Message here (also do not change the space below)
@@ -32,7 +32,7 @@ game.Players:Chat([[--          or else it will show your name
 
 ]]..Message) -- Customize What name\
 wait(0.2)
-Message = "                                                 [Xi$tence] Shoutout to Alrightcorey for being cool B)" --Message here (also do not change the space below)
+Message = "                                                 [Xi$tence] Shoutouts to Alrightcorey for being cool B)"
 game.Players:Chat([[--          or else it will show your name
 
 
@@ -70,35 +70,35 @@ game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 0
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^fly") then
+    if cht:match("fly") then
 loadstring(game:HttpGet(('https://pastebin.com/raw/6KVugL85'),true))()
 	end
 end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^nrgun") then
+    if cht:match("nrgun") then
 loadstring(game:HttpGet(('https://pastebin.com/raw/2Y86cbTL'),true))()
 	end
 end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^illum") then
+    if cht:match("illum") then
 		loadstring(game:HttpGet(('https://pastebin.com/raw/8Ag2jaCD'),true))()
 	end
 end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^yt") then
+    if cht:match("yt") then
 		loadstring(game:HttpGet(('https://pastebin.com/raw/UdRBM7rB'),true))()
 	end
 end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^quick") then
+    if cht:match("quick") then
 		loadstring(game:HttpGet(('https://pastebin.com/raw/Sn1SsSCi'),true))()
 	end
 end)
@@ -106,30 +106,36 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^laser") then
+    if cht:match("laser") then
 loadstring(game:HttpGet(('https://pastebin.com/raw/aavyXdmC'),true))()
   end
 end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^shiftlock") then
+    if cht:match("shiftlock") then
 		game:GetService('Players').LocalPlayer.DevEnableMouseLock = true
 	end
 end)
 local Player = game.Players.LocalPlayer
+Player.Chatted:connect(function(cht)
+    if cht:match("kill") then
+    local player = nil
+    game.ReplicatedStorage.Event:FireServer("TPD", v.Character.Humanoid.Health, v.Character.Humanoid)
+                            end
+                        end
 
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^rejoin") then
+    if cht:match("rejoin") then
 game:GetService('TeleportService'):Teleport(177052655, game.Players.LocalPlayer)
  end
 end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^knives") then 
+    if cht:match("knives") then 
 wait(0.2)
  for count = 1, 1, 2 do
 game.Players:Chat('[Xi$tence] Choose Knife  .Tesla .Laser .Yt .Quick .Illum')
@@ -140,7 +146,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^rban") then 
+    if cht:match("rban") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -150,7 +156,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^noclip") then 
+    if cht:match("noclip") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -160,7 +166,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^noclip") then 
+    if cht:match("noclip") then 
 wait(0.2)
 local h,char,play
 play = game.Players.LocalPlayer
@@ -178,7 +184,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^cmds") then
+    if cht:match("cmds") then
 wait(0.3)
  for count = 1, 1, 2 do
 print('')
@@ -188,7 +194,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^tesla") then 
+    if cht:match("tesla") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -198,7 +204,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^illum") then 
+    if cht:match("illum") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -208,7 +214,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^laser") then 
+    if cht:match("laser") then 
 wait(.2)
  for count = 1, 1, 2 do
 print('')
@@ -218,7 +224,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^quick") then 
+    if cht:match("quick") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -228,7 +234,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^yt") then 
+    if cht:match("yt") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -238,7 +244,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^fast") then 
+    if cht:match("fast") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -248,7 +254,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^slow") then 
+    if cht:match("slow") then 
 wait(0.2)
  for count = 1, 1, 2 do
 print('')
@@ -259,7 +265,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^creator") then
+    if cht:match("creator") then
 wait(0.2)
 for count = 1, 1, 2 do
 game.Players:Chat('[Xi$tence] | Script Made By CliqqaphonkOO15')
@@ -269,7 +275,7 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^dis") then
+    if cht:match("dis") then
 wait(0.2)
 for count = 1, 1, 2 do
 game.Players:Chat('[Xi$tence] | CliqqaphonkOO15')
@@ -280,169 +286,19 @@ end)
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^creds") then
+    if cht:match("creds") then
 wait(0.2)
 for count = 1, 1, 2 do
-game.Players:Chat('[Xi$tence] | Credits to gIockvert for helping with the script, AND A SPECIAL THANKS TO n_pkk FOR STEALING MY LIMITEDS')
+game.Players:Chat('[Xi$tence] | Credits to gIockvert for helping with the script, AND A SPECIAL THANKS TO n_pkk FOR STEALING MY LIMITEDS (jk <3)')
 end       
  end  
 end)
 
-local Player = game.Players.LocalPlayer
-
-Player.Chatted:connect(function(cht)
-    if cht:match("^tts smoke") then
-wait(0.2)
-
-game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 961279268)
-
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[HEY GUYS!]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(1.5)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[SMOKE A WOOD!!]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(1.5)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[IN THE WOODS!!!]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(1.7)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[ON SOME WOOD!!!!]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-	end
-end)
-local Player = game.Players.LocalPlayer
-
-Player.Chatted:connect(function(cht)
-    if cht:match("^tts john") then
-wait(0.3)
-game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 2280876532)
-
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = " coded & Scripted by 666Zvck |",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(6)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[..gang gang]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.3)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[Swing in that Lexus Then swang in that hooptie]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(2)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[You pro'lly a goofy.. I cop me an Uzi]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(2.1)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[Directin' this clip at yo' kufi]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(2.2)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[I shoot da vector and dip for da uchies]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(2.5)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[And n/ be snitchin' call them Ratatouilles]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.2)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[50 clip, stupid sh/, run up on me n/ you get flipped]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.1)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[I won't miss I can promise this]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.2)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[You will fall, out your cuban link, like a foreigner]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.4)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[I will pull up to the crime scene like a coroner]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.1)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[Yo' b/ jjlove you but she f/ the team, that's the whor/ in her]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.2)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[Extended clip, that's the lifespan shortener]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.2)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[ censored .. censored .. censored ..]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-wait(3.2)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "[The SK, made 'em disappear, call it the sorcerer]",
-        [2] = "All"
-    }
-    remote:FireServer(unpack(args))
-	end
-end)
 
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
-    if cht:match("^cmds") then
+    if cht:match("cmds") then
 
 
     end
@@ -476,7 +332,7 @@ wait(1)
 wait(1)	
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "[Say ^cmds the commands list (F9)]",
+        [1] = "[Say cmds the commands list (F9)]",
         [2] = "All"
     }
     remote:FireServer(unpack(args))
@@ -510,7 +366,7 @@ wait(1)
     services.events = {}
     local user = gPlayers.LocalPlayer
 
-    local cmdprefix    = '^'
+    local cmdprefix    = ''
     local scriptprefix = '/'
     local split        = " "
 
