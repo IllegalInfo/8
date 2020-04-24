@@ -1,7 +1,7 @@
 game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3287995862)
 
 wait(0.2)
-Message = "                                                 [Xi$tence] | Made by 666Zvck // CliqqaphonkOO15" -- Message here (also do not change the space below)
+Message = "                                                 [Xi$tence] | Made by LynxLunatic // CliqqaphonkOO15" -- Message here (also do not change the space below)
 game.Players:Chat([[--          or else it will show your name
 
 
@@ -123,7 +123,7 @@ Player.Chatted:connect(function(cht)
     local player = nil
     game.ReplicatedStorage.Event:FireServer("TPD", v.Character.Humanoid.Health, v.Character.Humanoid)
                             end
-                        end
+                        end)
 
 local Player = game.Players.LocalPlayer
 
@@ -325,7 +325,7 @@ wait(2)
 wait(1)	
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "[Xi$tence] Made By 666Zvck",
+        [1] = "[Xi$tence] Made By LynxLunatic",
         [2] = "All"
     }
     remote:FireServer(unpack(args))
