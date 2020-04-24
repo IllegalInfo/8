@@ -32,7 +32,7 @@ game.Players:Chat([[--          or else it will show your name
 
 ]]..Message) -- Customize What name\
 wait(0.2)
-Message = "                                                 [Xi$tence] GO CRAZY GO STUPID XDDD" --Message here (also do not change the space below)
+Message = "                                                 [Xi$tence] Shoutout to Alrightcorey for being cool B)" --Message here (also do not change the space below)
 game.Players:Chat([[--          or else it will show your name
 
 
