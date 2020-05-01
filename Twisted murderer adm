@@ -393,7 +393,7 @@ Player.Chatted:connect(function(cht)
     if cht:match("creds") then
 wait(0.2)
 for count = 1, 1, 2 do
-game.Players:Chat('[Xi$tence] | Credits to gIockvert for helping with the script, AND A SPECIAL THANKS TO n_pkk FOR STEALING MY LIMITEDS (jk <3)')
+game.Players:Chat('[Xi$tence] | Credits to gIockvert for helping with the script.')
 end       
  end  
 end)
