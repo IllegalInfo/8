@@ -1021,7 +1021,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by seatownc]", Color3.new(0,55,120))
         Text = "r doom2",
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
-_G.SendTMMessage("[XI$TENCE]: [Made by agramane], Color3.new(0,55,120))
+_G.SendTMMessage("[XI$TENCE]: [Made by agramane]", Color3.new(0,55,120))
                  game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by agramane]","All")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 2665769435)
 				end
