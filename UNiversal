@@ -310,7 +310,6 @@ end
 -- Holder --
 local Unnamed = Instance.new("ScreenGui")
 local holder = Instance.new("Frame")
-local holder2 = Instance.new("Frame")
 
 local output = Instance.new("Frame")
 local output1 = Instance.new("TextLabel")
@@ -325,7 +324,6 @@ local output9 = Instance.new("TextLabel")
 -- CMDBar --
 local entry = Instance.new("Frame")
 local user = Instance.new("TextLabel")
-local user2 = Instance.new("TextLabel")
 local cmd = Instance.new("TextBox")
 -- Random --
 local Frame = Instance.new("Frame")
@@ -1081,14 +1079,6 @@ holder.Position = UDim2.new(0,820, 0.2, 185)
 holder.Size = UDim2.new(0, 449, 0, 242)
 holder.Active = false
 
-holder2.Name = "holder2xd"
-holder2.Parent = Unnamed
-holder2.BackgroundColor3 = Color3.new(118, 116, 189)
-holder2.BackgroundTransparency = 1
-holder2.Position = UDim2.new(0,820, 0.2, 185)
-holder2.Size = UDim2.new()
-holder2.Active = false
-
 entry.Name = "entry"
 entry.Parent = holder
 entry.BackgroundColor3 = Color3.new(0.118, 0.166, 0.289)
@@ -1107,18 +1097,6 @@ user.Text = prompt
 user.TextColor3 = Color3.new(250, 250, 250)
 user.TextSize = 16
 user.TextXAlignment = Enum.TextXAlignment.Right
-
-user2.Name = "loluserXD"
-user2.Parent = holder2
-user2.BackgroundColor3 = Color3.new(0.118, 0.166, 0.289)
-user2.BackgroundTransparency = 1
-user2.Position = UDim2.new(0, -165, 0.6, -367)
-user2.Size = UDim2.new(0, 137, 0, 36)
-user2.Font = Enum.Font.GothamSemibold
-user2.Text = "Ev0lve by Cliqqaphonk#0015"
-user2.TextColor3 = Color3.new(144, 0, 200)
-user2.TextSize = 16
-user2.TextXAlignment = Enum.TextXAlignment.Right
 
 cmd.Name = "cmd"
 cmd.Parent = entry
