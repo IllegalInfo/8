@@ -1210,7 +1210,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 			end
          },
        TRENDSSS = {
-	Text = "r trends"
+	Text = "r trends",
 		Apply = function()
 				for i, v in ipairs(game.Players:GetoPlayers()) do
 	   _G.SendTMMessage("[XI$TENCE]: [Made by 1Ramzz]", Color3.new(0,55,120))
@@ -1219,7 +1219,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 			end
 				 },
        Kayos = {
-	 Text = "r kayos"
+	 Text = "r kayos",
 		Apply = function()
 				 for i, v in ipairs(game.Players:GetoPlayers()) do
 	   _G.SendTMMessage("[XI$TENCE]: [Made by balance4k]", Color3.new(0,55,120))
@@ -1228,7 +1228,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 			end
 				 },
 				 Ksisss = {
-				 Text = "r ksi"
+				 Text = "r ksi",
 				 Apply = function()
 				 for i, v in ipairs(game.Players:GetoPlayers()) do
 					_G.SendTMMessage("[XI$TENCE]: [Made by //UNKNOWN//]", Color3.new(0,55,120))
@@ -1238,7 +1238,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 				 },
 			
 				 parkie = {
-				 Text = "r park"
+				 Text = "r park",
 				 Apply = function()
 				 for i, v in ipairs(game.Players:GetoPlayers()) do
 					_G.SendTMMessage("[XI$TENCE]: [Made by //UNKNOWN//]", Color3.new(0,55,120))
