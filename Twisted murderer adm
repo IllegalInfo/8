@@ -781,7 +781,6 @@ local LateCmds = {
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by ml_em]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by m l_em]","All")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4219569851)
 				end
 			end
@@ -791,7 +790,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by ml_em]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by coratic]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by coratic]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4108678844)
 				end
 			end
@@ -801,7 +800,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by coratic]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by FaceSlasha]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Faceslasha]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3065884817)
 				end
 			end
@@ -811,7 +810,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by FaceSlasha]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Go reDemons]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4064833214)
 				end
 			end
@@ -821,7 +820,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by CorruptName]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by CorruptName]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4086723996)
 				end
 			end  
@@ -831,7 +830,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by CorruptName]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Vortexturize]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Vortexturize]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4267227336)
 				end
 			end    
@@ -841,58 +840,28 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Vortexturize]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by sadcoffins]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by sadcoffins]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 2499265839)
 				end
 			end 
 
         },
         johndoe = {
-			Text = "r johndoe",
+			Text = "r john",
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by //UNKNOWN//]", Color3.new(0,55,120))
-                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by //UNKNOWN//]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 2280876532) 
 				end
 			end
          		},  
-		mafia1 = {
-			Text = "r mafia1",
-			Apply = function()
-				for i, v in ipairs(game.Players:GetPlayers()) do
-_G.SendTMMessage("[XI$TENCE]: [Made by mafiataco]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by mafiataco]","All")
-					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4214112067)
-				end
-			end
-		},
-		mafia2 = {
-			Text = "r mafia2",
-			Apply = function()
-				for i, v in ipairs(game.Players:GetPlayers()) do
-_G.SendTMMessage("[XI$TENCE]: [Made by mafiataco]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by mafiataco]","All")
-					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4214231141)
-				end
-			end
-		},
-        mafia11 = {
-          Text = "r mafia",
-			Apply = function()
-				for i, v in ipairs(game.Players:GetPlayers()) do
-_G.SendTMMessage("[XI$TENCE]: [Made by mafiataco]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by mafiataco]","All")
-					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3575651155) 
-				end
-			end
-        },
         goredemonsflex = {
           Text = "r flex",
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Go reDemons]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3805711045)
 				end
 			end
@@ -902,7 +871,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Go reDemons]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3728461656) 
 				end
 			end
@@ -912,7 +881,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by x1mv]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by x1mv]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4180820228) --done
 				end
 			end
@@ -922,7 +891,6 @@ _G.SendTMMessage("[XI$TENCE]: [Made by x1mv]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by jimnnine]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by jimnnine]","All") --done
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3353217023)
 				end
 			end
@@ -932,7 +900,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by jimnnine]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Loksws]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Loksws]","All") --done
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4305174072)
 				end
 			end
@@ -942,7 +910,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Loksws]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Gwoo]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Gwoo]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4086462197)
 				end
 			end
@@ -952,7 +920,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Gwoo]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by GlxckMxne]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by GlxckMxne]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4298182850)
 				end
 			end
@@ -962,7 +930,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by GlxckMxne]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Gwoo]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Gwoo]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4323543590)
 				end
 			end
@@ -972,7 +940,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Gwoo]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by DemxnVibezAlt]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by DemxnVibezAlt]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4141242040)
 				end
 			end
@@ -982,7 +950,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by DemxnVibezAlt]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by symphamane AKA 7FpsGod]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by symphamane AKA 7FpsGod]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3329654657)
 				end
 			end
@@ -992,7 +960,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by symphamane AKA 7FpsGod]", Color3.new(0,55
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by 1c7y]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by 1c7y]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3980731564)
 				end
 			end
@@ -1002,7 +970,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by 1c7y]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by agramane]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by agramane]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 2791247295)
 				end
 			end
@@ -1012,7 +980,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by agramane]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by seatownc]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by seatownc]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 1290714953)
 				end
 			end
@@ -1021,8 +989,8 @@ _G.SendTMMessage("[XI$TENCE]: [Made by seatownc]", Color3.new(0,55,120))
         Text = "r doom2",
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
-_G.SendTMMessage("[XI$TENCE]: [Made by agramane]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by agramane]","All")
+    _G.SendTMMessage("[XI$TENCE]: [Made by agramane]", Color3.new(0,55,120))
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 2665769435)
 				end
 			end
@@ -1032,7 +1000,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by agramane]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by BLOODYDEMVNS]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by BLOODYDEMVNS]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3124425349)
 				end
 			end
@@ -1042,7 +1010,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by BLOODYDEMVNS]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Yvrpp]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Yvrpp]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4110415876)
 				end
 			end
@@ -1052,7 +1020,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Yvrpp]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by zerxmane]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by zerxmane]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3259191702)
 				end
 			end
@@ -1062,7 +1030,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by zerxmane]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Go reDemons]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3932838600)
 				end
 			end
@@ -1072,7 +1040,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by addictions666]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by addictions666]","All")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4386448963 )
 				end
 			end
@@ -1082,7 +1050,6 @@ _G.SendTMMessage("[XI$TENCE]: [Made by addictions666]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by matthew2623]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by matthew2623]","All")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4382001253)
 				end
 			end
@@ -1092,7 +1059,6 @@ _G.SendTMMessage("[XI$TENCE]: [Made by matthew2623]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by 1c7y]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by 1c7y]","All")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4357250648)
 				end
 			end
@@ -1102,7 +1068,6 @@ _G.SendTMMessage("[XI$TENCE]: [Made by 1c7y]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by heII_ish]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by heII_ish]","All")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3222886494)
 				end
 			end
@@ -1112,7 +1077,6 @@ _G.SendTMMessage("[XI$TENCE]: [Made by heII_ish]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Clad55]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Clad55]","All")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4107880451)
 				end
 			end
@@ -1122,7 +1086,6 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Clad55]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Gwoo]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Gwoo]","all")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3906641484)
 				end
 			end
@@ -1132,7 +1095,6 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Gwoo]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Go reDemons]","all")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4512855287)
 				end
 			end
@@ -1143,7 +1105,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by RussianDog5180]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by russiandog5180]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4394035906)
 				end
 			end
@@ -1153,7 +1115,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by RussianDog5180]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Firestripe]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Firestripe]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3455710119 )
 				end
 			end
@@ -1163,7 +1125,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Firestripe]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Darian273]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Darian273]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4380420981)
 				end
 			end
@@ -1173,7 +1135,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Darian273]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by TrashJuuls]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by TrashJuuls]","all")
+        
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4373864380 )
 				end
 			end
@@ -1183,7 +1145,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by TrashJuuls]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by Blackhavan]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Blackhavan]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4553144670 )
 				end
 			end
@@ -1193,7 +1155,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by Blackhavan]", Color3.new(0,55,120))
 			Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by 9vzy //Blackhavan//]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by 9v zy //blackhavan//]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3058682946 )
 				end
 			end
@@ -1203,7 +1165,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by 9vzy //Blackhavan//]", Color3.new(0,55,12
                 Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by BloodyRemains]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by BloodyRemains]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4431701107 )
 				end
 			end
@@ -1213,7 +1175,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by BloodyRemains]", Color3.new(0,55,120))
                 Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by lorddrizzyd]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by lorddrizzyd]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4534818584 )
 				end
 			end
@@ -1223,7 +1185,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by lorddrizzyd]", Color3.new(0,55,120))
                 Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by rikkodia]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by rikkodia]","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 1024224005 )
 				end
 			end
@@ -1233,7 +1195,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by rikkodia]", Color3.new(0,55,120))
                 Apply = function()
 				for i, v in ipairs(game.Players:GetPlayers()) do
 _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by wizzera","all")
+
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4528621671)
 				end
 			end
@@ -1243,11 +1205,48 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
                 Apply = function() 
 				for i, v in ipairs(game.Players:GetPlayers()) do
            _G.SendTMMessage("[XI$TENCE]: [Made by GoreDemons]", Color3.new(0,55,120))
-                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[XI$TENCE] - [Made by Go reDemons","all")
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 3180093499)
 				end
 			end
          },
+				 TRENDSSS = {
+				 Text = "r trends"
+				 Apply = function()
+				 for i, v in ipairs(game.Players:GetoPlayers()) do
+				  _G.SendTMMessage("[XI$TENCE]: [Made by 1Ramzz]", Color3.new(0,55,120))
+					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4948698421)
+					end
+					end
+				 },
+				 TRENDSSS = {
+				 Text = "r kayos"
+				 Apply = function()
+				 for i, v in ipairs(game.Players:GetoPlayers()) do
+					_G.SendTMMessage("[XI$TENCE]: [Made by balance4k]", Color3.new(0,55,120))
+					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4956121790)
+					end
+					end
+				 },
+				 TRENDSSS = {
+				 Text = "r ksi"
+				 Apply = function()
+				 for i, v in ipairs(game.Players:GetoPlayers()) do
+					_G.SendTMMessage("[XI$TENCE]: [Made by //UNKNOWN//]", Color3.new(0,55,120))
+					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4948325482)
+					end
+					end
+				 },
+			
+				 TRENDSSS = {
+				 Text = "r park"
+				 Apply = function()
+				 for i, v in ipairs(game.Players:GetoPlayers()) do
+					_G.SendTMMessage("[XI$TENCE]: [Made by //UNKNOWN//]", Color3.new(0,55,120))
+					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4686527283)
+					end
+					end
+				 },
+				 
 
 
 
@@ -1274,7 +1273,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 	},
 	Commands = {
 	Kill = {
-		Text = "Kill",
+		Text = ".k",
 		Apply = function(Args)
 			local Target = GetPlayerFromShortName(Args[2])
 			if Target ~= nil then
@@ -1283,7 +1282,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 		end
 	},
 	Invis = {
-		Text = "cloak",
+		Text = ".cl",
 		Apply = function(Args)
 			local Target = GetPlayerFromShortName(Args[2])
 			if Target ~= nil then
@@ -1292,7 +1291,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 		end
 	},
 	Play = {
-		Text = "radio",
+		Text = ".r",
 		Apply = function(Args)
 			local Target = GetPlayerFromShortName(Args[2])
 			local ID = Args[3]
@@ -1302,7 +1301,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 		end
 	},
 	LoopKill = {
-		Text = "lk",
+		Text = ".lk",
 		Apply = function(Args)
 			print("Fia")
 			local Target = GetPlayerFromShortName(Args[2])
@@ -1314,7 +1313,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 
     },
 	UnLoopKill = {
-		Text = "unlk",
+		Text = ".unlk",
 		Apply = function(Args)
 			print("Fia")
 			local Target = GetPlayerFromShortName(Args[2])
@@ -1335,7 +1334,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 		end
 	},
 	God = {
-		Text = "god",
+		Text = ".god",
 		Apply = function(Args)
 			local Target = GetPlayerFromShortName(Args[2])
 			if Target ~= nil then
@@ -1583,6 +1582,13 @@ end
 
 
 
+
+
+
+
+
+
+
 print("------------------Radio commands------------------")
 print("-- r beat1")
 print("-- r runyomouth")
@@ -1594,11 +1600,6 @@ print("-- r kidr")
 print("-- r flex")
 print("-- r supra")
 print("-- r hhh")
-print("-- r mafia")
-print("-- r mafia1")
-print("-- r mafia2")
-print("-- r mafia3")
-print("-- r mafia4")
 print("-- r johndoe")
 print("-- r mym")
 print("-- r cowbell")
