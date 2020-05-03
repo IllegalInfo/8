@@ -1209,25 +1209,25 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 				end
 			end
          },
-				 TRENDSSS = {
-				 Text = "r trends"
-				 Apply = function()
-				 for i, v in ipairs(game.Players:GetoPlayers()) do
-				  _G.SendTMMessage("[XI$TENCE]: [Made by 1Ramzz]", Color3.new(0,55,120))
+       TRENDSSS = {
+	Text = "r trends"
+		Apply = function()
+				for i, v in ipairs(game.Players:GetoPlayers()) do
+	   _G.SendTMMessage("[XI$TENCE]: [Made by 1Ramzz]", Color3.new(0,55,120))
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4948698421)
-					end
-					end
+				end
+			end
 				 },
-				 TRENDSSS = {
-				 Text = "r kayos"
-				 Apply = function()
+       Kayos = {
+	 Text = "r kayos"
+		Apply = function()
 				 for i, v in ipairs(game.Players:GetoPlayers()) do
-					_G.SendTMMessage("[XI$TENCE]: [Made by balance4k]", Color3.new(0,55,120))
+	   _G.SendTMMessage("[XI$TENCE]: [Made by balance4k]", Color3.new(0,55,120))
 					game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, 4956121790)
-					end
-					end
+				end
+			end
 				 },
-				 TRENDSSS = {
+				 Ksisss = {
 				 Text = "r ksi"
 				 Apply = function()
 				 for i, v in ipairs(game.Players:GetoPlayers()) do
@@ -1237,7 +1237,7 @@ _G.SendTMMessage("[XI$TENCE]: [Made by wizzera]", Color3.new(0,55,120))
 					end
 				 },
 			
-				 TRENDSSS = {
+				 parkie = {
 				 Text = "r park"
 				 Apply = function()
 				 for i, v in ipairs(game.Players:GetoPlayers()) do
