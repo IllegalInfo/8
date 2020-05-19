@@ -636,6 +636,8 @@ end)
 	
 ZANEXX:AddCommand("cmds","Prints the admin commands", function(args)
 print[[
+------------------------- ADMIN COMMANDS ----------------------------
+----------------------- PREFIX IS SET TO . --------------------------
 .cl [name here] -- aims at at a  specific person
 .hunt [name here] -- adds an esp loop on a specific person
 .glock -- autobuys a glock for you. (might kill you)
