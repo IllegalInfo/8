@@ -49,7 +49,7 @@ end)
 local RainbowTable1,RainbowTable2;
 
 
-local ZANAXX = {
+local ZANEXX = {
 	Commands = {}
 }
 local PREFIX = "."
@@ -118,13 +118,13 @@ function ParseMessage(Message)
 end
 function notification(text)
 	game.StarterGui:SetCore("SendNotification", {
-		Title = "ZANAXX";    --Name your script here!
+		Title = "ZANEXX";    --Name your script here!
 		Text = text;
 		Icon = "rbxassetid://4930407411"; --put your own decal here
 		Duration = 1;
 	})
 end
-function ZANAXX:AddCommand(commandname, cmddesc, sc)
+function ZANEXX:AddCommand(commandname, cmddesc, sc)
 	local cmdinformation = {
 		commandname
 	}
@@ -136,7 +136,7 @@ function ZANAXX:AddCommand(commandname, cmddesc, sc)
 		table.insert(cmdinformation, cmddesc)
 		table.insert(cmdinformation, sc)
 	end
-	table.insert(ZANAXX.Commands, cmdinformation)
+	table.insert(ZANEXX.Commands, cmdinformation)
 end
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
 	local IsACmd = false
@@ -145,7 +145,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 		msg = msg:sub(4)
 	end
 	local args = ParseMessage(msg)
-	for i, cmd in pairs(ZANAXX.Commands) do
+	for i, cmd in pairs(ZANEXX.Commands) do
 		if args[1] == cmd[1] then
 			IsACmd = true
 			table.remove(args, 1)
@@ -189,7 +189,7 @@ TextBox.FocusLost:Connect(function(w)
 				text = PREFIX..text
 			end
 			local args = ParseMessage(text)
-			for i, cmd in pairs(ZANAXX.Commands) do
+			for i, cmd in pairs(ZANEXX.Commands) do
 				if args[1] == cmd[1] then
 					IsACmd = true
 					table.remove(args, 1)
@@ -510,28 +510,28 @@ chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Positio
 -------------------------------------------------
 -------------------COMMANDS----------------------
 				---------------
-ZANAXX:AddCommand("print", "This is primarily used for testing", function(args)
+ZANEXX:AddCommand("print", "This is primarily used for testing", function(args)
 	local msg = table.concat(args, " ")
 	print(msg)
 end)
 
 
-ZANAXX:AddCommand("rejoin", "Rejoins the game that you're in.", function()
+ZANEXX:AddCommand("rejoin", "Rejoins the game that you're in.", function()
 	local ts = game:GetService("TeleportService")
 	local p = game:GetService("Players").LocalPlayer
 	ts:Teleport(game.PlaceId, p)
 end)
 
-ZANAXX:AddCommand("Ganim", "Adds gun animations", function()
+ZANEXX:AddCommand("Ganim", "Adds gun animations", function()
 	loadstring(game:HttpGet('https://pastebin.com/raw/2VsGhYsL'))()
 end)
-ZANAXX:AddCommand("goto", "Teleport to a player", function(args)
+ZANEXX:AddCommand("goto", "Teleport to a player", function(args)
 	local plr = psearch(args[1])
 	teleport(workspace[plr.Name].HumanoidRootPart.Position)
 end)
 
 
-ZANAXX:AddCommand("ws", "Changes Walkspeed", function(args)
+ZANEXX:AddCommand("ws", "Changes Walkspeed", function(args)
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = args[1]
 	var1 = args[1]
 	player.CharacterAdded:Connect(function(character)
@@ -540,7 +540,7 @@ ZANAXX:AddCommand("ws", "Changes Walkspeed", function(args)
 	end)
 end)
 	
-ZANAXX:AddCommand("jp", "Changes Jumppower", function(args)
+ZANEXX:AddCommand("jp", "Changes Jumppower", function(args)
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = args[1]
 	var2 = args[1]
 	player.CharacterAdded:Connect(function(character)
@@ -549,7 +549,7 @@ ZANAXX:AddCommand("jp", "Changes Jumppower", function(args)
 	end)
 end)
 
-ZANAXX:AddCommand("hunt", "loop find", function(args)
+ZANEXX:AddCommand("hunt", "loop find", function(args)
 	local target = psearch(args[1])
 	local billgui = Instance.new('BillboardGui', target.Character.Head)
 	local textlab = Instance.new('TextLabel', billgui)
@@ -612,18 +612,18 @@ game.Players.PlayerRemoving:Connect(function(plr)
 	end
 end)
 
-ZANAXX:AddCommand("cl", "camlock target", function(args)
+ZANEXX:AddCommand("cl", "camlock target", function(args)
 	local target = psearch(args[1])
 	if target ~= nil and target ~= "" then
 		local player = target
 		camlockplr = player
 	end
 end)
-ZANAXX:AddCommand("uncl", "uncamlock target", function(args)
+ZANEXX:AddCommand("uncl", "uncamlock target", function(args)
 	camlockplr = nil
 end)
 
-ZANAXX:AddCommand("Rainbowhats", "Makes your hats change color", function()
+ZANEXX:AddCommand("Rainbowhats", "Makes your hats change color", function()
 		RainbowHats = not RainbowHats
 		RainbowTable1,RainbowTable2 = LP.PlayerGui.HUD.Clan.Group.cs:GetChildren(),{}
 		local a = LP.PlayerGui.HUD.Clan.Group.Reps:GetChildren()
@@ -634,8 +634,23 @@ end
 end
 end)
 	
+ZANEXX:AddCommand("cmds","Prints the admin commands", function(args)
+print[[
+.cl [name here] -- aims at at a  specific person
+.hunt [name here] -- adds an esp loop on a specific person
+.glock -- autobuys a glock for you. (might kill you)
+.uzi -- autobuys an uzi for you. (also might kill you)
+.goto [name here] -- teleports you to the person
+.Ganim -- adds animations for your glock, shotty.
+.print -- made for testing the script (useless)
+.uncl -- unlocks your aim.
+.fov [number here] -- changes your field of view.
+.noclip -- lets you walk through walls
+.unnoclip -- disables noclip
+.ws [number here] -- changes your walkspeed to the number set in chat. (might be broken)
+.jp [number here] -- changes your jump height to the number set in the chat (might be broken)
 
-ZANAXX:AddCommand("glock","Buys Glock",function(args)
+ZANEXX:AddCommand("glock","Buys Glock",function(args)
 
 	repeat
 		while true do
@@ -652,13 +667,13 @@ ZANAXX:AddCommand("glock","Buys Glock",function(args)
 		until game.Players.LocalPlayer.Backpack.Uzi
 end)
 
-ZANAXX:AddCommand("fov", "Change fov", function(args)
+ZANEXX:AddCommand("fov", "Change fov", function(args)
 	local value1 = args[1]
 	game:GetService'Workspace'.Camera.FieldOfView = value1
 end)
 
 
-ZANAXX:AddCommand("uzi","Buys Uzi",function(args)
+ZANEXX:AddCommand("uzi","Buys Uzi",function(args)
 	  			repeat
 				while true do
 				wait() 
@@ -678,12 +693,12 @@ ZANAXX:AddCommand("uzi","Buys Uzi",function(args)
 	
 	
 	
-ZANAXX:AddCommand("noclip","walk through wall",function(args)
+ZANEXX:AddCommand("noclip","walk through wall",function(args)
 	noclip = true 
 	notification("Noclip Enable")
 	end)
 	
-ZANAXX:AddCommand("unnoclip","unnoclip wall",function(args)
+ZANEXX:AddCommand("unnoclip","unnoclip wall",function(args)
 	noclip = false 
 	notification("Noclip Disable")
 	end)
@@ -884,14 +899,14 @@ local AimbotEnabled = false
 	Aimbot.ResetOnSpawn = false
 	TextBox.Parent = Aimbot
 	TextBox.AnchorPoint = Vector2.new(0.5, 0.5)
-	TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	TextBox.BackgroundTransparency = 0.500
+	TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextBox.BackgroundTransparency = 0.200
 	TextBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	TextBox.BorderSizePixel = 3
 	TextBox.Position = UDim2.new(0.884, 0, 0.943, 0)
 	TextBox.Size = UDim2.new(0, 100, 0, 30)
 	TextBox.Font = Enum.Font.SourceSans
-	TextBox.PlaceholderText = "RMB to Select"
+	TextBox.PlaceholderText = "Type the players name here"
 	TextBox.Text = ""
 	TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextBox.TextScaled = true
@@ -1158,7 +1173,7 @@ local AimbotEnabled = false
 notification("Loaded!")
 
 
-for i, v in pairs(ZANAXX.Commands) do
+for i, v in pairs(ZANEXX.Commands) do
 	if type(v[2]) == "string" then
 		print(PREFIX..v[1].." - "..v[2])
 	else
