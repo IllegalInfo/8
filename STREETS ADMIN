@@ -635,7 +635,7 @@ end
 end)
 	
 ZANEXX:AddCommand("cmds","Prints the admin commands", function(args)
-print[[
+print([[
 ------------------------- ADMIN COMMANDS ----------------------------
 ----------------------- PREFIX IS SET TO . --------------------------
 .cl [name here] -- aims at at a  specific person
@@ -652,6 +652,8 @@ print[[
 .ws [number here] -- changes your walkspeed to the number set in chat. (might be broken)
 .jp [number here] -- changes your jump height to the number set in the chat (might be broken)
 
+]])
+end)
 ZANEXX:AddCommand("glock","Buys Glock",function(args)
 
 	repeat
@@ -1206,5 +1208,4 @@ end
 end
 end
 end
-
 
