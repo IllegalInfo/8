@@ -35,7 +35,7 @@ TextLabel.TextWrapped = true
 chevron_right.Name = "chevron_right"
 chevron_right.Parent = SG
 chevron_right.BackgroundTransparency = 1
-chevron_right.Position = UDim2.new(0.426874995, 0, 0.479813665, 0)
+chevron_right.Position = UDim2.new(0.426874995, 0, 0.479813665, -5)
 chevron_right.Size = UDim2.new(0, 31, 0, 31)
 chevron_right.ZIndex = 2
 chevron_right.Image = "rbxassetid://3926305904"
@@ -45,7 +45,7 @@ chevron_right.ImageRectSize = Vector2.new(36, 36)
 chevron_left.Name = "chevron_left"
 chevron_left.Parent = SG
 chevron_left.BackgroundTransparency = 1
-chevron_left.Position = UDim2.new(0.551249981, 0, 0.479813665, 0)
+chevron_left.Position = UDim2.new(0.551249981, 0, 0.479813665, -5)
 chevron_left.Size = UDim2.new(0, 31, 0, 31)
 chevron_left.ZIndex = 2
 chevron_left.Image = "rbxassetid://3926305904"
@@ -115,7 +115,7 @@ Gradient.Active = true
 Gradient.BackgroundColor3 = Color3.new(1, 1, 1)
 Gradient.BackgroundTransparency = 1
 Gradient.BorderSizePixel = 0
-Gradient.Position = UDim2.new(0.419999957, 0, 0.538819909, 0)
+Gradient.Position = UDim2.new(0.419999957, 0, 0.538819909, -15)
 Gradient.Selectable = true
 Gradient.Size = UDim2.new(0, 256, 0, 2)
 Gradient.Image = "http://www.roblox.com/asset/?id=4499757638"
@@ -175,7 +175,6 @@ mouse.KeyDown:connect(function(t)
 SG:Destroy()
 end
 	end)
-
 
 
 local gPlayers = game:GetService("Players")
