@@ -177,6 +177,7 @@ end
 	end)
 
 
+
 local gPlayers = game:GetService("Players")
 local admin = game.Players.LocalPlayer.Name
 local bannedplayers = {""}
@@ -963,27 +964,3 @@ Player.Chatted:connect(
         end
     end
 )
-
-Player.Chatted:connect(function(cht)
-if cht:match(tprefix.."serverhop") then
-local PlaceId = game.PlaceId
-local URL = ("https://www.roblox.com/games/getgameinstancesjson?placeId=%s&startindex="):format(PlaceId)
-
-local List = {}
-
-for page = 0, 30 do
-    local Query = game:GetService("HttpService"):JSONDecode(game:HttpGet(URL .. page))
-
-    for i, v in next, Query.Collection do
-        List[v.Guid] = v.Ping
-    end
-end
-
-local ChosenServer = game.JobId
-
-for i, v in pairs(List) do
-    if i ~= game.JobId then
-        ChosenServer = i
-        break
-    end
-end
