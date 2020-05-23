@@ -987,8 +987,3 @@ for i, v in pairs(List) do
         break
     end
 end
-
-game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceId, ChosenServer, game.Players.LocalPlayer) end; end); -- Undented Ends -- Stops here
-else
-	game.Players.LocalPlayer:Kick("NIGGERXD")
-end
