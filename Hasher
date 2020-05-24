@@ -1,0 +1,187 @@
+local Hasher = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Copy = Instance.new("TextButton")
+local StreetsBottom = Instance.new("ImageLabel")
+local Streets = Instance.new("ImageButton")
+local exp = Instance.new("ImageButton")
+local TextBox = Instance.new("TextBox")
+local Streets_2 = Instance.new("ImageButton")
+local exp_2 = Instance.new("ImageButton")
+local StreetsBottom_2 = Instance.new("ImageLabel")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Gradient = Instance.new("ImageLabel")
+local close = Instance.new("ImageButton")
+ 
+Hasher.Name = "Hasher"
+Hasher.Parent = game.CoreGui
+Hasher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = Hasher
+Main.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Main.BackgroundTransparency = 0.40000000596046
+Main.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.28125, 0, 0.206349194, 0)
+Main.Size = UDim2.new(0, 370, 0, 131)
+
+Copy.Name = "Copy"
+Copy.Parent = Main
+Copy.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+Copy.BorderSizePixel = 0
+Copy.Position = UDim2.new(0.0702313334, 0, 0.618558109, 0)
+Copy.Size = UDim2.new(0, 319, 0, 29)
+Copy.Font = Enum.Font.SourceSans
+Copy.Text = "Copy to Clipboard"
+Copy.TextColor3 = Color3.new(1, 1, 1)
+Copy.TextSize = 20
+Copy.TextWrapped = true
+
+StreetsBottom.Name = "StreetsBottom"
+StreetsBottom.Parent = Copy
+StreetsBottom.Active = true
+StreetsBottom.BackgroundColor3 = Color3.new(1, 1, 1)
+StreetsBottom.BackgroundTransparency = 1
+StreetsBottom.BorderSizePixel = 0
+StreetsBottom.Position = UDim2.new(-0.00313230883, 0, 0.987281024, 0)
+StreetsBottom.Selectable = true
+StreetsBottom.Size = UDim2.new(0, 320, 0, 2)
+StreetsBottom.Image = "http://www.roblox.com/asset/?id=4499750415"
+
+Streets.Name = "Streets"
+Streets.Parent = Copy
+Streets.BackgroundTransparency = 1
+Streets.Position = UDim2.new(-0.0844660029, 0, 0.0917021781, 0)
+Streets.Size = UDim2.new(0, 25, 0, 25)
+Streets.ZIndex = 2
+Streets.Image = "rbxassetid://3926305904"
+Streets.ImageRectOffset = Vector2.new(924, 884)
+Streets.ImageRectSize = Vector2.new(36, 36)
+
+exp.Name = "exp"
+exp.Parent = Copy
+exp.BackgroundTransparency = 1
+exp.Position = UDim2.new(0.994399071, 0, 0.0974274948, 0)
+exp.Size = UDim2.new(0, 25, 0, 25)
+exp.ZIndex = 2
+exp.Image = "rbxassetid://3926305904"
+exp.ImageRectOffset = Vector2.new(124, 924)
+exp.ImageRectSize = Vector2.new(36, 36)
+
+TextBox.Parent = Main
+TextBox.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0702702701, 0, 0.153227568, 0)
+TextBox.Size = UDim2.new(0, 318, 0, 28)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Paste your id here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.new(1, 1, 1)
+TextBox.TextSize = 20
+
+Streets_2.Name = "Streets"
+Streets_2.Parent = TextBox
+Streets_2.BackgroundTransparency = 1
+Streets_2.Position = UDim2.new(-0.0844660029, 0, 0.0917021781, 0)
+Streets_2.Size = UDim2.new(0, 25, 0, 25)
+Streets_2.ZIndex = 2
+Streets_2.Image = "rbxassetid://3926305904"
+Streets_2.ImageRectOffset = Vector2.new(924, 884)
+Streets_2.ImageRectSize = Vector2.new(36, 36)
+
+exp_2.Name = "exp"
+exp_2.Parent = TextBox
+exp_2.BackgroundTransparency = 1
+exp_2.Position = UDim2.new(0.994399071, 0, 0.0974274948, 0)
+exp_2.Size = UDim2.new(0, 25, 0, 25)
+exp_2.ZIndex = 2
+exp_2.Image = "rbxassetid://3926305904"
+exp_2.ImageRectOffset = Vector2.new(124, 924)
+exp_2.ImageRectSize = Vector2.new(36, 36)
+
+StreetsBottom_2.Name = "StreetsBottom"
+StreetsBottom_2.Parent = TextBox
+StreetsBottom_2.Active = true
+StreetsBottom_2.BackgroundColor3 = Color3.new(1, 1, 1)
+StreetsBottom_2.BackgroundTransparency = 1
+StreetsBottom_2.BorderSizePixel = 0
+StreetsBottom_2.Position = UDim2.new(-0.00313230883, 0, 0.987281024, 0)
+StreetsBottom_2.Selectable = true
+StreetsBottom_2.Size = UDim2.new(0, 320, 0, 2)
+StreetsBottom_2.Image = "http://www.roblox.com/asset/?id=4499750415"
+
+Frame.Parent = Hasher
+Frame.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.28125, 0, 0.160317466, 4)
+Frame.Size = UDim2.new(0, 370, 0, 35)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 370, 0, 35)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Xi$taHasher"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 20
+TextLabel.TextWrapped = true
+
+Gradient.Name = "Gradient"
+Gradient.Parent = Hasher
+Gradient.Active = true
+Gradient.BackgroundColor3 = Color3.new(1, 1, 1)
+Gradient.BackgroundTransparency = 1
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(0.280999988, 0, 0.212349206, -4)
+Gradient.Selectable = true
+Gradient.Size = UDim2.new(0, 370, 0, 2)
+Gradient.Image = "http://www.roblox.com/asset/?id=4499750415"
+
+close.Name = "close"
+close.Parent = Hasher
+close.BackgroundTransparency = 1
+close.Position = UDim2.new(0.497499973, 0, 0.160237387, 3)
+close.Size = UDim2.new(0, 25, 0, 25)
+close.ZIndex = 2
+close.Image = "rbxassetid://3926305904"
+close.ImageRectOffset = Vector2.new(284, 4)
+close.ImageRectSize = Vector2.new(24, 24)
+
+Copy.MouseButton1Click:Connect(function()
+
+local UrlEncoder = {
+    ['0'] = "%30";
+    ['1'] = "%31";
+    ['2'] = "%32";
+    ['3'] = "%33"; 
+    ['4'] = "%34";
+    ['5'] = "%35";
+    ['6'] = "%36";
+    ['7'] = "%37";
+    ['8'] = "%38";
+    ['9'] = "%39";
+    [' '] = "%20"
+}
+
+local String,Table=(TextBox.Text) ,{}
+String:gsub('.',function(Char)
+    if UrlEncoder[Char] then 
+        table.insert(Table,UrlEncoder[Char])
+    else 
+        table.insert(Table,Char)
+    end
+end)
+
+if setclipboard then 
+    setclipboard(table.concat(Table,""))
+else 
+    print(table.concat(Table,""))
+end
+end)
+
+
+close.MouseButton1Click:Connect(function()
+Hasher.Enabled = false
+end)
