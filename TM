@@ -141,27 +141,73 @@ TextLabel.Text = 'Loading...'
 wait(.9)
 TextLabel.Text = 'Adding gay shit.'
 wait(.9)
-    loadstring(game:HttpGet(('https://pastebin.com/raw/XHLUdbHF'),true))()
-wait(2)
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("", Color3.new(0,255,0))
-_G.SendTMMessage("[Xi$tence]: Welcome to Xi$tences Twisted Murderer Admin!", Color3.new(0,55,120))
-wait(.5)
-_G.SendTMMessage("[Xi$tence]: gang shit XD", Color3.new(0,55,120))
+ 
+
+
+
+
+
+
+
+
+
+
+
+function MessageColor(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')local b=n:FindFirstChild('Chat'):Clone()local c=game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats;
+    spawn(function()for i, x in pairs(c:GetChildren())do x.Position=x.Position+UDim2.new(0, 0, 0, -15)end;
+    b.Parent=c;
+    b.Text=v.." "b.TextColor3=w;
+    wait(15)for y=0, 1, 0.1 do wait(0.1)b.TextStrokeTransparency=1;
+    b.TextTransparency=y end;
+    b:Destroy()end)end;
+    function Message(v, z, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')local b=n:FindFirstChild('Chat'):Clone()local c=game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats;
+    spawn(function()for i, x in pairs(c:GetChildren())do x.Position=x.Position+UDim2.new(0, 0, 0, -15)end;
+    b.Parent=c;
+    b.Text=v.." "..z;
+    wait(13)for y=0, 1, 0.1 do wait(0.1)b.TextStrokeTransparency=1;
+    b.TextTransparency=y end;
+    b:Destroy()end)end;
+    MessageColor("[Xi$tence]: Admin Loaded! Enjoy!", Color3.fromRGB(0, 230, 250))for i,
+    x in pairs(game.Players:GetChildren())do x.Chatted:Connect(function(A)if string.find(A, "/e ")then Message(x.Name..": ", A)end end)end;
+    game.StarterGui:SetCore("SendNotification", {
+        Title="Check", Text="Blacklist check passed!"}
+    
+    
+    )local B=game:GetService("Players")local C=B.LocalPlayer.Name;
+    local D= {
+        'Player',
+        'Player1'
+    }
+    
+    local E= {
+        'Player, Player1'
+    }
+    
+    local F= {}
+    
+    local G= {}
+    
+    local H= {}
+    
+    local I=false;
+    
+    local aw=game.Players.LocalPlayer;
+    aw.Chatted:Connect(function(ax)if ax:match("lmaogetgun")then for i, x in pairs(game.Players:GetChildren())do if game.Players[x.Name].Character:FindFirstChild("Role")then local aF=game.Players[x.Name].Character:FindFirstChild("Role")if aF.Value=="Sheriff"then game.ReplicatedStorage.Event:FireServer("TPD", 999, game.Workspace.Ignore.Players[x.Name].Humanoid)end end end;
+    wait(1)repeat wait(0, 1)game.Workspace.Gun.CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame until game.Players.LocalPlayer.Backpack:FindFirstChild("Gun")or game.Workspace.Gun==nil end end)local aw=game.Players.LocalPlayer;
+    aw.Chatted:Connect(function(ax)if ax:match("lmaok murderer")then for i, x in pairs(game.Players:GetChildren())do if game.Players[x.Name].Character:FindFirstChild("Role")then local aF=game.Players[x.Name].Character:FindFirstChild("Role")if aF.Value=="Murderer"then game.ReplicatedStorage.Event:FireServer("TPD", 999, game.Workspace.Ignore.Players[x.Name].Humanoid)end end end end end)local aw=game.Players.LocalPlayer;
+    aw.Chatted:Connect(function(ax)if ax:match("lmaok sheriff")then for i, x in pairs(game.Players:GetChildren())do if game.Players[x.Name].Character:FindFirstChild("Role")then local aF=game.Players[x.Name].Character:FindFirstChild("Role")if aF.Value=="Sheriff"then game.ReplicatedStorage.Event:FireServer("TPD", 999, game.Workspace.Ignore.Players[x.Name].Humanoid)end end end end end)aw.Chatted:Connect(function(ax)if ax:match("lmaonoclip")then function noclip(a7)admintag=Instance.new("BoolValue")admintag.Parent=game.Players[a7]admintag.Value=true;
+    admintag.Name="noclip"end;
+    if game.Players.LocalPlayer:FindFirstChild("noclip")then game.Players.LocalPlayer.noclip:Destroy()end;
+    noclip(game.Players.LocalPlayer.Name)game:GetService('RunService').Stepped:connect(function()if game.Players.LocalPlayer:FindFirstChild("noclip")then game.Players.LocalPlayer.Character.Head.CanCollide=false;
+    game.Players.LocalPlayer.Character.Torso.CanCollide=false end end)end end)aw.Chatted:Connect(function(ax)if ax:match("lmaoclip")then game.Players.LocalPlayer.noclip:Destroy()end end)game.Players.LocalPlayer.Chatted:Connect(function(A)if string.find(A, "lmaows ")then game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed=A:sub(4)end end)game.Players.LocalPlayer.Chatted:Connect(function(A)if string.find(A, "lmaojp ")then game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower=A:sub(4)end end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "alrightcorey:")then x.Text=string.gsub(x.Text, "alrightcorey", "[Gamer] alrightcorey:")x.TextColor3=Color3.fromRGB(0, 200, 180)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "666Zvck")then x.Text=string.gsub(x.Text, "666Zvck", "[Owner] Zack")x.TextColor3=Color3.fromRGB(0, 220, 200)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()for i,
+    x in pairs(game.Players:GetChildren())do local aI=tostring(game:HttpGet("https://pastebin.com/raw/J8fXnzYw", true))if string.find(aI, x.Name)then local aJ=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")for n,
+    b in pairs(aJ.Chats:GetChildren())do if b.Name=="Chat"then if string.find(b.Text, x.Name..":")then b.Text=string.gsub(b.Text, x.Name, "[Xi$tence Buyer] "..x.Name.." ")b.TextColor3=Color3.fromRGB(225, 0, 0)end end end end end end;
+    game:GetService('RunService').Stepped:connect(function()start()end)game.Players.LocalPlayer.CharacterAdded:Connect(function()game:GetService('RunService').Stepped:connect(function()start()end)end)
+    
+
+
 TextLabel.Text = 'Adding gay shit..'
 wait(.9)
 TextLabel.Text = 'Loaded!'
