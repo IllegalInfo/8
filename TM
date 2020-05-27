@@ -220,6 +220,7 @@ SG:Destroy()
 end
 	end)
 
+    local localplayer = game.Players.LocalPlayer
 
 local gPlayers = game:GetService("Players")
 local admin = game.Players.LocalPlayer.Name
@@ -717,6 +718,46 @@ addcmd(
             end
         end
     end
+)
+addcmd(
+    "HID",
+    "Protects your audio and plays it",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        local val1 = args[1]
+        local UrlEncoder = {
+            ['0'] = "%30";
+            ['1'] = "%31";
+            ['2'] = "%32";
+            ['3'] = "%33"; 
+            ['4'] = "%34";
+            ['5'] = "%35";
+            ['6'] = "%36";
+            ['7'] = "%37";
+            ['8'] = "%38";
+            ['9'] = "%39";
+            [' '] = "%20"
+        }
+
+        local String,Table = val1 ,{}
+        String:gsub('.',function(Char)
+            if UrlEncoder[Char] then 
+                table.insert(Table,UrlEncoder[Char])
+            else 
+                table.insert(Table,Char)
+            end
+        end)
+        
+        if setclipboard then 
+            setclipboard(table.concat(Table,""))
+        else 
+            print(table.concat(Table,""))
+        end
+        end)
+
+        game.StarterGui:SetCore("SendNotification", {
+            Title="Hasher", Text="Hash copied!"}
 )
 
 addcmd(
