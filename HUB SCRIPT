@@ -1,1 +1,240 @@
-loadstring(game:HttpGet('https://pastebin.com/raw/YyVSwf0b'))()
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Sync = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Top = Instance.new("Frame")
+local NAME = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local Expander = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local TS = Instance.new("TextButton")
+local Tm = Instance.new("TextButton")
+local Uni = Instance.new("TextButton")
+
+
+--Properties:
+
+Sync.Name = "Sync"
+Sync.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Sync.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = Sync
+Main.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Main.Position = UDim2.new(0.0782715306, 0, 0.231658325, 0)
+Main.Size = UDim2.new(0, 388, 0, 133)
+
+Top.Name = "Top"
+Top.Parent = Main
+Top.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Top.BorderSizePixel = 0
+Top.Size = UDim2.new(0, 388, 0, 33)
+
+NAME.Name = "NAME"
+NAME.Parent = Top
+NAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NAME.BackgroundTransparency = 1.000
+NAME.BorderSizePixel = 0
+NAME.Position = UDim2.new(0.0283505153, 0, 0.151515156, 0)
+NAME.Size = UDim2.new(0, 365, 0, 23)
+NAME.Font = Enum.Font.SourceSans
+NAME.Text = "Xi$tence Hub"
+NAME.TextColor3 = Color3.fromRGB(0, 255, 127)
+NAME.TextSize = 19.000
+
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0283505153, 0, 0.248120308, 0)
+Frame.Size = UDim2.new(0, 366, 0, 3)
+
+Expander.Name = "Expander"
+Expander.Parent = Main
+Expander.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Expander.BackgroundTransparency = 0.650
+Expander.BorderSizePixel = 0
+Expander.Position = UDim2.new(0.579896986, 0, 0.699248075, 0)
+Expander.Size = UDim2.new(0, 151, 0, 30)
+Expander.Font = Enum.Font.SourceSans
+Expander.Text = "Arsenal H.E."
+Expander.TextColor3 = Color3.fromRGB(255, 255, 255)
+Expander.TextSize = 19.000
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.932989717, 0, 0, 0)
+Close.Size = UDim2.new(0, 26, 0, 22)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+TS.Name = "TS"
+TS.Parent = Main
+TS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TS.BackgroundTransparency = 0.650
+TS.BorderSizePixel = 0
+TS.Position = UDim2.new(0.579896986, 0, 0.383458644, 0)
+TS.Size = UDim2.new(0, 151, 0, 30)
+TS.Font = Enum.Font.SourceSans
+TS.Text = "The Streets Admin"
+TS.TextColor3 = Color3.fromRGB(255, 255, 255)
+TS.TextSize = 19.000
+
+Tm.Name = "Tm"
+Tm.Parent = Main
+Tm.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Tm.BackgroundTransparency = 0.650
+Tm.BorderSizePixel = 0
+Tm.Position = UDim2.new(0.0257732868, 0, 0.699248075, 0)
+Tm.Size = UDim2.new(0, 151, 0, 30)
+Tm.Font = Enum.Font.SourceSans
+Tm.Text = "Tm admin"
+Tm.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tm.TextSize = 19.000
+
+Uni.Name = "Uni"
+Uni.Parent = Main
+Uni.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Uni.BackgroundTransparency = 0.650
+Uni.BorderSizePixel = 0
+Uni.Position = UDim2.new(0.0257732868, 0, 0.383458644, 0)
+Uni.Size = UDim2.new(0, 151, 0, 30)
+Uni.Font = Enum.Font.SourceSans
+Uni.Text = "Audio Hasher"
+Uni.TextColor3 = Color3.fromRGB(255, 255, 255)
+Uni.TextSize = 19.000
+
+-- Scripts:
+
+local function ZYLJ_fake_script() -- NAME.LocalScript 
+	local script = Instance.new('LocalScript', NAME)
+
+		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		           
+		            counter = 0
+		           
+		            while wait(0.1)do
+		
+		             
+		             script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		
+		             counter = counter + 0.001010
+		        end 
+	
+end
+coroutine.wrap(ZYLJ_fake_script)()
+local function ZKFA_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		           
+		            counter = 0
+		           
+		            while wait(0.1)do
+		
+		             
+		             script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		
+		             counter = counter + 0.001010
+		        end 
+	
+end
+coroutine.wrap(ZKFA_fake_script)()
+local function WIXUT_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+	
+		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		           
+		            counter = 0
+		           
+		            while wait(0.1)do
+		
+		             
+		             script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		
+		             counter = counter + 0.001010
+		        end 
+	
+end
+coroutine.wrap(WIXUT_fake_script)()
+local function WWERA_fake_script() -- Expander.Script 
+	local script = Instance.new('Script', Expander)
+
+	
+			local Player = game.Players.LocalPlayer
+		local button = script.Parent
+		
+		button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/IllegalInfo/8/master/Expander'))()
+		end)
+			function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		           
+		            counter = 0
+		           
+		            while wait(0.1)do
+		
+		             
+		             script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		
+		             counter = counter + 0.001010
+		        end 
+	
+end
+coroutine.wrap(WWERA_fake_script)()
+local function IDZCS_fake_script() -- Close.Script 
+	local script = Instance.new('Script', Close)
+
+		local script = Instance.new('LocalScript', Close)
+	
+		script.Parent.MouseButton1Click:Connect(function()
+		 script.Parent.Parent.Visible = false
+		end)
+	
+end
+coroutine.wrap(IDZCS_fake_script)()
+local function XTBO_fake_script() -- TS.Script 
+	local script = Instance.new('Script', TS)
+
+	
+		
+			local Player = game.Players.LocalPlayer
+		local button = script.Parent
+		
+		button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/IllegalInfo/8/master/STREETS%20ADMIN'))()
+		end)
+			function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+		           
+		            counter = 0
+		           
+		            while wait(0.1)do
+		
+		             
+		             script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		
+		             counter = counter + 0.001010
+		        end 
+	
+end
+coroutine.wrap(XTBO_fake_script)()
+local function ZMQAJ_fake_script() -- Tm.Script 
+	local script = Instance.new('Script', Tm)
+
+	
+			local Player = game.Players.LocalPlayer
+		local button = script.Parent
+		
+		button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/IllegalInfo/8/master/TM'))()
