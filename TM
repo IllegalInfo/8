@@ -153,6 +153,7 @@ wait(.9)
 
 
 
+
 function MessageColor(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')local b=n:FindFirstChild('Chat'):Clone()local c=game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats;
     spawn(function()for i, x in pairs(c:GetChildren())do x.Position=x.Position+UDim2.new(0, 0, 0, -15)end;
     b.Parent=c;
@@ -205,9 +206,6 @@ function MessageColor(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChi
     x in pairs(game.Players:GetChildren())do local aI=tostring(game:HttpGet("https://pastebin.com/raw/J8fXnzYw", true))if string.find(aI, x.Name)then local aJ=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")for n,
     b in pairs(aJ.Chats:GetChildren())do if b.Name=="Chat"then if string.find(b.Text, x.Name..":")then b.Text=string.gsub(b.Text, x.Name, "[Xi$tence Buyer] "..x.Name.." ")b.TextColor3=Color3.fromRGB(225, 0, 0)end end end end end end;
     game:GetService('RunService').Stepped:connect(function()start()end)game.Players.LocalPlayer.CharacterAdded:Connect(function()game:GetService('RunService').Stepped:connect(function()start()end)end)
-    
-
-
 TextLabel.Text = 'Adding gay shit..'
 wait(.9)
 TextLabel.Text = 'Loaded!'
