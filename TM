@@ -49,13 +49,54 @@ function MessageColor(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChi
     start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "666Zvck")then x.Text=string.gsub(x.Text, "666Zvck", "[Owner] Zack")x.TextColor3=Color3.fromRGB(160, 83, 237)end end end end end)end;
     start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "ttrashlean")then x.Text=string.gsub(x.Text, "ttrashlean", "[Superior Motherfucker] Abdullahi")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
     start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "alrightcorey")then x.Text=string.gsub(x.Text, "alrightcorey", "[Admin] Corey")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
-    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "wackygoons")then x.Text=string.gsub(x.Text, "wackygoons", "[Snacc] Emdog")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
-    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()for i,
-    x in pairs(game.Players:GetChildren())do local aI=tostring(game:HttpGet("https://pastebin.com/raw/J8fXnzYw", true))if string.find(aI, x.Name)then local aJ=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")for n,
-    b in pairs(aJ.Chats:GetChildren())do if b.Name=="Chat"then if string.find(b.Text, x.Name..":")then b.Text=string.gsub(b.Text, x.Name, "[Xi$tence Buyer] "..x.Name.." ")b.TextColor3=Color3.fromRGB(225, 0, 0)end end end end end end;
-    game:GetService('RunService').Stepped:connect(function()start()end)game.Players.LocalPlayer.CharacterAdded:Connect(function()game:GetService('RunService').Stepped:connect(function()start()end)end)
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "wackygoons")then x.Text=string.gsub(x.Text, "wackygoons", "[Snack] Emmie")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()
+end
 
     local localplayer = game.Players.LocalPlayer
+
+    local Spam = [[
+        
+                                      $$$$$                                                                                                               
+                                      $:::$                                                                                                               
+XXXXXXX       XXXXXXXIIIIIIIIII   $$$$$:::$$$$$$         tttt                                                                                             
+X:::::X       X:::::XI::::::::I $$::::::::::::::$     ttt:::t                                                                                             
+X:::::X       X:::::XI::::::::I$:::::$$$$$$$::::$     t:::::t                                                                                             
+X::::::X     X::::::XII::::::II$::::$       $$$$$     t:::::t                                                                                             
+XXX:::::X   X:::::XXX  I::::I  $::::$           ttttttt:::::ttttttt        eeeeeeeeeeee    nnnn  nnnnnnnn        cccccccccccccccc    eeeeeeeeeeee         
+   X:::::X X:::::X     I::::I  $::::$           t:::::::::::::::::t      ee::::::::::::ee  n:::nn::::::::nn    cc:::::::::::::::c  ee::::::::::::ee       
+    X:::::X:::::X      I::::I  $:::::$$$$$$$$$  t:::::::::::::::::t     e::::::eeeee:::::een::::::::::::::nn  c:::::::::::::::::c e::::::eeeee:::::ee     
+     X:::::::::X       I::::I   $$::::::::::::$$tttttt:::::::tttttt    e::::::e     e:::::enn:::::::::::::::nc:::::::cccccc:::::ce::::::e     e:::::e     
+     X:::::::::X       I::::I     $$$$$$$$$:::::$     t:::::t          e:::::::eeeee::::::e  n:::::nnnn:::::nc::::::c     ccccccce:::::::eeeee::::::e     
+    X:::::X:::::X      I::::I              $::::$     t:::::t          e:::::::::::::::::e   n::::n    n::::nc:::::c             e:::::::::::::::::e      
+   X:::::X X:::::X     I::::I              $::::$     t:::::t          e::::::eeeeeeeeeee    n::::n    n::::nc:::::c             e::::::eeeeeeeeeee       
+XXX:::::X   X:::::XXX  I::::I  $$$$$       $::::$     t:::::t    tttttte:::::::e             n::::n    n::::nc::::::c     ccccccce:::::::e                
+X::::::X     X::::::XII::::::II$::::$$$$$$$:::::$     t::::::tttt:::::te::::::::e            n::::n    n::::nc:::::::cccccc:::::ce::::::::e               
+X:::::X       X:::::XI::::::::I$::::::::::::::$$      tt::::::::::::::t e::::::::eeeeeeee    n::::n    n::::n c:::::::::::::::::c e::::::::eeeeeeee       
+X:::::X       X:::::XI::::::::I $$$$$$:::$$$$$          tt:::::::::::tt  ee:::::::::::::e    n::::n    n::::n  cc:::::::::::::::c  ee:::::::::::::e       
+XXXXXXX       XXXXXXXIIIIIIIIII      $:::$                ttttttttttt      eeeeeeeeeeeeee    nnnnnn    nnnnnn    cccccccccccccccc    eeeeeeeeeeeeee       
+                                     $$$$$                                                                                                                
+                                                                                                                                                          
+ gang gang nigga XDDD                                                                                                                                                         
+ gang gang nigga XDDD                                                                                                                                                         
+ gang gang nigga XDDD                                                                                                                                                          
+ gang gang nigga XDDD                                                                                                                                                         
+ gang gang nigga XDDD                                                                                                                                                         
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+ gang gang nigga XDDD   
+    ]]
 
 local gPlayers = game:GetService("Players")
 local admin = game.Players.LocalPlayer.Name
@@ -84,12 +125,12 @@ function FIX_LIGHTING()
 	services.events = {}
 	local user = gPlayers.LocalPlayer
 	
-	local tprefix = ""
+	local tprefix = "$"
 	local scriptprefix = ""
 	local split = " "
 
 	for i, v in pairs(game.CoreGui:GetDescendants()) do
-	    if v:IsA("TextLabel") and v.Text == "XVA Admin" then
+	    if v:IsA("TextLabel") and v.Text == "Xi$tence" then
 	        print(v:GetFullName())
 	    end
 	end
@@ -459,7 +500,7 @@ addcmd(
 
 addcmd(
     "kill",
-    "destroys the breakjoins of the chosen player",
+    "Kills the chosen player.",
     {},
     function(args)
         local players = getPlayer(args[1])
@@ -468,10 +509,22 @@ addcmd(
         end
     end
 )
+addcmd(
+    "lel",
+    "Spams the console with bs XD",
+    {},
+    function(args)
+        local players = getPlayer(args[1])
+        for i, v in pairs(players) do
+            game.ReplicatedStorage.Event:FireServer("PlayRadio", gPlayers[v], Spam)
+        end
+    end
+)
+
 
 addcmd(
     "dmg",
-    "destroys the # of the amount that the player typed",
+    "Takes the players health away",
     {},
     function(args)
         local players = getPlayer(args[1])
@@ -613,7 +666,6 @@ addcmd(
         end
     end
 )
-
 
 addcmd(
     "cmds",
