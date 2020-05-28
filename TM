@@ -125,7 +125,7 @@ function FIX_LIGHTING()
 	services.events = {}
 	local user = gPlayers.LocalPlayer
 	
-	local tprefix = "$"
+	local tprefix = ""
 	local scriptprefix = ""
 	local split = " "
 
