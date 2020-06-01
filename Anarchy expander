@@ -1,0 +1,72 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Xi$tence", Text = "Press e to enable, f to disable."})
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "e"
+bind3 = "f"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 7
+_G.Disabled = true
+
+
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Institutional White")
+v.Character.HumanoidRootPart.Material = "Plastic"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
+
+mouse.KeyDown:connect(function(key3)
+if key3 == bind3 then
+_G.HeadSize = 7
+_G.Disabled = true
+
+
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really red")
+v.Character.HumanoidRootPart.Material = "Glass"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+
+
+
+
+
+
+local val = math.random()
+	
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Xi$tence";    --Name your script here!
+    Text = "Script loaded in "..val.." Seconds enjoy";
+    Duration = 5;
+    })
