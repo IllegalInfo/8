@@ -46,13 +46,17 @@ function MessageColor(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChi
     if game.Players.LocalPlayer:FindFirstChild("noclip")then game.Players.LocalPlayer.noclip:Destroy()end;
     noclip(game.Players.LocalPlayer.Name)game:GetService('RunService').Stepped:connect(function()if game.Players.LocalPlayer:FindFirstChild("noclip")then game.Players.LocalPlayer.Character.Head.CanCollide=false;
     game.Players.LocalPlayer.Character.Torso.CanCollide=false end end)end end)aw.Chatted:Connect(function(ax)if ax:match("lmaoclip")then game.Players.LocalPlayer.noclip:Destroy()end end)game.Players.LocalPlayer.Chatted:Connect(function(A)if string.find(A, "lmaows ")then game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed=A:sub(4)end end)game.Players.LocalPlayer.Chatted:Connect(function(A)if string.find(A, "lmaojp ")then game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower=A:sub(4)end end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "alrightcorey:")then x.Text=string.gsub(x.Text, "alrightcorey", "[Gamer] alrightcorey:")x.TextColor3=Color3.fromRGB(0, 200, 180)end end end end end)end;
-    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "666Zvck")then x.Text=string.gsub(x.Text, "666Zvck", "[Owner] Zack")x.TextColor3=Color3.fromRGB(160, 83, 237)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "666Zvck")then x.Text=string.gsub(x.Text, "666Zvck", "[Owner] Zack")x.TextColor3=Color3.fromRGB(160, 0, 255)end end end end end)end;
     start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "ttrashlean")then x.Text=string.gsub(x.Text, "ttrashlean", "[Superior Motherfucker] Abdullahi")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
-    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "alrightcorey")then x.Text=string.gsub(x.Text, "alrightcorey", "[Admin] Corey")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
-    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "wackygoons")then x.Text=string.gsub(x.Text, "wackygoons", "[Snack] Emmie")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "alrightcorey")then x.Text=string.gsub(x.Text, "alrightcorey", "[Admin] alrightcorey")x.TextColor3=Color3.fromRGB(20, 255, 20)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "wackygoons")then x.Text=string.gsub(x.Text, "wackygoons", "[Snack] wackygoons")x.TextColor3=Color3.fromRGB(0, 225, 250)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "Matt1QQ")then x.Text=string.gsub(x.Text, "Matt1QQ", "[Matts Admin Owner] Matt1QQ")x.TextColor3=Color3.fromRGB(0, 117, 250)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "Metacalled")then x.Text=string.gsub(x.Text, "Metacalled", "[Terminal X Admin Owner] Metacalled")x.TextColor3=Color3.fromRGB(0, 255, 0)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "Sinkicol")then x.Text=string.gsub(x.Text, "Sinkicol", "[Terminal X Admin Owner] Sinkicol")x.TextColor3=Color3.fromRGB(0, 255, 0)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "KAHZZE")then x.Text=string.gsub(x.Text, "KAHZZE", "[Eras Admin Owner] Era")x.TextColor3=Color3.fromRGB(255, 0, 0)end end end end end)end;
+    start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "ASKUC_P")then x.Text=string.gsub(x.Text, "ASKUC_P", "[Autistic fat ginger kid] Peter")x.TextColor3=Color3.fromRGB(0, 0, 0)end end end end end)end;  
     start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()
 end
-
     local localplayer = game.Players.LocalPlayer
 
     local Spam = [[
@@ -95,8 +99,7 @@ XXXXXXX       XXXXXXXIIIIIIIIII      $:::$                ttttttttttt      eeeee
  gang gang nigga XDDD   
  gang gang nigga XDDD   
  gang gang nigga XDDD   
- gang gang nigga XDDD   
-    ]]
+ gang gang nigga XDDD ]]
 
 local gPlayers = game:GetService("Players")
 local admin = game.Players.LocalPlayer.Name
@@ -125,8 +128,8 @@ function FIX_LIGHTING()
 	services.events = {}
 	local user = gPlayers.LocalPlayer
 	
-	local tprefix = ""
-	local scriptprefix = ""
+	local prfx = "-"
+	local scripprfx = ""
 	local split = " "
 
 	for i, v in pairs(game.CoreGui:GetDescendants()) do
@@ -232,10 +235,10 @@ function FIX_LIGHTING()
 	end
 	
 	local getprfx = function(strn)
-	    if strn:sub(1, string.len(tprefix)) == tprefix then
-	        return {"cmd", string.len(tprefix) + 1}
-	    elseif strn:sub(1, string.len(scriptprefix)) == scriptprefix then
-	        return {"exec", string.len(scriptprefix) + 1}
+	    if strn:sub(1, string.len(prfx)) == prfx then
+	        return {"cmd", string.len(prfx) + 1}
+	    elseif strn:sub(1, string.len(scripprfx)) == scripprfx then
+	        return {"exec", string.len(scripprfx) + 1}
 	    end
 	    return
 	end
@@ -638,14 +641,14 @@ addcmd(
         end)
 
         game.StarterGui:SetCore("SendNotification", {
-            Title="Hasher", Text="Hash copied!"})
+            Title="Xi$tence", Text="Hash copied!"})
         
         if setclipboard then 
             setclipboard(table.concat(Table,""))
         else 
             print(table.concat(Table,""))
         end
-     game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, Table)
+     game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, concat)
 end)
 
 addcmd(
@@ -714,7 +717,7 @@ addcmd(
 )
 addcmd(
     "Ws",
-    "changes the localplayer walkspeed",
+    "changes the localplayers walkspeed",
     {},
     function(args)
         local players = getPlayer(args[1])
@@ -729,22 +732,14 @@ addcmd(
         end
     end
 )
-addcmd(
-    "Add",
-    "lets a player use your admin commands",
-    {},
-    function(args)
-        if not args[1] then
-            return
+    addcmd(
+        "Prefix",
+        "Lets you change the prefix to anything",
+        {},
+        function(args)
+            wait()
+            prfx = args[1]
         end
-        local players = getPlayer(args[1])
-        table.foreach(
-            players,
-            function(k, v)
-                admins[v] = true
-            end
-        )
-    end
 )
 
 addcmd(
@@ -752,121 +747,8 @@ addcmd(
 	"makes the localplayer fly",
 {},
 	function(args)
-local mouse = game.Players.LocalPlayer:GetMouse ""
-local localplayer = game.Players.LocalPlayer
-game.Players.LocalPlayer.Character:WaitForChild("Torso")
-local torso = game.Players.LocalPlayer.Character.Torso
-local flying = true
-local speed = 5
-local keys = {a = false, d = false, w = false, s = false}
-local e1
-local e2
-local function start()
-local pos = Instance.new("BodyPosition", torso)
-local gyro = Instance.new("BodyGyro", torso)
-pos.Name = "EPIXPOS"
-pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
-pos.position = torso.Position
-gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
-gyro.cframe = torso.CFrame
-function NoFly()
-flying = false
-if gyro then
-gyro:Destroy()
-end
-if pos then
-pos:Destroy()
-end
-localplayer.Character.Humanoid.PlatformStand = false
-speed = 0
-end
-repeat
-wait()
-localplayer.Character.Humanoid.PlatformStand = true
-local new = gyro.cframe - gyro.cframe.p + pos.position
-if not keys.w and not keys.s and not keys.a and not keys.d then
-speed = 1
-end
-if keys.w then
-new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
-speed = speed + 0.05
-end
-if keys.s then
-new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
-speed = speed + 0.03
-end
-if keys.d then
-new = new * CFrame.new(speed, 0, 0)
-speed = speed + 0.02
-end
-if keys.a then
-new = new * CFrame.new(-speed, 0, 0)
-speed = speed + 0.03
-end
-if speed > 3 then
-speed = 3
-end
-pos.position = new.p
-if keys.w then
-gyro.cframe = workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad(speed * 6), 0, 0)
-elseif keys.s then
-gyro.cframe = workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(math.rad(speed * 5), 0, 0)
-else
-gyro.cframe = workspace.CurrentCamera.CoordinateFrame
-end
-until flying == false
-NoAnti()
-flying = false
-if gyro then
-gyro:Destroy()
-end
-if pos then
-pos:Destroy()
-end
-localplayer.Character.Humanoid.PlatformStand = false
-speed = 0
-end
-e1 = mouse.KeyDown:connect(function(key)
-if not torso or not torso.Parent then
-flying = false
-e1:disconnect()
-e2:disconnect()
-return
-end
-if key == "w" then
-keys.w = true
-elseif key == "s" then
-keys.s = true
-elseif key == "a" then
-keys.a = true
-elseif key == "d" then
-keys.d = true
-elseif key == "p" then
-keys.d = true
-end
-e2 = mouse.KeyUp:connect(function(key)
-if key == "w" then
-keys.w = false
-elseif key == "s" then
-keys.s = false
-elseif key == "a" then
-keys.a = false
-elseif key == "d" then
-keys.d = false
-end
-start()
-end)
-end)
-end)
-
-addcmd(
-    "unfly",
-    "makes localplayer fly",
-    {},
-    function(args)
-        NoFly()
-    end
-)
+loadstring(game:HttpGet(('https://pastebin.com/raw/6KVugL85'),true))()
+    end)
 
 -- Local Commands
 addcmd(
@@ -908,7 +790,7 @@ addcmd(
 local Player = game.Players.LocalPlayer
 Player.Chatted:connect(
     function(cht)
-        if cht:match(tprefix .. "noclip") then
+        if cht:match(prfx .. "noclip") then
             local function noclip(plr)
                 local admintag = Instance.new("BoolValue")
                 admintag.Parent = game.Players[plr]
@@ -933,8 +815,16 @@ Player.Chatted:connect(
 
 Player.Chatted:connect(
     function(cht)
-        if cht:match(tprefix .. "clip") then
+        if cht:match(prfx .. "clip") then
             game.Players.LocalPlayer.noclip:Destroy()
         end
     end
 )
+
+local val = math.random()
+	
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Xi$tence";    --Name your script here!
+    Text = "Script loaded in "..val.." Seconds enjoy";
+    Duration = 5;
+    })
