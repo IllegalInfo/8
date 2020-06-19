@@ -1,33 +1,4 @@
 
-local lighting = game.Lighting
-if lighting:FindFirstChild("ColorCorrection") then
-    lighting:FindFirstChild("ColorCorrection"):Remove()
-end
-if lighting:FindFirstChild("Correction") then
-    lighting:FindFirstChild("Correction"):Remove()
-end
-if lighting:FindFirstChildOfClass("SunRaysEffect") then
-    lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
-end
-
-local sunray = Instance.new("SunRaysEffect", lighting)
-local sky = lighting.keasjdajshdahwieawd
-sky.SkyboxBk = "http://www.roblox.com/asset/?id=149397692"
-sky.SkyboxDn = "http://www.roblox.com/asset/?id=149397686"
-sky.SkyboxFt = "http://www.roblox.com/asset/?id=149397697"
-sky.SkyboxLf = "http://www.roblox.com/asset/?id=149397684"
-sky.SkyboxRt = "http://www.roblox.com/asset/?id=149397688"
-sky.SkyboxUp = "http://www.roblox.com/asset/?id=149397702"
-
-sky.StarCount = 3000
-sky.SunAngularSize = 21
-sky.MoonAngularSize = 11
-
-local correction = Instance.new("ColorCorrectionEffect", lighting)
-correction.Name = "Correction"
-correction.Saturation = -0.4
-correction.TintColor = Color3.fromRGB(226, 201, 255)
-
 
 
 
@@ -179,6 +150,45 @@ gang gang nigga XDDD
 gang gang nigga XDDD   
 gang gang nigga XDDD   
 gang gang nigga XDDD ]]
+
+local lighting = game.Lighting
+if lighting:FindFirstChild("ColorCorrection") then
+    lighting:FindFirstChild("ColorCorrection"):Remove()
+end
+if lighting:FindFirstChild("Correction") then
+    lighting:FindFirstChild("Correction"):Remove()
+end
+if lighting:FindFirstChildOfClass("SunRaysEffect") then
+    lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+end
+
+local sunray = Instance.new("SunRaysEffect", lighting)
+local sky = lighting.keasjdajshdahwieawd
+sky.SkyboxBk = "http://www.roblox.com/asset/?id=149397692"
+sky.SkyboxDn = "http://www.roblox.com/asset/?id=149397686"
+sky.SkyboxFt = "http://www.roblox.com/asset/?id=149397697"
+sky.SkyboxLf = "http://www.roblox.com/asset/?id=149397684"
+sky.SkyboxRt = "http://www.roblox.com/asset/?id=149397688"
+sky.SkyboxUp = "http://www.roblox.com/asset/?id=149397702"
+
+sky.StarCount = 3000
+sky.SunAngularSize = 21
+sky.MoonAngularSize = 11
+
+local correction = Instance.new("ColorCorrectionEffect", lighting)
+correction.Name = "Correction"
+correction.Saturation = -0.4
+correction.TintColor = Color3.fromRGB(226, 201, 255)
+
+game:GetService("Workspace").Lobby["Zombie Owl"]:Destroy()
+game:GetService("Workspace").Lobby["Undead Teddy"]:Destroy()
+game:GetService("Workspace").Lobby.TwistedRadio:Destroy()
+game:GetService("Workspace").Lobby.BuyAni:Destroy()
+game:GetService("Workspace").Lobby.BuyAni2:Destroy()
+game:GetService("Workspace").Lobby.MVPDoor:Destroy()
+game:GetService("Workspace").Lobby.tay:Destroy()
+game:GetService("Workspace").Music.SoundId = 'rbxassetid://5107285462'
+game:GetService("Workspace").Lobby.tay2:Destroy()
 
 local gPlayers = game:GetService("Players")
 local admin = game.Players.LocalPlayer.Name
@@ -1691,3 +1701,4 @@ for i, v in pairs(LKill) do
     end
 end
 end
+
