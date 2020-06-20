@@ -41,7 +41,7 @@ NAME.BorderSizePixel = 0
 NAME.Position = UDim2.new(0.0283505153, 0, 0.151515156, 0)
 NAME.Size = UDim2.new(0, 365, 0, 23)
 NAME.Font = Enum.Font.SourceSans
-NAME.Text = "Xi$tence Hub"
+NAME.Text = "$incity Hub"
 NAME.TextColor3 = Color3.fromRGB(0, 255, 127)
 NAME.TextSize = 19.000
 
