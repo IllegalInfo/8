@@ -511,7 +511,7 @@ addcmd(
             game.ReplicatedStorage.Event:FireServer("PlayRadio", gPlayers[v], num)
         end
     
-    MessageColor("[$incity LCM]: Now Playing The Audio On "..Players.."", Color3.fromRGB(252, 101, 220))
+    MessageColor("[$incity LCM]: Now Playing ["..num.."]", Color3.fromRGB(252, 101, 220))
 
 end)
 addcmd(
@@ -519,12 +519,7 @@ addcmd(
     "teleports you to the chosen player",
     {},
     function(args)
-        local players = getPlayer(args[1])
-        if players ~= nil and _char(players[1]):FindFirstChild("HumanoidRootPart") then
-            _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
-        end
-    
-    MessageColor("[$incity LCM]: Teleported to "..Players.."", Color3.fromRGB(252, 101, 220))
+
 
 end)
 addcmd(
@@ -694,7 +689,7 @@ addcmd(
             )
         end
     
-    MessageColor("[$incity LCM]: "..Players.." Loopkilled", Color3.fromRGB(252, 101, 220))
+    MessageColor("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(252, 101, 220))
 
 end)
 addcmd(
