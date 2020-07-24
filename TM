@@ -1,981 +1,776 @@
 
-
-    local ContentProvider = game:GetService("ContentProvider")
-    local Players = game:GetService("Players")
-    local localPlayer = Players.LocalPlayer
-    local playerGui = localPlayer:WaitForChild("PlayerGui")
-    local screenGui = Instance.new("ScreenGui", playerGui)
-    local blur = Instance.new("BlurEffect",game.Lighting)
-    blur.Name = "Blur"
-    blur.Size = 35
-
-    local LoadingS = Instance.new("ScreenGui")
-    local Frame = Instance.new("Frame")
-    local TextLabel = Instance.new("TextLabel")
-
-    LoadingS.Name = "LoadingS"
-    LoadingS.Parent = game.CoreGui
-    LoadingS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-    Frame.Parent = LoadingS
-    Frame.BackgroundColor3 = Color3.new(0, 0, 0)
-    Frame.BackgroundTransparency = 0.15000000596046
-    Frame.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
-    Frame.Position = UDim2.new(0.300624967, 0, 0.0636645928, 0)
-    Frame.Size = UDim2.new(0, 640, 0, 33)
-
-    TextLabel.Parent = Frame
-    TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-    TextLabel.BackgroundTransparency = 1
-    TextLabel.BorderSizePixel = 0
-    TextLabel.Position = UDim2.new(-0.00308599463, 0, 0.164000005, 0)
-    TextLabel.Size = UDim2.new(0, 643, 0, 22)
-    TextLabel.Font = Enum.Font.SourceSansBold
-    TextLabel.Text = "Loading $incity"
-    TextLabel.TextColor3 = Color3.new(1, 1, 1)
-    TextLabel.TextSize = 20
-
-    TextLabel.Text = "Loading $incity"
-    wait(.5)
-    TextLabel.Text = "Loading $incity."
-    wait(.5)
-    TextLabel.Text = "Loading $incity.."
-    wait(.5)
-    TextLabel.Text = "Loading $incity..."
-    wait(1)
-    TextLabel.Text = "$incity Loaded, Enjoy! Advertise this shit if u want more updates XD"
-    wait(2)
-
-
-    Frame.BackgroundTransparency = 0.9
-    wait()
-    Frame.BackgroundTransparency = 0.8
-    blur.Size = 30
-    wait()
-    Frame.BackgroundTransparency = 0.7
-    blur.Size = 25
-    wait()
-    Frame.BackgroundTransparency = 0.6
-    wait()
-    Frame.BackgroundTransparency = 0.5
-    blur.Size = 20
-    wait()
-    Frame.BackgroundTransparency = 0.4
-    blur.Size = 15
-    wait()
-    Frame.BackgroundTransparency = 0.3
-    blur.Size = 10
-    wait()
-    Frame.BackgroundTransparency = 0.2
-    blur.Size = 5
-    wait()
-    LoadingS:Destroy()
-    Frame.BackgroundTransparency = 0
-    blur.Size = 0
-
-
-    local ScreenGui = Instance.new("ScreenGui")
-    local Frame = Instance.new("Frame")
-    local TextBox = Instance.new("TextBox")
-    local TextButton = Instance.new("TextButton")
-     
-    ScreenGui.Parent = game.CoreGui
-    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    
-    Frame.Parent = ScreenGui
-    Frame.BackgroundColor3 = Color3.new(0.0627451, 0.0627451, 0.0627451)
-    Frame.Position = UDim2.new(0, 0, 0.605590105, 0)
-    Frame.Size = UDim2.new(0, 153, 0, 64)
-    
-    TextBox.Parent = Frame
-    TextBox.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
-    TextBox.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
-    TextBox.Position = UDim2.new(0.0257221144, 0, 0.0983796269, 0)
-    TextBox.Size = UDim2.new(0, 144, 0, 20)
-    TextBox.Font = Enum.Font.SourceSans
-    TextBox.PlaceholderText = "Audio ID"
-    TextBox.Text = ""
-    TextBox.TextColor3 = Color3.new(0.32549, 0.72549, 0.835294)
-    TextBox.TextSize = 14
-    
-    TextButton.Parent = Frame
-    TextButton.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
-    TextButton.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
-    TextButton.Position = UDim2.new(0.0257221293, 0, 0.600217819, 0)
-    TextButton.Size = UDim2.new(0, 144, 0, 20)
-    TextButton.Font = Enum.Font.SourceSans
-    TextButton.Text = "Play"
-    TextButton.TextColor3 = Color3.new(1, 1, 1)
-    TextButton.TextSize = 14
-    
-    TextButton.MouseButton1Down:Connect(function()
-        game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, TextBox.Text)
-    end)
-
-    function MessageColor(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')local b=n:FindFirstChild('Chat'):Clone()local c=game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats;
-        spawn(function()for i, x in pairs(c:GetChildren())do x.Position=x.Position+UDim2.new(0, 0, 0, -15)end;
-        b.Parent=c;
-        b.Text=v.." "b.TextColor3=w;
-        wait(15)for y=0, 1, 0.1 do wait(0.1)b.TextStrokeTransparency=1;
-        b.TextTransparency=y end;
-        b:Destroy()end)end;
-        function Message(v, z, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')local b=n:FindFirstChild('Chat'):Clone()local c=game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats;
-        spawn(function()for i, x in pairs(c:GetChildren())do x.Position=x.Position+UDim2.new(0, 0, 0, -15)end;
-        b.Parent=c;
-        b.Text=v.." "..z;
-        wait(13)for y=0, 1, 0.1 do wait(0.1)b.TextStrokeTransparency=1;
-        b.TextTransparency=y end;
-        b:Destroy()end)end;
-        MessageColor("[$incity]: Admin Loaded! Enjoy!", Color3.fromRGB(252, 101, 220))for i,
-        x in pairs(game.Players:GetChildren())do x.Chatted:Connect(function(A)if string.find(A, "/e ")then Message(x.Name..": ", A)end end)end;
-        game.StarterGui:SetCore("SendNotification", {
-            Title="Check", Text="Blacklist check passed!"}
-        
-        
-        )local B=game:GetService("Players")local C=B.LocalPlayer.Name;
-        local D= {
-            'Player',
-            'Player1'
-        }
-        
-        local E= {
-            'Player, Player1'
-        }
-        
-        local F= {}
-        
-        local G= {}
-        
-        local H= {}
-        
-        local I=false;
-        
-        local aw=game.Players.LocalPlayer;
-        aw.Chatted:Connect(function(ax)if ax:match("lmaogetgun")then for i, x in pairs(game.Players:GetChildren())do if game.Players[x.Name].Character:FindFirstChild("Role")then local aF=game.Players[x.Name].Character:FindFirstChild("Role")if aF.Value=="Sheriff"then game.ReplicatedStorage.Event:FireServer("TPD", 999, game.Workspace.Ignore.Players[x.Name].Humanoid)end end end;
-        wait(1)repeat wait(0, 1)game.Workspace.Gun.CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame until game.Players.LocalPlayer.Backpack:FindFirstChild("Gun")or game.Workspace.Gun==nil end end)local aw=game.Players.LocalPlayer;
-        aw.Chatted:Connect(function(ax)if ax:match("lmaok murderer")then for i, x in pairs(game.Players:GetChildren())do if game.Players[x.Name].Character:FindFirstChild("Role")then local aF=game.Players[x.Name].Character:FindFirstChild("Role")if aF.Value=="Murderer"then game.ReplicatedStorage.Event:FireServer("TPD", 999, game.Workspace.Ignore.Players[x.Name].Humanoid)end end end end end)local aw=game.Players.LocalPlayer;
-        aw.Chatted:Connect(function(ax)if ax:match("lmaok sheriff")then for i, x in pairs(game.Players:GetChildren())do if game.Players[x.Name].Character:FindFirstChild("Role")then local aF=game.Players[x.Name].Character:FindFirstChild("Role")if aF.Value=="Sheriff"then game.ReplicatedStorage.Event:FireServer("TPD", 999, game.Workspace.Ignore.Players[x.Name].Humanoid)end end end end end)aw.Chatted:Connect(function(ax)if ax:match("lmaonoclip")then function noclip(a7)admintag=Instance.new("BoolValue")admintag.Parent=game.Players[a7]admintag.Value=true;
-        admintag.Name="noclip"end;
-        if game.Players.LocalPlayer:FindFirstChild("noclip")then game.Players.LocalPlayer.noclip:Destroy()end;
-        noclip(game.Players.LocalPlayer.Name)game:GetService('RunService').Stepped:connect(function()if game.Players.LocalPlayer:FindFirstChild("noclip")then game.Players.LocalPlayer.Character.Head.CanCollide=false;
-        game.Players.LocalPlayer.Character.Torso.CanCollide=false end end)end end)aw.Chatted:Connect(function(ax)if ax:match("lmaoclip")then game.Players.LocalPlayer.noclip:Destroy()end end)game.Players.LocalPlayer.Chatted:Connect(function(A)if string.find(A, "lmaows ")then game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed=A:sub(4)end end)game.Players.LocalPlayer.Chatted:Connect(function(A)if string.find(A, "lmaojp ")then game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower=A:sub(4)end end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "/e")then x.Text=string.gsub(x.Text, "", "")x.TextColor3=Color3.fromRGB(255, 0, 40)end end end end end)end;
-        start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()game:GetService('RunService').Stepped:connect(function()local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI")if n then for i, x in pairs(n.Chats:GetChildren())do if x.Name=="Chat"then if string.find(x.Text, "666Zvck")then x.Text=string.gsub(x.Text, "666Zvck", "[Owner] Zack")x.TextColor3=Color3.fromRGB(0, 0, 0)end end end end end)end;
-        start()game.Players.LocalPlayer.CharacterAdded:Connect(function()start()end)function start()
-    end
-        local localplayer = game.Players.LocalPlayer
-
-        local Spam = [[                                                                                                                                
-    gang gang nigga XDDD                                                                                                                                                         
-    gang gang nigga XDDD                                                                                                                                                         
-    gang gang nigga XDDD                                                                                                                                                          
-    gang gang nigga XDDD                                                                                                                                                         
-    gang gang nigga XDDD                                                                                                                                                         
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD   
-    gang gang nigga XDDD ]]
-
-
-    local gPlayers = game:GetService("Players")
-    local admin = game.Players.LocalPlayer.Name
-    local bannedplayers = {""}
-
-    local admins = {"Friend, Friend"}
-
-    local services = {}
-    local cmds = {}
-    local std = {}
-
-    local serverLocked = false
-
-    function FIX_LIGHTING()
-        game.Lighting.Ambient = Color3.new(0.5, 0.5, 0.5)
-        game.Lighting.Brightness = 1
-        game.Lighting.GlobalShadows = true
-        game.Lighting.Outlines = false
-        game.Lighting.TimeOfDay = 14
-        game.Lighting.FogEnd = 100000
-        end
-
-        services.players = gPlayers
-        services.lighting = game:GetService("Lighting")
-        services.workspace = game:GetService("Workspace")
-        services.events = {}
-        local user = gPlayers.LocalPlayer
-        
-        local prfx = ""
-        local scripprfx = ""
-        local split = " "
-
-        for i, v in pairs(game.CoreGui:GetDescendants()) do
-            if v:IsA("TextLabel") and v.Text == "$incity" then
-                print(v:GetFullName())
-            end
-        end
-        
-        local updateevents = function()
-            for i, v in pairs(services.events) do
-                services.events:remove(i)
-                v:disconnect()
-            end
-            for i, v in pairs(gPlayers:players()) do
-                local ev =
-                    v.Chatted:connect(
-                    function(msg)
-                        do_exec(msg, v)
-                    end
-                )
-                services.events[#services.events + 1] = ev
-            end
-        end
-
-        std.inTable = function(tbl, val)
-            if tbl == nil then
-                return false
-            end
-        
-            for _, v in pairs(tbl) do
-                if v == val then
-                    return true
-                end
-            end
-            return false
-        end
-        
-        std.out = function(str)
-            print(str)
-        end
-        
-        std.list = function(tbl)
-            local str = ""
-            for i, v in pairs(tbl) do
-                str = str .. tostring(v)
-                if i ~= #tbl then
-                    str = str .. ", "
-                end
-            end
-            return str
-        end
-        
-        std.endat = function(str, val)
-            local z = str:find(val)
-            if z then
-                return str:sub(0, z - string.len(val)), true
-            else
-                return str, false
-            end
-        end
-        
-        std.first = function(str)
-            return str:sub(1, 1)
-        end
-        
-        local isAdmin = function(name)
-            if name == admin then
-                return true
-            elseif admins[name] == true then
-                return true
-            end
-            return false
-        end
-        
-        local exec = function(str)
-            spawn(
-                function()
-                    local script, loaderr = loadstring(str)
-                    if not script then
-                        error(loaderr)
-                    else
-                        script()
-                    end
-                end
-            )
-        end
-        
-        local findCmd = function(cmd_name)
-            for i, v in pairs(cmds) do
-                if v.NAME:lower() == cmd_name:lower() or std.inTable(v.ALIAS, cmd_name:lower()) then
-                    return v
-                end
-            end
-        end
-        
-        local getCmd = function(msg)
-            local cmd, hassplit = std.endat(msg:lower(), split)
-            if hassplit then
-                return {cmd, true}
-            else
-                return {cmd, false}
-            end
-        end
-        
-        local getprfx = function(strn)
-            if strn:sub(1, string.len(prfx)) == prfx then
-                return {"cmd", string.len(prfx) + 1}
-            elseif strn:sub(1, string.len(scripprfx)) == scripprfx then
-                return {"exec", string.len(scripprfx) + 1}
-            end
-            return 
-        end
-        
-        local getArgs = function(str)
-            local args = {}
-            local new_arg = nil
-            local hassplit = nil
-            local s = str
-            repeat
-                new_arg, hassplit = std.endat(s:lower(), split)
-                if new_arg ~= "" then
-                    args[#args + 1] = new_arg
-                    s = s:sub(string.len(new_arg) + string.len(split) + 1)
-                end
-            until hassplit == false
-            return args
-        end
-        
-        local function execCmd(str, plr)
-            local s_cmd
-            local a
-            local cmd
-            s_cmd = getCmd(str) --separate command from string using split {command name,arg bool (for arg system)}
-            cmd = findCmd(s_cmd[1]) --get command object {NAME,DESC,{ALIASES},function(args)}
-            if cmd == nil then
-                return
-            end
-            a = str:sub(string.len(s_cmd[1]) + string.len(split) + 1)
-            --start string "a" after command and split
-            local args = getArgs(a)
-            --gets us a nice table of arguments
-        
-            pcall(
-                function()
-                    cmd.FUNC(args, plr)
-                end
-            )
-        end
-        
-        function do_exec(str, plr)
-            if not isAdmin(plr.Name) then
-                return
-            end
-        
-            str = str:gsub("/e ", "") --remove "/e " the easy way!
-        
-            local t = getprfx(str)
-            if t == nil then
-                return
-            end
-            str = str:sub(t[2])
-            if t[1] == "exec" then
-                exec(str)
-            elseif t[1] == "cmd" then
-                execCmd(str, plr)
-            end
-        end
-        
-        updateevents()
-    _G.exec_cmd = execCmd
-        --game.Players.LocalPlayer.Chatted:connect(doexec)
-        
-        local _char = function(plr_name)
-            for i, v in pairs(game.Players:GetChildren()) do
-                if v:IsA "Player" then
-                    if v.Name == plr_name then
-                        return v.Character
-                    end
-                end
-            end
-            return
-        end
-        
-        local _plr = function(plr_name)
-            for i, v in pairs(game.Players:GetChildren()) do
-                if v:IsA "Player" then
-                    if v.Name == plr_name then
-                        return v
-                    end
-                end
-            end
-            return
-        end
-        
-        function addcmd(name, desc, alias, func)
-            cmds[#cmds + 1] = {
-                NAME = name,
-                DESC = desc,
-                ALIAS = alias,
-                FUNC = func
-            }
-        end
-        
-        local function getPlayer(name)
-            local nameTable = {}
-            name = name:lower()
-            if name == "me" then
-                return {admin}
-            elseif name == "others" then
-                for i, v in pairs(gPlayers:GetChildren()) do
-                    if v:IsA "Player" then
-                        if v.Name ~= admin then
-                            nameTable[#nameTable + 1] = v.Name
-                        end
-                    end
-                end
-            elseif name == "all" then
-                for i, v in pairs(gPlayers:GetChildren()) do
-                    if v:IsA "Player" then
-                        nameTable[#nameTable + 1] = v.Name
-                    end
-                end
-            else
-                for i, v in pairs(gPlayers:GetChildren()) do
-                    local lname = v.Name:lower()
-                    local i, j = lname:find(name)
-                    if i == 1 then
-                        return {v.Name}
-                    end
-                end
-            end
-            return nameTable
-        end
-    local a =
-        setmetatable(
-            {},
-            {__index = function(b, c)
-                    return game:service(c)
-                end}
-        )
-    local d = {"AntiSpeedHack", "AntiDataTheft", "UI", "NO FF"}
-    local e = a.Players.LocalPlayer
-    local f = {}
-    function NoAnti()
-        spawn(
-            function()
-                a.RunService.RenderStepped:wait()
-                for g, h in pairs(f) do
-                    h:remove()
-                    f[g] = nil
-                end
-                for g, h in pairs(e.PlayerGui:GetChildren()) do
-                    for g, b in pairs(d) do
-                        if b == h.Name then
-                            h:remove()
-                        end
-                    end
-                end
-            end
-        )
-    end
-    NoAnti()
-
-    addcmd(
-        "lg",
-        "loopgods the chosen player",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            NoAnti()
-            for i, v in pairs(players) do
-                if gPlayers[v]:FindFirstChild("god") then
-                    gPlayers[v]:FindFirstChild("god"):Destroy()
-                end
-                local god = Instance.new("BoolValue")
-                god.Parent = gPlayers[v]
-                god.Value = true
-                god.Name = "god"
-
-                game:GetService("RunService").RenderStepped:connect(
-                    function()
-                        if gPlayers[v]:FindFirstChild("god") then
-                            game.ReplicatedStorage.Event:FireServer(
-                                "TPD",
-                                -math.huge ^ 1.45,
-                                gPlayers[v].Character:FindFirstChild("Humanoid")
-                            )
-                            game.ReplicatedStorage.Event:FireServer(
-                                "TPD",
-                                math.huge,
-                                gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or
-                                    gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid")
-                            )
-                        end
-                    end
-                )
-            end
-        
-        MessageColor("[$incity LCM]: Player(-s) loopgodded", Color3.fromRGB(252, 101, 220))
-
-    end)
-    addcmd(
-        "unlg",
-        "ungods the chosen player",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            for i, v in pairs(players) do
-                if gPlayers[v]:FindFirstChild("god") then
-                    gPlayers[v]:FindFirstChild("god"):Destroy()
-    game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
-                end
-            end
-        
-        MessageColor("[$incity LCM]: Player(-s) Unloopgodded", Color3.fromRGB(252, 101, 220))
-
-    end)
-
-
-    addcmd(
-        "radio",
-        "plays an audio",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            if not args[1] or not args[2] then
-                return
-            end
-            local num = args[2]
-            for i, v in pairs(players) do
-                game.ReplicatedStorage.Event:FireServer("PlayRadio", gPlayers[v], num)
-            end
-        
-        MessageColor("[$incity LCM]: Now Playing ["..num.."]", Color3.fromRGB(252, 101, 220))
-
-    end)
-    addcmd(
-        "to",
-        "teleports you to the chosen player",
-        {},
-        function(args)
-
-
-    end)
-
-
-    addcmd(
-        "kill",
-        "Kills the chosen player.",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            for i, v in pairs(players) do
-                game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
-            end
-        
-        MessageColor("[$incity LCM]: "..players.." Killed", Color3.fromRGB(252, 101, 220))
-    end)
-    addcmd(
-        "dmg",
-        "damages the chosen player",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            if not args[1] or not args[2] then
-                return
-            end
-            local num = args[2]
-            for i, v in pairs(players) do
-                game.ReplicatedStorage.Event:FireServer("TPD", num, gPlayers[v].Character.Humanoid)
-            end
-        
-        MessageColor("[$incity LCM]: Player(s) Damaged ["..num.."]", Color3.fromRGB(252, 101, 220))
-
-    end)
-    
-    addcmd(
-        "gay%",
-        "Shows a gay percentage",
-        {},
-        function(args)
-            if arguments[2] then
-                target = findplr(arguments[2])
-                if target then
-                    local gayREAL = math.random(0,100)
-                    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(target.Name.." is "..gayREAL.."% gay","All")
-                end
-            end
-        end)
-    addcmd(
-        "heal",
-        "heals the chosen player",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            if not args[1] or not args[2] then
-                return
-            end
-            local num = args[2]
-                NoAnti()
-            for i, v in pairs(players) do
-                game.ReplicatedStorage.Event:FireServer("TPD", -num, gPlayers[v].Character.Humanoid)
-            end
-        
-            MessageColor("[$incity LCM]: Player(s) Healed ["..num.."]", Color3.fromRGB(252, 101, 220))
-
-    end)    
-
-    addcmd(
-        "view",
-        "view's the chosen player",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            workspace.CurrentCamera.CameraSubject = game.Players[players[1]].Character
-            MessageColor("[$incity LCM]: You Are Now Spectating ["..players.."] Fucking pedo :rolling_eyes:", Color3.fromRGB(252, 101, 220))
-        end)
-    addcmd( 
-        "Kgui",
-        "Opens the $incity knife gui",
-        {},
-        function(args)
-            MessageColor("[$incity LCM]: Knife Gui Loaded", Color3.fromRGB(252, 101, 220))
-            loadstring(game:HttpGet("https://pastebin.com/raw/SN5BmNtD"))()
-        end
-    )
-    addcmd(
-        "lk",
-        "100 ping or <",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            for i, v in pairs(players) do
-                if gPlayers[v]:FindFirstChild("fasterloop") then
-                    gPlayers[v]:FindFirstChild("fasterloop"):Destroy()
-                end
-                local fasterloop = Instance.new("BoolValue")
-                fasterloop.Parent = gPlayers[v]
-                fasterloop.Value = true
-                fasterloop.Name = "fasterloop"
-                game:GetService("RunService").RenderStepped:connect(
-                    function()
-                    game.RunService.Stepped:wait()
-                        if gPlayers[v]:FindFirstChild("fasterloop") then
-                            local s =
-                                game:GetService("Players"):FindFirstChild(gPlayers[v].Name).Character:FindFirstChild(
-                                "Humanoid"
-                            )
-                            game.ReplicatedStorage.Event:FireServer("TPD", math.huge, s)
-                        end
-                    end
-                )
-            end
-        
-        MessageColor("[$incity LCM]: "..Players.." Loopkilled", Color3.fromRGB(252, 101, 220))
-    end)
-    addcmd(
-        "unlk",
-        "unloops the chosen player",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            for i, v in pairs(players) do
-                if gPlayers[v]:FindFirstChild("fasterloop") then
-                    gPlayers[v]:FindFirstChild("fasterloop"):Destroy()
-                end
-            end
-        
-        MessageColor("[$incity LCM]: "..Players.." Unloopkilled", Color3.fromRGB(252, 101, 220))
-    end)
-    addcmd(
-        "HID",
-        "Protects your audio and plays it",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            local val1 = args[1]
-            local UrlEncoder = {
-                ['0'] = "%30";
-                ['1'] = "%31";
-                ['2'] = "%32";
-                ['3'] = "%33"; 
-                ['4'] = "%34";
-                ['5'] = "%35";
-                ['6'] = "%36";
-                ['7'] = "%37";
-                ['8'] = "%38";
-                ['9'] = "%39";
-                [' '] = "%20"
-            }
-
-            local String,Table = val1 ,{}
-            String:gsub('.',function(Char)
-                if UrlEncoder[Char] then 
-                    table.insert(Table,UrlEncoder[Char])
-                else 
-                    table.insert(Table,Char)
-                end
+            local x = tick(start)
+            local ScreenGui = Instance.new("ScreenGui")
+            local Frame = Instance.new("Frame")
+            local TextBox = Instance.new("TextBox")
+            local TextButton = Instance.new("TextButton")
+            
+            ScreenGui.Parent = game.CoreGui
+            ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+            
+            Frame.Parent = ScreenGui
+            Frame.BackgroundColor3 = Color3.new(0.0627451, 0.0627451, 0.0627451)
+            Frame.Position = UDim2.new(0, 0, 0.605590105, 0)
+            Frame.Size = UDim2.new(0, 153, 0, 64)
+            
+            TextBox.Parent = Frame
+            TextBox.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+            TextBox.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
+            TextBox.Position = UDim2.new(0.0257221144, 0, 0.0983796269, 0)
+            TextBox.Size = UDim2.new(0, 144, 0, 20)
+            TextBox.Font = Enum.Font.SourceSans
+            TextBox.PlaceholderText = "Audio ID"
+            TextBox.Text = ""
+            TextBox.TextColor3 = Color3.new(0.32549, 0.72549, 0.835294)
+            TextBox.TextSize = 14
+            
+            TextButton.Parent = Frame
+            TextButton.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+            TextButton.BorderColor3 = Color3.new(0.509804, 0.796079, 1)
+            TextButton.Position = UDim2.new(0.0257221293, 0, 0.600217819, 0)
+            TextButton.Size = UDim2.new(0, 144, 0, 20)
+            TextButton.Font = Enum.Font.SourceSans
+            TextButton.Text = "Play"
+            TextButton.TextColor3 = Color3.new(1, 1, 1)
+            TextButton.TextSize = 14
+            
+            TextButton.MouseButton1Down:Connect(function()
+                game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, TextBox.Text)
             end)
 
-            game.StarterGui:SetCore("SendNotification", {
-                Title="$incity", Text="Hash copied!"})
-            
-            if setclipboard then 
-                setclipboard(table.concat(Table,""))
-            else 
-                print(table.concat(Table,""))
-            end
-        game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, concat)
-    end)
+        local Pname = game.Players.LocalPlayer.Name
 
-    addcmd(
-        "lk",
-        "loopkills the chosen person",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            for i, v in pairs(players) do
-                game:GetService("RunService").RenderStepped:connect(
-                    function()
-                    game.RunService.Stepped:wait()
-                        local s =
-                            game:GetService("Players"):WaitForChild(gPlayers[v].Name).Character:FindFirstChild("Humanoid")
-                        game.ReplicatedStorage.Event:FireServer("TPD", math.huge, s)
-                    end
-                )
-            end
-        
-        MessageColor("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(252, 101, 220))
+            function SendM(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')local b=n:FindFirstChild('Chat'):Clone()local c=game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats;
+                spawn(function()for i, x in pairs(c:GetChildren())do x.Position=x.Position+UDim2.new(0, 0, 0, -15)end;
+                b.Parent=c;
+                b.Text=v.." "b.TextColor3=w;
+                wait(15)for y=0, 1, 0.1 do wait(0.1)b.TextStrokeTransparency=1;
+                b.TextTransparency=y end;
+                b:Destroy()end)end;
+                function Message(v, z, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEController')local b=n:FindFirstChild('Chat'):Clone()local c=game.Players.LocalPlayer.PlayerGui:WaitForChild('GUI').Chats;
+                spawn(function()for i, x in pairs(c:GetChildren())do x.Position=x.Position+UDim2.new(0, 0, 0, -15)end;
+                b.Parent=c;
+                b.Text=v.." "..z;
+                wait(13)for y=0, 1, 0.1 do wait(0.1)b.TextStrokeTransparency=1;
+                b.TextTransparency=y end;
+                b:Destroy()end)end;
+                SendM("[$incity v2 LCM]: $incity v2 Loaded", Color3.fromRGB(123, 255, 71))
+                SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: []", Color3.fromRGB(123, 255, 71))
+                for i, x in pairs(game.Players:GetChildren())do x.Chatted:Connect(function(A)if string.find(A, "/e ")then Message(x.Name..": ", A)end end)end;
 
-    end)
-    addcmd(
-        "cmds",
-        "shows the list for admin commands",
-        {},
-        function(args)
-    print([[
-
-        
-        ------------------------------------------------------------
-        -- radio (name)(me, others, all work too!) (audio id)
-        -- Kill (name)
-        -- Loopkill(name)
-        -- HID (Audio ID) -- Protects your audio from skids.
-        -- Lk (name)
-        -- Unlk (name)
-        -- God (name)
-        -- Ungod (name) 
-        -- dmg (name) (number 1-100)
-        -- heal (name) (number 1-100)
-        -- cloak (name) 
-        -- fly (localplayer only)
-        -- unfly (localplayer only)
-        -- noclip (localplayer only)
-        -- ws (localplayer only)
-        -- clip (localplayer only)
-        -- view (name)
-        -- shiftlock (localplayer only)
-        -- Rejoin (localplayer only)
-        -- leave (localplayer only)
-        ------------------------------------------------------------------------------]])
-        MessageColor("[$incity LCM]: Commands printed in the console", Color3.fromRGB(252, 101, 220))
-    end)
-        
-    addcmd(
-        "cloak",
-        "makes the chosen player invisible",
-        {},
-        function(args)
-            local players = getPlayer(args[1])
-            for i, v in pairs(players) do
-                local workspacep = game.Workspace.Ignore.Players
-                local audio = workspacep:FindFirstChild(players[1])
-                game.ReplicatedStorage.Event:FireServer("Cloak", audio)
-            end
-        
-        MessageColor("[$incity LCM]: "..Players.." Cloaked", Color3.fromRGB(252, 101, 220))
-    end)
-    addcmd(
-        "Ws",
-        "changes the localplayers walkspeed",
-        {},
-        function(args)
-            local walkspeedvalue = args[1]
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = walkspeedvalue
-            MessageColor("[$incity LCM]: Walkspeed Changed To ["..walkspeedvalue.."]", Color3.fromRGB(252, 101, 220))
-        end)
-        addcmd(
-            "Prefix",
-            "Lets you change the prefix to anything",
-            {},
-            function(args)
-                wait()
-                prfx = args[1]
-            
-            MessageColor("[$incity LCM]: Prefix Changed To ["..prfx.."]", Color3.fromRGB(252, 101, 220))
-            if prfx == "!" then 
-game.StarterGui:SetCore("SendNotification", {
-                Title="$incity", Text="Prefix Set To [!] (Matts Admin)"})
-
-
-elseif prfx == "." then
     game.StarterGui:SetCore("SendNotification", {
-        Title="$incity", Text="Prefix Set To [.] (Faxng Admin)"})
-
-
-elseif prfx == ":" then
-    game.StarterGui:SetCore("SendNotification", {
-        Title="$incity", Text="Prefix Set To [:] (Aidez)"})
-
-
-elseif prfx == "/" then
-    game.StarterGui:SetCore("SendNotification", {
-        Title="$incity", Text="Prefix Set To [/] (Terminal X)"})
-   
-        
-elseif prfx == "`" then
-    game.StarterGui:SetCore("SendNotification", {
-        Title="$incity", Text="Prefix Set To [`] ($incity)"})        
-
-          end
-end)
-
-
-    addcmd(
-        "bg",
-        "brings the gun to you",
-        {},
-        function(args)
-            game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    wait(1)
-            game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    wait(1)
-            game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-            MessageColor("[$incity LCM]: Gun Teleported!", Color3.fromRGB(252, 101, 220))
-        end)
-
-    addcmd(
-        "fly",
-        "makes the localplayer fly",
-    {},
-        function(args)
-            MessageColor("[$incity LCM]: You Are Now Flying! Press E To Stop", Color3.fromRGB(252, 101, 220))
-    loadstring(game:HttpGet(('https://pastebin.com/raw/6KVugL85'),true))()
-
-        end)
-
-
-    addcmd(
-        "rejoin",
-        "makes the localplayer rejoin",
-        {},
-        function(args)
-            MessageColor("[$incity LCM]: Rejoining.. Please Wait!", Color3.fromRGB(252, 101, 220))
-            game:GetService("TeleportService"):Teleport(game.PlaceId)
-        end
-    )
-
-    addcmd(
-        "leave",
-        "lol",
-        {},
-        function(args)
-            MessageColor("[$incity LCM]: Rage Quit lol", Color3.fromRGB(252, 101, 220))
-            wait(.5)
-            game:Shutdown()
-        end
-    )
-
-    addcmd(
-        "reset",
-        "Makes you reset.",
-        {},
-        function(args)
-            MessageColor("[$incity LCM]: Holl up lemme get my shotgun Xddddd", Color3.fromRGB(252, 101, 220))
-            game.Players.LocalPlayer.Character:BreakJoints()
-        end
-    )
-
-    addcmd(
-        "shiftlock",
-        "enables shiftlock",
-        {},
-        function(args)
-            game.Players.LocalPlayer.DevEnableMouseLock = true
-            MessageColor("[$incity LCM]: Shiftlock Enabled", Color3.fromRGB(252, 101, 220))
-        end)
-
-        if game.Players:FindFirstChild("sofieIove") then
-            game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
-end
-
-    local Player = game.Players.LocalPlayer
-    Player.Chatted:connect(
-        function(cht)
-            if cht:match(prfx .. "noclip") then
-                local function noclip(plr)
-                    local admintag = Instance.new("BoolValue")
-                    admintag.Parent = game.Players[plr]
-                    admintag.Value = true
-                    admintag.Name = "noclip"
-                end
+                Title="Check", Text="Blacklist check passed!"}
+                
+                
+                )local B=game:GetService("Players")local C=B.LocalPlayer.Name;
+                local D= {
+                    'Player',
+                    'Player1'
+                }
+                
+                local E= {
+                    'Player, Player1'
+                }
+                
+                local F= {}
+                
+                local G= {}
+                
+                local H= {}
+                
+                local I=false;
+                
                 if game.Players.LocalPlayer:FindFirstChild("noclip") then
                     game.Players.LocalPlayer.noclip:Destroy()
+                    end
+                
+                function start()game:GetService('RunService').Stepped:connect(function()
+                    local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then for i, x in pairs(n.Chats:GetChildren())do
+                        if x.Name=="Chat"then if string.find(x.Text, "/e") then x.Text=string.gsub(x.Text, "", "")x.TextColor3=Color3.fromRGB(255, 0, 40)
+                        end
+                    end 
+                    end
+                end 
+                end)
+            end
+            
+                start()game.Players.LocalPlayer.CharacterAdded:Connect(function()
+                    start()
+                end)
+                    function start()
+                        game:GetService('RunService').Stepped:connect(function()
+                            local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then for i, x in pairs(n.Chats:GetChildren()) do
+                                if x.Name=="Chat" then if string.find(x.Text, "exclusiveclique")then x.Text=string.gsub(x.Text, "exclusiveclique", "[Owner] Zack")x.TextColor3=Color3.fromRGB(0, 144, 163)
+                
+                                end
+                            end
+                        end 
+                        end
+                    end)
+                end;
+            
+                local localplayer = game.Players.LocalPlayer
+            
+
+
+            local localplayer = game.Players.LocalPlayer
+            local gPlayers = game:GetService("Players")
+            local admin = game.Players.LocalPlayer.Name
+            local bannedplayers = {""}
+            local admins = {"Friend, Friend"}
+            local services = {}
+            local cmds = {}
+            local std = {}
+            local serverLocked = false
+
+
+                services.players = gPlayers
+                services.lighting = game:GetService("Lighting")
+                services.workspace = game:GetService("Workspace")
+                services.events = {}
+                local user = gPlayers.LocalPlayer
+                
+                local prfx = ""
+                local scripprfx = ""
+                local split = " "
+
+                for i, v in pairs(game.CoreGui:GetDescendants()) do
+                    if v:IsA("TextLabel") and v.Text == "$incity" then
+                        print(v:GetFullName())
+                    end
                 end
-                noclip(game.Players.LocalPlayer.Name)
-                game:GetService("RunService").Stepped:connect(
+                
+                local updateevents = function()
+                    for i, v in pairs(services.events) do
+                        services.events:remove(i)
+                        v:disconnect()
+                    end
+                    for i, v in pairs(gPlayers:players()) do
+                        local ev =
+                            v.Chatted:connect(
+                            function(msg)
+                                do_exec(msg, v)
+                            end
+                        )
+                        services.events[#services.events + 1] = ev
+                    end
+                end
+
+                std.inTable = function(tbl, val)
+                    if tbl == nil then
+                        return false
+                    end
+                
+                    for _, v in pairs(tbl) do
+                        if v == val then
+                            return true
+                        end
+                    end
+                    return false
+                end
+                
+                std.out = function(str)
+                    print(str)
+                end
+                
+                std.list = function(tbl)
+                    local str = ""
+                    for i, v in pairs(tbl) do
+                        str = str .. tostring(v)
+                        if i ~= #tbl then
+                            str = str .. ", "
+                        end
+                    end
+                    return str
+                end
+                
+                std.endat = function(str, val)
+                    local z = str:find(val)
+                    if z then
+                        return str:sub(0, z - string.len(val)), true
+                    else
+                        return str, false
+                    end
+                end
+                
+                std.first = function(str)
+                    return str:sub(1, 1)
+                end
+                
+                local isAdmin = function(name)
+                    if name == admin then
+                        return true
+                    elseif admins[name] == true then
+                        return true
+                    end
+                    return false
+                end
+                
+                local exec = function(str)
+                    spawn(
+                        function()
+                            local script, loaderr = loadstring(str)
+                            if not script then
+                                error(loaderr)
+                            else
+                                script()
+                            end
+                        end
+                    )
+                end
+                
+                local findCmd = function(cmd_name)
+                    for i, v in pairs(cmds) do
+                        if v.NAME:lower() == cmd_name:lower() or std.inTable(v.ALIAS, cmd_name:lower()) then
+                            return v
+                        end
+                    end
+                end
+                
+                local getCmd = function(msg)
+                    local cmd, hassplit = std.endat(msg:lower(), split)
+                    if hassplit then
+                        return {cmd, true}
+                    else
+                        return {cmd, false}
+                    end
+                end
+                
+                local getprfx = function(strn)
+                    if strn:sub(1, string.len(prfx)) == prfx then
+                        return {"cmd", string.len(prfx) + 1}
+                    elseif strn:sub(1, string.len(scripprfx)) == scripprfx then
+                        return {"exec", string.len(scripprfx) + 1}
+                    end
+                    return 
+                end
+                
+                local getArgs = function(str)
+                    local args = {}
+                    local new_arg = nil
+                    local hassplit = nil
+                    local s = str
+                    repeat
+                        new_arg, hassplit = std.endat(s:lower(), split)
+                        if new_arg ~= "" then
+                            args[#args + 1] = new_arg
+                            s = s:sub(string.len(new_arg) + string.len(split) + 1)
+                        end
+                    until hassplit == false
+                    return args
+                end
+                
+                local function execCmd(str, plr)
+                    local s_cmd
+                    local a
+                    local cmd
+                    s_cmd = getCmd(str) 
+                    cmd = findCmd(s_cmd[1]) 
+                    if cmd == nil then
+                        return
+                    end
+                    a = str:sub(string.len(s_cmd[1]) + string.len(split) + 1)
+                
+                    local args = getArgs(a)
+                    
+                
+                    pcall(
+                        function()
+                            cmd.FUNC(args, plr)
+                        end
+                    )
+                end
+                
+                function do_exec(str, plr)
+                    if not isAdmin(plr.Name) then
+                        return
+                    end
+                
+                    str = str:gsub("/e ", "") 
+                
+                    local t = getprfx(str)
+                    if t == nil then
+                        return
+                    end
+                    str = str:sub(t[2])
+                    if t[1] == "exec" then
+                        exec(str)
+                    elseif t[1] == "cmd" then
+                        execCmd(str, plr)
+                    end
+                end
+                
+                updateevents()
+            _G.exec_cmd = execCmd
+                
+                
+                local _char = function(plr_name)
+                    for i, v in pairs(game.Players:GetChildren()) do
+                        if v:IsA "Player" then
+                            if v.Name == plr_name then
+                                return v.Character
+                            end
+                        end
+                    end
+                    return
+                end
+                
+                local _plr = function(plr_name)
+                    for i, v in pairs(game.Players:GetChildren()) do
+                        if v:IsA "Player" then
+                            if v.Name == plr_name then
+                                return v
+                            end
+                        end
+                    end
+                    return
+                end
+                
+                function AC(name, desc, alias, func)
+                    cmds[#cmds + 1] = {
+                        NAME = name,
+                        DESC = desc,
+                        ALIAS = alias,
+                        FUNC = func
+                    }
+                end
+                
+                local function getPlayer(name)
+                    local nameTable = {}
+                    name = name:lower()
+                    if name == "me" then
+                        return {admin}
+                    elseif name == "others" then
+                        for i, v in pairs(gPlayers:GetChildren()) do
+                            if v:IsA "Player" then
+                                if v.Name ~= admin then
+                                    nameTable[#nameTable + 1] = v.Name
+                                end
+                            end
+                        end
+                    elseif name == "all" then
+                        for i, v in pairs(gPlayers:GetChildren()) do
+                            if v:IsA "Player" then
+                                nameTable[#nameTable + 1] = v.Name
+                            end
+                        end
+                    else
+                        for i, v in pairs(gPlayers:GetChildren()) do
+                            local lname = v.Name:lower()
+                            local i, j = lname:find(name)
+                            if i == 1 then
+                                return {v.Name}
+                            end
+                        end
+                    end
+                    return nameTable
+                end
+            local a =
+                setmetatable(
+                    {},
+                    {__index = function(b, c)
+                            return game:service(c)
+                        end}
+                )
+            local d = {"AntiSpeedHack", "AntiDataTheft", "UI", "NO FF"}
+            local e = a.Players.LocalPlayer
+            local f = {}
+            function RA()
+                spawn(
                     function()
-                        if game.Players.LocalPlayer:FindFirstChild("noclip") then
-                            game.Players.LocalPlayer.Character.Head.CanCollide = false
-                            game.Players.LocalPlayer.Character.Torso.CanCollide = false
+                        a.RunService.RenderStepped:wait()
+                        for g, h in pairs(f) do
+                            h:remove()
+                            f[g] = nil
+                        end
+                        for g, h in pairs(e.PlayerGui:GetChildren()) do
+                            for g, b in pairs(d) do
+                                if b == h.Name then
+                                    h:remove()
+                                end
+                            end
                         end
                     end
                 )
             end
-        end
-    )
+    RA()
 
-    Player.Chatted:connect(
-        function(cht)
-            if cht:match(prfx .. "clip") then
-                game.Players.LocalPlayer.noclip:Destroy()
-            end
-        end
-    )
 
-    local lighting = game.Lighting
-    if lighting:FindFirstChild("ColorCorrection") then
-        lighting:FindFirstChild("ColorCorrection"):Remove()
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvCOMMANDSvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+
+
+
+    AC("fov", "Changes Your FOV", {}, function(args)
+    local fval = args[1]
+    game.workspace.Camera.FieldOfView = fval
+    SendM("[$incity LCM]: LP FOV Changed To ["..fval.."]", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("leave", "Shuts The LocalPlayers Game Down", {}, function(args)
+    SendM("[$incity LCM]: Leaving Please Wait", Color3.fromRGB(130, 255, 222))
+    game:Shutdown("Gtfo newgen skid LMAOO")
+    end)
+
+
+    AC("rj", "Rejoins The Current Server You Are In",  {}, function(args)
+    SendM("[$incity LCM]: Rejoining Please Wait", Color3.fromRGB(130, 255, 222))
+    game:GetService("TeleportService"):Teleport(game.PlaceId)
+    end)
+
+
+    AC("ws", "Changes The LocalPlayers WalkSpeed", {}, function(args)
+    local wval = args[1]
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = wval
+    SendM("[$incity LCM]: WalkSpeed Changed To ["..wval.."]", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("jp", "Changes The LocalPlayers Jump Height", {}, function(args)
+    local jval = args[1]
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = jval
+    SendM("[$incity LCM]: JumpPower Changed To ["..jval.."]", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("Fly", "Makes The LocalPlayer Fly", {}, function(args)
+    SendM("[$incity LCM]: Press E Twice To Start Flying", Color3.fromRGB(130, 255, 222))
+    loadstring(game:HttpGet('https://pastebin.com/raw/cQCseaYL'))()
+    end)
+
+
+    AC("rst", "Makes The LocalPlayer Reset", {}, function(args)
+    game.Players.LocalPlayer.Character:BreakJoints()
+    SendM("[$incity LCM]: Clapped XD", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("view", "Spectates The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    workspace.CurrentCamera.CameraSubject = game.Players[players[1]].Character
+    SendM("[$incity LCM]: Fucking Pedo Smh..", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("unview", "UnSpectates The Chosen Player", {}, function(args)
+    game.workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+    end)
+
+
+    AC("slock", "Enables Shiftlock For The LocalPlayer", {}, function(args)
+    game.Players.LocalPlayer.DevEnableMouseLock = true
+    SendM("[$incity LCM]: Shiftlock Enabled", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("prefix", "Lets The LocalPlayer Change The Prefix To Anything", {}, function(args)
+    SendM("[$incity LCM]: Prefix Before: "..prfx.."", Color3.fromRGB(130, 255, 222))
+    local pargs = args[1]
+    prfx = pargs
+    SendM("[$incity LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(130, 255, 222))
+    if prfx == "!" then 
+        game.StarterGui:SetCore("SendNotification", {
+                        Title="$incity", Text="Prefix Set To [!] (Matts Admin)"})
+    
+    
+        elseif prfx == "." then
+            game.StarterGui:SetCore("SendNotification", {
+                Title="$incity", Text="Prefix Set To [.] (Faxng Admin)"})
+    
+    
+        elseif prfx == ":" then
+            game.StarterGui:SetCore("SendNotification", {
+                Title="$incity", Text="Prefix Set To [:] (Aidez)"})
+    
+    
+        elseif prfx == "/" then
+            game.StarterGui:SetCore("SendNotification", {
+                Title="$incity", Text="Prefix Set To [/] (Terminal X)"})
+        
+                
+        elseif prfx == "[]" then
+            game.StarterGui:SetCore("SendNotification", {
+                Title="$incity", Text="Prefix Set To [[]] ($incity)"})        
+    
+                end
+        end)
+   
+
+
+    AC("to", "Lets The LocalPlayer Teleport To Anyone", {}, function(args)
+    local players=getPlayer(args[1])
+    if players ~= nil and _char(players[1]):FindFirstChild("HumanoidRootPart") then
+    _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
+    end	
+    end)
+
+
+    AC("gay", "SHows A Random Gay Percentage On The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    local gayREAL = math.random(0,100)
+    for i, p in pairs(players) do
+    cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(""..gPlayers[p].Name.."is "..gayREAL"%gay","All")
     end
-    if lighting:FindFirstChild("Correction") then
-        lighting:FindFirstChild("Correction"):Remove()
+    end)
+
+
+
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvSERVERSIDE COMMANDSvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+
+
+
+    AC("radio", "Plays An Audio On The Player, Others, All", {}, function(args)
+    local players = getPlayer(args[1])
+    if not args[1] or not args[2] then
+    return
     end
-    if lighting:FindFirstChildOfClass("SunRaysEffect") then
-        lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+    local num = args[2]
+    for i, v in pairs(players) do
+    game.ReplicatedStorage.Event:FireServer("PlayRadio", gPlayers[v], num)
     end
+    SendM("[$incity LCM]: Now Playing ["..num.."]", Color3.fromRGB(130, 255, 222))
+    end)
 
-    local sunray = Instance.new("SunRaysEffect", lighting)
-    local sky = lighting.keasjdajshdahwieawd
-    sky.SkyboxBk = "http://www.roblox.com/asset/?id=149397692"
-    sky.SkyboxDn = "http://www.roblox.com/asset/?id=149397686"
-    sky.SkyboxFt = "http://www.roblox.com/asset/?id=149397697"
-    sky.SkyboxLf = "http://www.roblox.com/asset/?id=149397684"
-    sky.SkyboxRt = "http://www.roblox.com/asset/?id=149397688"
-    sky.SkyboxUp = "http://www.roblox.com/asset/?id=149397702"
 
-    sky.StarCount = 3000
-    sky.SunAngularSize = 21
-    sky.MoonAngularSize = 11
+    AC("Kgui", "Opens the $incity knife gui", {}, function(args)
+    SendM("[$incity LCM]: Knife Gui Loaded", Color3.fromRGB(130, 255, 222))
+    loadstring(game:HttpGet("https://pastebin.com/raw/SN5BmNtD"))()
+    end)
 
-    local correction = Instance.new("ColorCorrectionEffect", lighting)
-    correction.Name = "Correction"
-    correction.Saturation = -0.4
-    correction.TintColor = Color3.fromRGB(255, 183, 255)
 
-    game:GetService("Workspace").Lobby["Zombie Owl"]:Destroy()
-    game:GetService("Workspace").Lobby["Undead Teddy"]:Destroy()
-    game:GetService("Workspace").Lobby.TwistedRadio:Destroy()
-    game:GetService("Workspace").Lobby.BuyAni:Destroy()
-    game:GetService("Workspace").Lobby.BuyAni2:Destroy()
-    game:GetService("Workspace").Lobby.MVPDoor:Destroy()
-    game:GetService("Workspace").Lobby.tay:Destroy()
+    AC("bg", "Brings The Gun To The LocalPlayer", {}, function(args)	
+    game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    wait(1)
+    game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    wait(1)
+    game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    SendM("[$incity LCM]: Gun Teleported", Color3.fromRGB(130, 255, 222))
+    print('bring works')
+    end)
 
-    MessageColor("[$incity LCM]: Prefix is set to [None]", Color3.fromRGB(252, 101, 220))
+
+
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvSERVERSIDE ABUSIVE COMMANDSvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+
+
+
+    AC("kill", "Kills The Chosen Player(-s)", {}, function(args)
+    local players = getPlayer(args[1])
+    for i, v in pairs(players) do
+    game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
+    end
+    SendM("[$incity LCM]: Player(-s) Killed", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("dmg", "SE Damages The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    if not args[1] or not args[2] then return end
+    local dmgp = args[2]
+    for i, p in pairs(players) do
+    game.ReplicatedStorage.Event:FireServer("TPD", dmgp, gPlayers[p].Character.Humanoid)
+    end
+    SendM("[$incity LCM]: Player(-s) Damaged For ["..dmgp.."]", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("heal", "SE Heals The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    if not args[1] or not args[2] then return end
+    local healn = args[2]
+    for i, p in pairs(players) do
+    game.ReplicatedStorage.Event:FireServer("TPD", -healn, gPlayers[p].Character.Humanoid)
+    end
+    SendM("[$incity LCM]: Player(-s) Healed For ["..healn.."]", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("lk", "Loopkills The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    local loopk = true
+    while loopk == true do
+    wait(0.9)
+    for i, v in pairs(players) do
+    game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
+    end
+break
+    end
+    SendM("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("unlk", "Unloopkills The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    while loopk == true do
+    for i, g in pairs(players) do
+    game.ReplicatedStorage.Event:FireServer("TPD", -math.huge, gPlayers[g].Character.Humanoid)  
+    end
+    SendM("[$incity LCM]: Player(-s) Unloopkilled", Color3.fromRGB(130, 255, 222))
+    end
+    end)
+
+
+
+    AC("g", "Gods The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    for i, h in pairs(players) do
+    RA()
+    game.ReplicatedStorage.Event:FireServer("TPD", -math.huge, gPlayers[h].Character.Humanoid)
+    SendM("[$incity LCM]: Player(-s) Godded", Color3.fromRGB(130, 255, 222))
+	end
+    end)
+
+
+    AC("lg", "Loopgods The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    RA()
+    for i, v in pairs(players) do
+    if gPlayers[v]:FindFirstChild("god") then
+    gPlayers[v]:FindFirstChild("god"):Destroy()
+    end
+    local god = Instance.new("BoolValue")
+    god.Parent = gPlayers[v]
+    god.Value = true
+    god.Name = "lol"
+    game:GetService("RunService").RenderStepped:connect(function()
+    if gPlayers[v]:FindFirstChild("god") then
+    game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
+    game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid"))
+	end
+	end)
+	end
+    SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
+	end)
+    
+
+    AC("unlg", "Unloopgods The Chosen Player", {}, function(args)
+    local players = getPlayer(args[1])
+    for i, v in pairs(players) do
+    if gPlayers[v]:FindFirstChild("god") then
+    gPlayers[v]:FindFirstChild("god"):Destroy()
+    game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
+    SendM("[$incity LCM]: Player(-s) Unloopgodded", Color3.fromRGB(130, 255, 222))
+	end
+    end
+    end)
+
+
+
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^SERVERSIDE ABUSIVE COMMANDS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+
+
+
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvSERVERSIDE KNIFE COMMANDSvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+    --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
+
+
+
+    AC("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", {}, function(args)
+        SendM([[																																																																																																													 							$incity LCM: Knife Abilities:
+                                           														  																									  -Tesla
+                                           						  																																	  -Illum
+              													  																																																																												 -Quick
+  										 					      																																																																																					 -Laser
+  											 					  																																																																																											 -Yt
+                                                                  							-Norelgun
+]], Color3.fromRGB(130, 255, 222))
+    end)
+    
+
+    AC("norelgun", "Gives The LocalPlayer A No Reload Gun / No Cooldown Knife", {}, function(args)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/nVy1rVNP'),true))()
+        SendM("[$incity LCM]: No-Reload Gun / No-Cooldown Knife Given", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("illum", "Gives The LocalPlayer A Knife With The Illuminati Ability", {}, function(args)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/8Ag2jaCD'),true))()
+        SendM("[$incity LCM]: Illuminati Knife Given", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("Quick", "Gives The LocalPlayer A Knife With The Quickscoper Ability", {}, function(args)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/Sn1SsSCi'),true))()
+        SendM("[$incity LCM]: Quickscoper Knife Given", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("Laser", "Gives The LocalPlayer A Knife With The Laser Ability", {}, function(args)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/aavyXdmC'),true))()
+        SendM("[$incity LCM]: Laser Knife Given", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("Tesla", "Gives The LocalPlayer A Knife With The Tesla Ability", {}, function(args)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/CdUMRVmq'),true))()
+        SendM("[$incity LCM]: Tesla Knife Given", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("Yt", "Gives The LocalPlayer A Knife With The Youtube Power Ability", {}, function(args)
+        loadstring(game:HttpGet(('https://pastebin.com/raw/CSaF8Szi'),true))()
+        SendM("[$incity LCM]: Youtube Power Knife Given", Color3.fromRGB(130, 255, 222))
+    end)
+
+
+    AC("cmds", "Prints The Commands In The Console (GUI Soon)",
+       warn[[
+
+
+       (FOV) > Changes Your FieldOfView To Whatever [0 - 120]
+       (Leave) > Shuts The LocalPlayers Game Down
+       (Rj) > Makes The LocalPlayer Rejoin The Current Server
+       (Ws) > Changes The LocalPlayers WalkSpeed To Whatever [1 - inf]
+       (Jp) > Changes The LocalPlayers JumpPower To Whatever [1 - inf]
+       (Fly) > {SE} Makes The LocalPlayer Fly 
+       (Rst) > Makes The LocalPlayer Reset
+       (View) > Lets The LocalPlayer Spectate The Chosen Player
+       (Unview) > {SE}
+       (Slock) > Enables Shiftlock For The LocalPlayer
+       (Prefix) > Lets The LocalPlayer Change The Prefix To Anything
+       (To) > Lets The LocalPlayer Teleport To The Chosen Player
+       (Radio) > Lets The LocalPlayer Play An Audio On The Chosen Player [me, all, others]
+       (Kgui) > Load The $incity Knife GUI
+       (Kill) > {SE} Kills The Chosen Player
+       (Dmg) > Damages The Chosen Player [1 - inf] [Uneven Numbers Work Too (.dmg me 12.222)]
+       (Heal) > Heals The Chosen Player [1 - inf] [Uneven Numbers Work Too (.heal me 53.614)]
+       (Lk) > Loopkills The Chosen Player [Ping Must Be Under 100]
+       (Unlk) > Unloopkill the Chosen Player
+       (Lg) > Loopgods The Chosen Player
+       (Unlg) > Unloopgods The Chosen Player
+       (G) > Gods The Chosen Player (Might Kill Everyone)
+       (Tools) > Sends A LocalPlayer Message With The Tool List
+       (Norelgun) > Gives You A Gun Without The Reload Cooldown 
+       (Illum) > Gives The LocalPlayer A Knife With The Illuminati Ability
+       (Quick) > Gives The LocalPlayer A Knife With The Quickscoper Ability
+       (Laser) > Gives The LocalPlayer A Knife With The Laser Ability
+       (Tesla) > Gives The LocalPlayer A Knife With The Tesla Ability 
+       (Yt) > Gives The LocalPlayer A Knife With The Youtube Power Ability
+       ]]
+)
+	   
+
+
+
+
+
+
+
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^SERVERSIDE KNIFE COMMANDS^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+    --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
+
+
+    game.StarterGui:SetCore("SendNotification", {
+    Title = '$incity';
+    Text = 'Script Loaded In '..tick()-x..' Seconds Enjoy.';
+    Duration = 5})
