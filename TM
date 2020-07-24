@@ -639,13 +639,14 @@ end)
                 god.Value = true
                 god.Name = "god"
 
-                game:GetService("RunService").Heartbeat:connect(function()
+                game:GetService("RunService").RenderStepped:connect(
+                    function()
                         if gPlayers[v]:FindFirstChild("god") then
-                            game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
+                            game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
+                            game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid"))
                         end
                     end
                 )
-            end
         
         SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(123, 255, 71))
 
