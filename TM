@@ -55,7 +55,7 @@
                 b.TextTransparency=y end;
                 b:Destroy()end)end;
                 SendM("[$incity v2 LCM]: $incity v2 Loaded", Color3.fromRGB(123, 255, 71))
-                SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: %%None%%", Color3.fromRGB(123, 255, 71))
+                SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: []", Color3.fromRGB(123, 255, 71))
                 for i, x in pairs(game.Players:GetChildren())do x.Chatted:Connect(function(A)if string.find(A, "/e ")then Message(x.Name..": ", A)end end)end;
 
     game.StarterGui:SetCore("SendNotification", {
@@ -598,11 +598,11 @@
     wait(0.9)
     for i, v in pairs(players) do
     game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
-    end
-break
+
     end
     SendM("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(130, 255, 222))
-    end)
+    end
+end)
 
 
     AC("unlk", "Unloopkills The Chosen Player", {}, function(args)
@@ -619,34 +619,37 @@ break
 
     AC("g", "Gods The Chosen Player", {}, function(args)
     local players = getPlayer(args[1])
-    for i, h in pairs(players) do
     RA()
-    game.ReplicatedStorage.Event:FireServer("TPD", -math.huge, gPlayers[h].Character.Humanoid)
+    for i, h in pairs(players) do
+    game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, gPlayers[h].Character.Humanoid)
     SendM("[$incity LCM]: Player(-s) Godded", Color3.fromRGB(130, 255, 222))
 	end
     end)
 
 
     AC("lg", "Loopgods The Chosen Player", {}, function(args)
-    local players = getPlayer(args[1])
-    RA()
-    for i, v in pairs(players) do
-    if gPlayers[v]:FindFirstChild("god") then
-    gPlayers[v]:FindFirstChild("god"):Destroy()
-    end
-    local god = Instance.new("BoolValue")
-    god.Parent = gPlayers[v]
-    god.Value = true
-    god.Name = "lol"
-    game:GetService("RunService").RenderStepped:connect(function()
-    if gPlayers[v]:FindFirstChild("god") then
-    game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
-    game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid"))
-	end
-	end)
-	end
-    SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
-	end)
+            local players = getPlayer(args[1])
+            RA()
+            for i, v in pairs(players) do
+                if gPlayers[v]:FindFirstChild("god") then
+                    gPlayers[v]:FindFirstChild("god"):Destroy()
+                end
+                local god = Instance.new("BoolValue")
+                god.Parent = gPlayers[v]
+                god.Value = true
+                god.Name = "god"
+
+                game:GetService("RunService").Heartbeat:connect(function()
+                        if gPlayers[v]:FindFirstChild("god") then
+                            game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
+                        end
+                    end
+                )
+            end
+        
+        SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(123, 255, 71))
+
+    end)
     
 
     AC("unlg", "Unloopgods The Chosen Player", {}, function(args)
@@ -723,9 +726,7 @@ break
 
 
     AC("cmds", "Prints The Commands In The Console (GUI Soon)",
-       warn[[
-
-
+       warn[[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
        (FOV) > Changes Your FieldOfView To Whatever [0 - 120]
        (Leave) > Shuts The LocalPlayers Game Down
        (Rj) > Makes The LocalPlayer Rejoin The Current Server
@@ -738,6 +739,7 @@ break
        (Slock) > Enables Shiftlock For The LocalPlayer
        (Prefix) > Lets The LocalPlayer Change The Prefix To Anything
        (To) > Lets The LocalPlayer Teleport To The Chosen Player
+       (Bg) > Bring The Gun To The LocalPlayer
        (Radio) > Lets The LocalPlayer Play An Audio On The Chosen Player [me, all, others]
        (Kgui) > Load The $incity Knife GUI
        (Kill) > {SE} Kills The Chosen Player
