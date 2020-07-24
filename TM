@@ -55,7 +55,7 @@
                 b.TextTransparency=y end;
                 b:Destroy()end)end;
                 SendM("[$incity v2 LCM]: $incity v2 Loaded", Color3.fromRGB(123, 255, 71))
-                SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: []", Color3.fromRGB(123, 255, 71))
+                SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: %%None%%", Color3.fromRGB(123, 255, 71))
                 for i, x in pairs(game.Players:GetChildren())do x.Chatted:Connect(function(A)if string.find(A, "/e ")then Message(x.Name..": ", A)end end)end;
 
     game.StarterGui:SetCore("SendNotification", {
