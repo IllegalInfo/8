@@ -650,7 +650,7 @@ end)
                 )
         
         SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(123, 255, 71))
-
+end
     end)
     
 
