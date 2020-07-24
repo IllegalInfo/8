@@ -55,8 +55,8 @@
                 wait(13)for y=0, 1, 0.1 do wait(0.1)b.TextStrokeTransparency=1;
                 b.TextTransparency=y end;
                 b:Destroy()end)end;
-                SendM("[$incity v2 LCM]: $incity v2 Loaded", Color3.fromRGB(123, 255, 71))
-                SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: []", Color3.fromRGB(123, 255, 71))
+                SendM("[$incity v2 LCM]: $incity v2 Loaded", Color3.fromRGB(130, 255, 222))
+                SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: None", Color3.fromRGB(130, 255, 222))
                 for i, x in pairs(game.Players:GetChildren())do x.Chatted:Connect(function(A)if string.find(A, "/e ")then Message(x.Name..": ", A)end end)end;
 
     game.StarterGui:SetCore("SendNotification", {
@@ -649,8 +649,9 @@ end)
                     end
                 )
         
-        SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(123, 255, 71))
+        
 end
+SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
     end)
     
 
@@ -848,8 +849,7 @@ local function OSUHZJD_fake_script() -- TextLabel.LocalScript
 		local FramePerSec = math.floor(.5+(1/(tick() - Last )))
 		if Delay == false then
 			Delay = true
-			textLabel.Text = "FPS : "..FramePerSec
-			wait(0.1)
+			textLabel.Text = "FPS > "..FramePerSec
 			Delay = false
 		end
 		Last = tick()
