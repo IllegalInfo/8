@@ -774,6 +774,11 @@ end
     --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
 
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local aea = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local SINCITY = Instance.new("TextLabel")
@@ -785,12 +790,14 @@ local TextLabel = Instance.new("TextLabel")
 aea.Name = "aea"
 aea.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 aea.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+aea.ResetOnSpawn = false
 
 Main.Name = "Main"
 Main.Parent = aea
 Main.BackgroundColor3 = Color3.fromRGB(36, 36, 54)
 Main.Position = UDim2.new(0.665625095, 0, -0.00114285573, 0)
 Main.Size = UDim2.new(0, 262, 0, 60)
+
 
 SINCITY.Name = "SINCITY"
 SINCITY.Parent = Main
@@ -841,8 +848,8 @@ local function OSUHZJD_fake_script() -- TextLabel.LocalScript
 		local FramePerSec = math.floor(.5+(1/(tick() - Last )))
 		if Delay == false then
 			Delay = true
-			textLabel.Text = "FPS > "..FramePerSec
-
+			textLabel.Text = "FPS : "..FramePerSec
+			wait(0.1)
 			Delay = false
 		end
 		Last = tick()
