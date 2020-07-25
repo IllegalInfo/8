@@ -601,8 +601,9 @@
     game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
 
     end
+end
     SendM("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(130, 255, 222))
-    end
+    
 end)
 
 
@@ -612,8 +613,9 @@ end)
     for i, g in pairs(players) do
     game.ReplicatedStorage.Event:FireServer("TPD", -math.huge, gPlayers[g].Character.Humanoid)  
     end
+end
     SendM("[$incity LCM]: Player(-s) Unloopkilled", Color3.fromRGB(130, 255, 222))
-    end
+
     end)
 
 
@@ -822,7 +824,7 @@ FPS.Font = Enum.Font.SourceSans
 FPS.Text = "Fps  >  "
 FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
 FPS.TextSize = 20.000
-FPS.TextStrokeTransparency = 0.000
+FPS.TextStrokeTransparency = 0.600
 FPS.TextWrapped = true
 FPS.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -836,7 +838,7 @@ Ping.Font = Enum.Font.SourceSans
 Ping.Text = "Ping > "
 Ping.TextColor3 = Color3.fromRGB(255, 255, 255)
 Ping.TextSize = 20.000
-Ping.TextStrokeTransparency = 0.000
+Ping.TextStrokeTransparency = 0.600
 Ping.TextWrapped = true
 Ping.TextXAlignment = Enum.TextXAlignment.Left
 
