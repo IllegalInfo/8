@@ -560,7 +560,7 @@
     local players = getPlayer(args[1])
     local loopk = true
     while loopk == true do
-    wait(0.9)
+    wait(0.01)
     for i, v in pairs(players) do
     game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
 
@@ -573,13 +573,14 @@ end)
 
     AC("unlk", "Unloopkills The Chosen Player", {}, function(args)
     local players = getPlayer(args[1])
-    while loopk == true do
-    for i, g in pairs(players) do
-    game.ReplicatedStorage.Event:FireServer("TPD", -math.huge, gPlayers[g].Character.Humanoid)  
-    end
+       RA()
+       for i, v in pairs(players) do
+       game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
+                            game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid"))
 end
-    SendM("[$incity LCM]: Player(-s) Unloopkilled", Color3.fromRGB(130, 255, 222))
 
+    SendM("[$incity LCM]: Player(-s) Unloopkilled", Color3.fromRGB(130, 255, 222))
+ 
     end)
 
 
@@ -658,7 +659,7 @@ SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
     end)
     
 
-    AC("norelgun", "Gives The LocalPlayer A No Reload Gun / No Cooldown Knife", {}, function(args)
+    AC("norelgun", "Gives The LocalPlayer A No-Reload Gun, {}, function(args)
         loadstring(game:HttpGet(('https://pastebin.com/raw/nVy1rVNP'),true))()
         SendM("[$incity LCM]: No-Reload Gun / No-Cooldown Knife Given", Color3.fromRGB(130, 255, 222))
     end)
