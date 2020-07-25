@@ -782,7 +782,11 @@ SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
 
 -- Instances:
 
-local aea = Instance.new("ScreenGui")
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+local RADIO = Instance.new("TextLabel")
 local MainSTATS = Instance.new("Frame")
 local STATSSIN = Instance.new("TextLabel")
 local FPS = Instance.new("TextLabel")
@@ -791,21 +795,61 @@ local Ping = Instance.new("TextLabel")
 
 --Properties:
 
-aea.Name = "aea"
-aea.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-aea.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(36, 36, 54)
+Frame.Position = UDim2.new(-0.000624999986, 0, 0.813664675, 0)
+Frame.Size = UDim2.new(0, 153, 0, 90)
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+TextBox.BorderColor3 = Color3.fromRGB(15, 25, 31)
+TextBox.Position = UDim2.new(0.0322580636, 0, 0.387268543, 0)
+TextBox.Size = UDim2.new(0, 144, 0, 20)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Audio ID"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(83, 185, 213)
+TextBox.TextSize = 14.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+TextButton.BorderColor3 = Color3.fromRGB(12, 20, 25)
+TextButton.Position = UDim2.new(0.0322580785, 0, 0.677995622, 0)
+TextButton.Size = UDim2.new(0, 144, 0, 20)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Play"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+RADIO.Name = "RADIO"
+RADIO.Parent = Frame
+RADIO.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RADIO.BackgroundTransparency = 0.650
+RADIO.Position = UDim2.new(0, 0, -0.0107638836, 0)
+RADIO.Size = UDim2.new(0, 153, 0, 27)
+RADIO.Font = Enum.Font.SourceSans
+RADIO.Text = "$incity Audio Player"
+RADIO.TextColor3 = Color3.fromRGB(255, 255, 255)
+RADIO.TextSize = 20.000
+RADIO.TextStrokeColor3 = Color3.fromRGB(106, 0, 255)
+RADIO.TextStrokeTransparency = 0.500
+RADIO.TextWrapped = true
 
 MainSTATS.Name = "MainSTATS"
-MainSTATS.Parent = aea
+MainSTATS.Parent = ScreenGui
 MainSTATS.BackgroundColor3 = Color3.fromRGB(36, 36, 54)
-MainSTATS.Position = UDim2.new(0.678375006, 0, 0.00396273378, 0)
-MainSTATS.Size = UDim2.new(0, 262, 0, 100)
+MainSTATS.Position = UDim2.new(-0.000450609485, 0, 0.639055967, 0)
+MainSTATS.Size = UDim2.new(0, 153, 0, 100)
 
 STATSSIN.Name = "STATSSIN"
 STATSSIN.Parent = MainSTATS
 STATSSIN.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 STATSSIN.BackgroundTransparency = 0.650
-STATSSIN.Size = UDim2.new(0, 262, 0, 27)
+STATSSIN.Size = UDim2.new(0, 153, 0, 27)
 STATSSIN.Font = Enum.Font.SourceSans
 STATSSIN.Text = "$incity Stats"
 STATSSIN.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -824,7 +868,7 @@ FPS.Font = Enum.Font.SourceSans
 FPS.Text = "Fps  >  "
 FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
 FPS.TextSize = 20.000
-FPS.TextStrokeTransparency = 0.600
+FPS.TextStrokeTransparency = 0.000
 FPS.TextWrapped = true
 FPS.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -838,13 +882,41 @@ Ping.Font = Enum.Font.SourceSans
 Ping.Text = "Ping > "
 Ping.TextColor3 = Color3.fromRGB(255, 255, 255)
 Ping.TextSize = 20.000
-Ping.TextStrokeTransparency = 0.600
+Ping.TextStrokeTransparency = 0.000
 Ping.TextWrapped = true
 Ping.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function PPCVEAT_fake_script() -- STATSSIN.Script 
+local function MFNVSU_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	local TextBox = script.Parent
+	if TextBox.FocusLost:Connect(function()
+			game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, TextBox.Text)
+		end)
+then end
+end
+coroutine.wrap(MFNVSU_fake_script)()
+local function TTMLBX_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	TextButton.MouseButton1Down:Connect(function()
+		game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players.LocalPlayer, TextBox.Text)
+	end)
+end
+coroutine.wrap(TTMLBX_fake_script)()
+local function YAMRKWH_fake_script() -- RADIO.Script 
+	local script = Instance.new('Script', RADIO)
+
+	while true do
+	 for a = 1,360,1 do wait(.01)
+	  script.Parent.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
+	 end
+	end
+end
+coroutine.wrap(YAMRKWH_fake_script)()
+local function VNNDEE_fake_script() -- STATSSIN.Script 
 	local script = Instance.new('Script', STATSSIN)
 
 	while true do
@@ -853,8 +925,8 @@ local function PPCVEAT_fake_script() -- STATSSIN.Script
 	 end
 	end
 end
-coroutine.wrap(PPCVEAT_fake_script)()
-local function QEYRMFQ_fake_script() -- FPS.LocalScript 
+coroutine.wrap(VNNDEE_fake_script)()
+local function QKINLLC_fake_script() -- FPS.LocalScript 
 	local script = Instance.new('LocalScript', FPS)
 
 	local textLabel = script.Parent
@@ -871,8 +943,8 @@ local function QEYRMFQ_fake_script() -- FPS.LocalScript
 		Last = tick()
 	end)
 end
-coroutine.wrap(QEYRMFQ_fake_script)()
-local function KEHXV_fake_script() -- FPS.Script 
+coroutine.wrap(QKINLLC_fake_script)()
+local function TGLFR_fake_script() -- FPS.Script 
 	local script = Instance.new('Script', FPS)
 
 	while true do
@@ -881,8 +953,8 @@ local function KEHXV_fake_script() -- FPS.Script
 	 end
 	end
 end
-coroutine.wrap(KEHXV_fake_script)()
-local function LXNWDF_fake_script() -- Ping.LocalScript 
+coroutine.wrap(TGLFR_fake_script)()
+local function PAYLM_fake_script() -- Ping.LocalScript 
 	local script = Instance.new('LocalScript', Ping)
 
 	function GetPing()
@@ -897,8 +969,8 @@ local function LXNWDF_fake_script() -- Ping.LocalScript
 	script.Parent.Text = "Ping > "..GetPing()
 	end
 end
-coroutine.wrap(LXNWDF_fake_script)()
-local function DZLY_fake_script() -- Ping.Script 
+coroutine.wrap(PAYLM_fake_script)()
+local function VYPNZ_fake_script() -- Ping.Script 
 	local script = Instance.new('Script', Ping)
 
 	while true do
@@ -907,11 +979,19 @@ local function DZLY_fake_script() -- Ping.Script
 	 end
 	end
 end
-coroutine.wrap(DZLY_fake_script)()
-
+coroutine.wrap(VYPNZ_fake_script)()
 
 
     game.StarterGui:SetCore("SendNotification", {
     Title = '$incity';
     Text = 'Script Loaded In '..tick()-x..' Seconds Enjoy.';
     Duration = 5})
+
+local dsc = 'https://discord.gg/YwAekbT'
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = '$incity',
+	Text = 'NEW DISCORD SERVER '..dsc..'',
+	Duration = 21,
+	Button1 = 'Copy To ClipBoard', setclipboard(dsc),
+})
