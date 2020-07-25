@@ -659,7 +659,7 @@ SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
     end)
     
 
-    AC("norelgun", "Gives The LocalPlayer A No-Reload Gun, {}, function(args)
+    AC("norelgun", "Gives The LocalPlayer A No-Reload Gun", {}, function(args)
         loadstring(game:HttpGet(('https://pastebin.com/raw/nVy1rVNP'),true))()
         SendM("[$incity LCM]: No-Reload Gun / No-Cooldown Knife Given", Color3.fromRGB(130, 255, 222))
     end)
