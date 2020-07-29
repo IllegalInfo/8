@@ -635,20 +635,19 @@
     
     
         sincity("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", {}, function(args)
-            SendM([[																																																																																																													 							$incity LCM: Knife Abilities:
-                                                                                                                                                                                                               -Tesla
-                                                                                                                                                                                                               -Illum
-                                                                                                                                                                                                                                                                                                                                                                                         -Quick
-                                                                                                                                                                                                                                                                                                                                                                                                                              -Laser
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      -Yt
-                                                                                                  -Norelgun
-    ]], Color3.fromRGB(130, 255, 222))
+SendM("-Tesla", Color3.fromRGB(130, 255, 222))
+SendM("-Illum", Color3.fromRGB(130, 255, 222))
+SendM("-Quick", Color3.fromRGB(130, 255, 222))
+SendM("-Laser", Color3.fromRGB(130, 255, 222))
+SendM("-Yt", Color3.fromRGB(130, 255, 222))
+SendM("-Norelgun", Color3.fromRGB(130, 255, 222))
+
         end)
         
     
         sincity("norelgun", "Gives The LocalPlayer A No-Reload Gun", {}, function(args)
             loadstring(game:HttpGet(('https://pastebin.com/raw/nVy1rVNP'),true))()
-            SendM("[$incity LCM]: No-Reload Gun / No-Cooldown Knife Given", Color3.fromRGB(130, 255, 222))
+            SendM("[$incity LCM]: No-Reload Gun ", Color3.fromRGB(130, 255, 222))
         end)
     
     
