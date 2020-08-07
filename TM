@@ -75,7 +75,7 @@ function start()
   game:GetService('RunService').Stepped:connect(function()
   local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then for i, x in pairs(n.Chats:GetChildren()) do
     if x.Name=="Chat" then if string.find(x.Text, "exclusiveclique")then x.Text=string.gsub(x.Text, "exclusiveclique", "[Owner] Zack")x.TextColor3=Color3.fromRGB(0, 144, 163)
-
+    elseif string.find(x.Text, "Jay_Trvp")then x.Text=string.gsub(x.Text, "Jay_Trvp", "[crodie] Jay")x.TextColor3=Color3.fromRGB(0, 220, 0)
   end
 end
 end
