@@ -1153,8 +1153,8 @@ if not _G.colorSequences then
 			table.insert(
 				sequence, i + 1, ColorSequenceKeypoint.new(i / num, Color3.fromRGB(
 					127 * math.sin(0.52 * i + counter) + 128,
-					127 * math.sin(0.52 * i + 2 * math.pi / 3 + counter) + 128,
-					127 * math.sin(0.52 * i + 4 * math.pi / 3 + counter) + 128)
+					127 * math.sin(0.52 * i + 2 * math.pi / 0 + counter) + 128,
+					127 * math.sin(0.52 * i + 4 * math.pi / 0 + counter) + 128)
 				)
 			)
 		end
