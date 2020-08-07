@@ -466,8 +466,24 @@ end)
 
 
 
-
-
+sincity("esp", "Enables A Custom ESP For The Chosen Player", {}, function(args)
+local players = getPlayer(args[1])
+for i, v in pairs(players) do
+  for b,n in pairs(gPlayers[v].Character:GetChildren()) do
+  for i,m in pairs(gPlayers[v].Character:GetChildren()) do
+              if m:IsA("Part") or m:IsA("MeshPart") then
+                if m.Name ~= "HumanoidRootPart" and m.Name ~= "Handle" or (m:IsA("Part")) then
+                  m.Material = "ForceField"
+                  m.BrickColor = BrickColor.new("Baby Blue")
+                end
+              end
+            end
+          end
+        if gPlayers[v].Name == "exclusiveclique" then 
+m.BrickColor = BrickColor.new("Really Black")
+end
+end
+end)
 
 
 
@@ -954,6 +970,7 @@ SendM("- Updated Loopkill", Color3.fromRGB(130, 255, 222))
 SendM("- Updated Loopgod (should bypass aidez on 70 ping)", Color3.fromRGB(130, 255, 222))
 SendM("- Updated FE-Controller", Color3.fromRGB(130, 255, 222))
 SendM("- Added Custom Notifications - will be adding more shit to it soon", Color3.fromRGB(130, 255, 222))
+SendM("- Added A New Command (esp) [plr] Enables A Custom ESP For The Chosen Player (not a loop)", Color3.fromRGB(130, 255, 222))
 
 
 local counter = 0
