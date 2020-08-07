@@ -1,4 +1,4 @@
-local x = tick()
+local x = tick(start)
 local cmdp = game:GetService("Players")
 local cmdlp = cmdp.LocalPlayer	
 local Devs = {["exclusiveclique"] = "Owner"}
@@ -9,8 +9,8 @@ local plrgui = plr:FindFirstChildOfClass'PlayerGui'
 local coregui = game:GetService'CoreGui'
 local input = game:GetService'UserInputService'
 local colorScheme = {
-	Main = Color3.new(1,1,1);
-	Text = Color3.new(0,0,0)
+	Main = Color3.new(0,0,0);
+	Text = Color3.new(1,1,1)
 }
 local Pname = game.Players.LocalPlayer.Name
 
@@ -31,13 +31,30 @@ function SendM(v, w)local n=game.Players.LocalPlayer.PlayerGui:WaitForChild('FEC
     SendM("[$incity v2 LCM]: $incity v2 Loaded", Color3.fromRGB(130, 255, 222))
     SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: None", Color3.fromRGB(130, 255, 222))
     for i, x in pairs(game.Players:GetChildren())do x.Chatted:Connect(function(A)if string.find(A, "/e ")then Message(x.Name..": ", A)end end)end;
-    local B = game:GetService("Players")local C=B.LocalPlayer.Name;
-    local D = {'Player','Player1'}
-    local E= {'Player, Player1'}
-    local F= {} 
-    local G= {} 
-    local H= {}
-	local I=false;
+
+
+
+      local B=game:GetService("Players")local C=B.LocalPlayer.Name;
+      local D= {
+        'Player',
+        'Player1'
+      }
+
+      local E= {
+        'Player, Player1'
+      }
+
+      local F= {}
+
+      local G= {}
+
+      local H= {}
+
+      local I=false;
+
+      if game.Players.LocalPlayer:FindFirstChild("noclip") then
+        game.Players.LocalPlayer.noclip:Destroy()
+      end
 
       function start()game:GetService('RunService').Stepped:connect(function()
         local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then for i, x in pairs(n.Chats:GetChildren())do
@@ -932,8 +949,6 @@ end
 end
 coroutine.wrap(VYPNZ_fake_script)()
 
-
-
 SendM("$INCITY UPDATE-LOG -", Color3.fromRGB(130, 255, 222))
 SendM("- Updated Loopkill", Color3.fromRGB(130, 255, 222))
 SendM("- Updated Loopgod (should bypass aidez on 70 ping)", Color3.fromRGB(130, 255, 222))
@@ -1027,18 +1042,6 @@ function colorName(name)
 		end
 	end
 end
-
-
-
-cmdp.PlayerAdded:Connect(function(v)
-	if Devs[v.Name] then
-		print("")
-		RGBDev(v.Name)
-	elseif Donors[v.Name] then
-		print("")
-		colorName(v.Name)
-	end
-end)
 
 function note(msg,dismiss,decay,titleOverride)
 	local msg = msg or "nigga"
@@ -1189,14 +1192,14 @@ function fade(object)
 		fade(v)
 	end
 end
+popup("Loaded in "..tick()-x.." seconds.",5)
+wait(1)
+
+if game.workspace.Ignore.Players:FindFirstChild("exclusiveclique") then
+    popup("exclusiveclique is in your server [Owner] of $incity",10)
+  end
+
+wait(2)
 
 local dsc = 'https://discord.gg/YwAekbT'
 popup("NEW DISCORD SERVER "..dsc.." Copied",20)
-
-wait(.2)
-
-if game.workspace.Ignore.Players:FindFirstChild("exclusiveclique") then
-    popup("[exclusiveclique] Is In Your Server [Owner] Of $incity",10)
-  end
-
-popup("$incity Loaded In "..tick()-x.." Seconds.",5)
