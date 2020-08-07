@@ -570,30 +570,35 @@ end)
 
 
 sincity("lk", "Loopkills The Chosen Player", {}, function(args)
-local players = getPlayer(args[1])
-local loopk = true
-while loopk == true do
-wait(0.01)
-for i, v in pairs(players) do
-game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
-
-end
-end
-SendM("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(130, 255, 222))
-
-end)
+  local players = getPlayer(args[1])
+  for i, v in pairs(players) do
+    if gPlayers[v]:FindFirstChild("ml") then
+        gPlayers[v]:FindFirstChild("ml"):Destroy()
+    end
+    local ml = Instance.new("BoolValue")
+    ml.Parent = gPlayers[v]
+    ml.Value = true
+    ml.Name = "ml"
+    while gPlayers[v]:FindFirstChild("ml") do
+    if gPlayers[v]:FindFirstChild("ml") then
+  wait(.01)
+      local plrs = game:GetService("Players"):FindFirstChild(gPlayers[v].Name).Character:FindFirstChild("Humanoid")
+      game.ReplicatedStorage.Event:FireServer("TPD", math.huge, plrs)
+  end
+  end
+  end
+  SendM("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(130, 255, 222))
+  end)
 
 
 sincity("unlk", "Unloopkills The Chosen Player", {}, function(args)
 local players = getPlayer(args[1])
-RA()
 for i, v in pairs(players) do
-game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
-game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid"))
+  if gPlayers[v]:FindFirstChild("ml") then
+    gPlayers[v]:FindFirstChild("ml"):Destroy()
+  end
 end
-
 SendM("[$incity LCM]: Player(-s) Unloopkilled", Color3.fromRGB(130, 255, 222))
-
 end)
 
 
@@ -619,7 +624,6 @@ local god = Instance.new("BoolValue")
 god.Parent = gPlayers[v]
 god.Value = true
 god.Name = "god"
-
 game:GetService("RunService").RenderStepped:connect(
 function()
 if gPlayers[v]:FindFirstChild("god") then
@@ -628,8 +632,6 @@ game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character 
 end
 end
 )
-
-
 end
 SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
 end)
@@ -642,6 +644,40 @@ if gPlayers[v]:FindFirstChild("god") then
 gPlayers[v]:FindFirstChild("god"):Destroy()
 game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character.Humanoid)
 SendM("[$incity LCM]: Player(-s) Unloopgodded", Color3.fromRGB(130, 255, 222))
+end
+end
+end)
+
+
+
+sincity("cloak", "Makes The Chosen Player(-s) Invisible", {}, function(args)
+local players = getPlayer(args[1])
+for i, p in pairs(players) do
+  local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
+  game.ReplicatedStorage.Event:FireServer("Cloak", x)
+end
+end)
+
+
+
+sincity("uncloak", "Makes The Chosen Player(-s) Invisible", {}, function(args)
+  local players = getPlayer(args[1])
+  for i, p in pairs(players) do
+    local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
+    game.ReplicatedStorage.Event:FireServer("UnCloak", x)
+  end
+  end)
+
+
+
+sincity("poison", "Poisons The Chosen Player", {}, function(args)
+local players = getPlayer(args[1])
+for i, p in pairs(players) do
+while wait(.1) do
+  game.ReplicatedStorage.Event:FireServer("TPD", 1, gPlayers[p].Character.Humanoid)
+  if gPlayers[p].Character.Humanoid.Health == 0 then
+    break
+end
 end
 end
 end)
