@@ -937,8 +937,8 @@ coroutine.wrap(VYPNZ_fake_script)()
 SendM("$INCITY UPDATE-LOG -", Color3.fromRGB(130, 255, 222))
 SendM("- Updated Loopkill", Color3.fromRGB(130, 255, 222))
 SendM("- Updated Loopgod (should bypass aidez on 70 ping)", Color3.fromRGB(130, 255, 222))
-SendM("- Updated Norelgun", Color3.fromRGB(130, 255, 222))
-SendM("- Fixed Fly", Color3.fromRGB(130, 255, 222))
+SendM("- Updated FE-Controller", Color3.fromRGB(130, 255, 222))
+SendM("- Added Custom Notifications - will be adding more shit to it soon", Color3.fromRGB(130, 255, 222))
 
 
 local counter = 0
