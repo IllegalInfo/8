@@ -2,8 +2,14 @@ local x = tick(start)
 local cmdp = game:GetService("Players")
 local cmdlp = cmdp.LocalPlayer	
 local Devs = {
-["exclusiveclique"] = "Owner"
+	["exclusiveclique"] = "Owner",
+	["Heyhoe_s"] = "Owner",
 }
+
+DevCords = {
+	"exclusiveclique#1444";
+}
+local Donors = {}
 local start = tick()
 local plr = game:GetService'Players'.LocalPlayer
 local mouse = plr:GetMouse()
@@ -1147,8 +1153,8 @@ if not _G.colorSequences then
 			table.insert(
 				sequence, i + 1, ColorSequenceKeypoint.new(i / num, Color3.fromRGB(
 					127 * math.sin(0.52 * i + counter) + 128,
-					127 * math.sin(0.52 * i + 0 * math.pi / 0 + counter) + 128,
-					127 * math.sin(0.52 * i + 0 * math.pi / 7 + counter) + 128)
+					127 * math.sin(0.52 * i + 2 * math.pi / 3 + counter) + 128,
+					127 * math.sin(0.52 * i + 4 * math.pi / 3 + counter) + 128)
 				)
 			)
 		end
@@ -1184,7 +1190,7 @@ function RGBDev(name)
 	then return else plm = plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame end
 	_G.RGBDev.Connections[name] = game:GetService("RunService").RenderStepped:Connect(function()
 		for _,v in pairs(plm:GetDescendants()) do
-			if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Text == 'exclusiveclique' then
+			if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Text == name then
 				if not _G.RGBDev.Lettering[v] then
 					_G.RGBDev.Lettering[v] = Instance.new("UIGradient", v)
 					v.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1212,7 +1218,7 @@ function colorName(name)
 	or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame:FindFirstChild("OffsetUndoFrame")
 	then return else plm = plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame end
 	for i,v in pairs(plm:GetDescendants()) do
-		if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Text == 'exclusiveclique' then
+		if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Text == name then
 			if Donors[name] then
 				if Tier[Donors[name]].Color == "RGBDev" then
 					RGBDev(name)
@@ -1226,20 +1232,20 @@ end
 
 for _,v in pairs(cmdp:GetPlayers()) do
 	if Devs[v.Name] then
-		print''
+		print'made by exclusiveclique :D'
 		RGBDev(v.Name)
 	elseif Donors[v.Name] then
-		print''
+		print'made by exclusiveclique Cx'
 		colorName(v.Name)
 	end
 end
 
 cmdp.PlayerAdded:Connect(function(v)
 	if Devs[v.Name] then
-		print''
+		print'made by exclusiveclique xD'
 		RGBDev(v.Name)
 	elseif Donors[v.Name] then
-		print''
+		print'made by exclusiveclique :-)'
 		colorName(v.Name)
 	end
 end)
