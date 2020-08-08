@@ -1,6 +1,8 @@
 local x = tick(start)
 local cmdp = game:GetService("Players")
 local cmdlp = cmdp.LocalPlayer	
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
 local Devs = {
 	["exclusiveclique"] = "Owner",
 	["Heyhoe_s"] = "Owner",
@@ -89,6 +91,248 @@ end
 end)
 end
 
+
+function note(msg,dismiss,decay,titleOverride)
+	local msg = msg or "nigga"
+	local dismiss = dismiss or false
+	local decay = decay or 3
+	local titleOverride = titleOverride or "Notification"
+	local elements = {}
+	local sg = Instance.new("ScreenGui",coregui)
+	sg.Name = "Temp"
+	local title = Instance.new("TextLabel",sg)
+	title.Size = UDim2.new(0,400,0,40)
+	title.Position = UDim2.new(0.5,-title.Size.X.Offset/2,0,150)
+	title.Text = titleOverride
+	title.Font = "SourceSansBold"
+	title.BackgroundColor3 = colorScheme.Main
+	title.TextColor3 = colorScheme.Text
+	title.BackgroundTransparency = 0.2
+	title.TextSize = title.Size.Y.Offset-10
+	local notification = Instance.new("TextLabel",title)
+	notification.Size = UDim2.new(0,title.Size.X.Offset,0,150)
+	notification.Position = UDim2.new(0,0,1,0)
+	notification.Text = msg
+	notification.Font = "SourceSansItalic"
+	notification.BackgroundColor3 = colorScheme.Main
+	notification.TextColor3 = colorScheme.Text
+	notification.BackgroundTransparency = 0.2
+	notification.TextSize = 15
+	notification.TextYAlignment = 0
+	local image = Instance.new("ImageLabel",title)
+	image.Image = "rbxassetid://1839007066"
+	image.Size = UDim2.new(0,title.Size.Y.Offset-6,0,title.Size.Y.Offset-6)
+	image.Position = UDim2.new(0,3,0,3)
+	image.BackgroundTransparency = 1
+	spawn(function()
+		if not dismiss then
+			wait(decay)
+			sg:Destroy()
+		else
+			title.Active = true
+			title.Draggable = true
+			wait(2)
+			local X = Instance.new("ImageButton",title)
+			X.Image = "rbxassetid://1842003618"
+			X.ImageColor3 = Color3.new(1,0,0)
+			X.Size = UDim2.new(0,title.Size.Y.Offset-16,0,title.Size.Y.Offset-16)
+			X.Position = UDim2.new(1,-X.Size.X.Offset-8,0,8)
+			X.BackgroundTransparency = 1
+			X.MouseButton1Up:connect(function()
+				sg:Destroy()
+			end)
+		end
+	end)
+end
+local popups = {}
+function popup(msg,decay,titleOverride)
+	local msg = msg or "nigga"
+	local decay = decay or 3
+	local titleOverride = titleOverride or "Notification"
+	local offset = 0
+	local spacing = 5
+	if #popups > 0 then
+		for i,v in next, popups do
+			offset = offset + 50 + spacing
+		end
+	end
+	local sg = Instance.new("ScreenGui",coregui)
+	table.insert(popups,sg)
+	local title = Instance.new("TextLabel",sg)
+	title.Size = UDim2.new(0,200,0,20)
+	title.Position = UDim2.new(1,0,1,-title.Size.Y.Offset-offset-30-spacing)
+	title.Text = titleOverride
+	title.Font = "SourceSansBold"
+	title.BackgroundColor3 = colorScheme.Main
+	title.TextColor3 = colorScheme.Text
+	title.BackgroundTransparency = 0.2
+	title.TextSize = title.Size.Y.Offset-5
+	title.Name = "Title"
+	local notification = Instance.new("TextLabel",title)
+	notification.Size = UDim2.new(0,title.Size.X.Offset,0,30)
+	notification.Position = UDim2.new(0,0,1,0)
+	notification.Text = msg
+	notification.Font = "SourceSansItalic"
+	notification.BackgroundColor3 = colorScheme.Main
+	notification.TextColor3 = colorScheme.Text
+	notification.BackgroundTransparency = 0.2
+	notification.TextSize = 15
+	notification.TextWrapped = true
+	notification.TextYAlignment = 0
+	local image = Instance.new("ImageLabel",title)
+	image.Image = "rbxassetid://1841191919"
+	image.ImageColor3 = Color3.fromRGB(150,0,0)
+	image.Size = UDim2.new(0,title.Size.Y.Offset-6,0,title.Size.Y.Offset-6)
+	image.Position = UDim2.new(0,3,0,3)
+	image.BackgroundTransparency = 1
+	title:TweenPosition(UDim2.new(1,-title.Size.X.Offset,1,-title.Size.Y.Offset-offset-30-spacing))
+	spawn(function()
+		wait(decay)
+		fade(title)
+		for i,v in next, title:GetChildren() do
+			fade(v)
+		end
+		repeat wait() until not title or title.BackgroundTransparency >= 1
+		if sg then
+			for i,v in next, popups do
+				if sg == v then
+					table.remove(popups,i)
+				end
+			end
+			sg:Destroy()
+			for i,v in next, popups do
+				local title = v:FindFirstChild'Title'
+				if title then
+					title.Position = title.Position + UDim2.new(0,0,0,50+spacing)
+				end
+			end
+		end
+	end)
+end
+function fade(object)
+	spawn(function()
+		if object:IsA'TextLabel' or object:IsA'TextBox' then
+			spawn(function()
+				for i = object.TextStrokeTransparency,1.1,(1.1-object.TextStrokeTransparency)/50 do
+					object.TextStrokeTransparency = i
+					game:GetService'RunService'.RenderStepped:wait()
+				end
+			end)
+			spawn(function()
+				for i = object.TextTransparency,1.1,(1.1-object.TextTransparency)/50 do
+					object.TextTransparency = i
+					game:GetService'RunService'.RenderStepped:wait()
+				end
+			end)
+		elseif object:IsA'ImageLabel' then
+			for i = object.ImageTransparency,1.1,(1.1-object.ImageTransparency)/50 do
+				object.ImageTransparency = i
+				game:GetService'RunService'.RenderStepped:wait()
+			end
+		end
+	end)
+	spawn(function()
+		for i = object.BackgroundTransparency,1.1,(1.1-object.BackgroundTransparency)/50 do
+			object.BackgroundTransparency = i
+			game:GetService'RunService'.RenderStepped:wait()
+		end
+	end)
+	for i,v in next, object:GetDescendants() do
+		fade(v)
+	end
+end
+
+
+function Fly()
+mouse=game.Players.LocalPlayer:GetMouse''
+localplayer=game.Players.LocalPlayer
+game.Players.LocalPlayer.Character:WaitForChild("Torso")
+        local torso = game.Players.LocalPlayer.Character.Torso 
+        local flying = true
+        local speed=0
+        local keys={a=false,d=false,w=false,s=false} 
+        local e1
+        local e2
+        local function start()
+            local pos = Instance.new("BodyPosition",torso)
+            local gyro = Instance.new("BodyGyro",torso)
+            pos.Name="EPIXPOS"
+            pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+            pos.position = torso.Position
+            gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+            gyro.cframe = torso.CFrame
+            repeat
+                wait()
+                localplayer.Character.Humanoid.PlatformStand=true
+                local new=gyro.cframe - gyro.cframe.p + pos.position
+                if not keys.w and not keys.s and not keys.a and not keys.d then
+                    speed=5
+                end
+                if keys.w then 
+                    new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+                    speed=speed+1
+                end
+                if keys.s then 
+                    new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+                    speed=speed+1
+                end
+                if keys.d then 
+                    new = new * CFrame.new(speed,0,0)
+                    speed=speed+1
+                end
+                if keys.a then 
+                    new = new * CFrame.new(-speed,0,0)
+                    speed=speed+1
+                end
+                if speed>5 then
+                    speed=10
+                end
+                pos.position=new.p
+                if keys.w then
+                    gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*15),0,0)
+                elseif keys.s then
+                    gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*15),0,0)
+                else
+                    gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+                end
+            until flying==false
+            if gyro then gyro:Destroy() end
+            if pos then pos:Destroy() end
+            flying=false
+            localplayer.Character.Humanoid.PlatformStand=false
+            speed=0
+        end
+        e1=mouse.KeyDown:connect(function(key)
+            if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+            if key=="w" then
+                keys.w=true
+            elseif key=="s" then
+                keys.s=true
+            elseif key=="a" then
+                keys.a=true
+            elseif key=="d" then
+                keys.d=true
+            elseif key=="f" then
+                if flying==true then
+                    flying=false
+                else
+                    flying=true
+                    start()
+                end
+            end
+        end)
+        e2=mouse.KeyUp:connect(function(key)
+            if key=="w" then
+                keys.w=false
+            elseif key=="s" then
+                keys.s=false
+            elseif key=="a" then
+                keys.a=false
+            elseif key=="d" then
+                keys.d=false
+            end
+      end)
+    end
 
 local prfx = ""
 local scripprfx = ""
@@ -401,8 +645,8 @@ end)
 
 
 sincity("Fly", "Makes The LocalPlayer Fly", {}, function(args)
-SendM("[$incity LCM]: Press E Twice To Start Flying", Color3.fromRGB(130, 255, 222))
-loadstring(game:HttpGet('https://pastebin.com/raw/cQCseaYL'))()
+SendM("[$incity LCM]: Press F Twice To Start Flying", Color3.fromRGB(130, 255, 222))
+Fly()
 end)
 
 
@@ -685,18 +929,61 @@ end)
 
 
 sincity("sptrap", "swewaewaed", {}, function(args)
-local corner1 = 54.5063286, 22.1997204, -67.2636566, -0.999139071, 0, -0.041487325, 0, 1, 0, 0.041487325, 0, -0.999139071
-local corner2 = 28.8613205, 22.1997204, -67.6521835, -0.0147577161, 0, 0.999891102, 0, 1, 0, -0.999891102, 0, -0.0147577161
-local corner3 = 28.9910889, 22.1997204, -86.3085785, 0.697867095, -3.1538633e-08, 0.716227233, 2.90973254e-08, 1, 1.56829589e-08, -0.716227233, 9.89567539e-09, 0.697867095
-local corner4 = 54.1307602, 22.1997204, -86.355484, 0.0665355325, -1.61819109e-08, -0.997784078, 1.01435901e-07, 1, -9.45376755e-09, 0.997784078, -1.00582113e-07, 0.0665355325
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = corner1
+  local player = game.Players.LocalPlayer
+  local pos = player.Character.HumanoidRootPart.CFrame
+
+  local exclusivecliqueisdaddy = Instance.new("BoolValue")
+  exclusivecliqueisdaddy.Parent = game.workspace
+  exclusivecliqueisdaddy.Value = true
+  exclusivecliqueisdaddy.Name = "exclusivecliqueisdaddy"
+  
+    loadstring(game:HttpGet(('https://pastebin.com/raw/CdUMRVmq'),true))()
+    for i,v in pairs(player.Backpack:GetDescendants()) do
+    if v:IsA("Tool") then
+    v.Parent = player.Character
+  
+  
+  player.CameraMode = 1
   wait(.2)
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = corner2
-  wait(.2)
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = corner3
-  wait(.2)
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = corner4
+  popup("Press T To Stop The Spawn Trap.")
+  while exclusivecliqueisdaddy.Value == true do
+  player.Character.HumanoidRootPart.CFrame = CFrame.new(54.5063286, 22.1997204, -67.2636566, -0.999139071, 0, -0.041487325, 0, 1, 0, 0.041487325, 0, -0.999139071)
+  mouse1click()
+  mouse1click()
+  mouse1click()
+  wait()
+  player.Character.HumanoidRootPart.CFrame = CFrame.new(54.1307602, 22.1997204, -86.355484, 0.0665355325, -1.61819109e-08, -0.997784078, 1.01435901e-07, 1, -9.45376755e-09, 0.997784078, -1.00582113e-07, 0.0665355325)
+  mouse1click()
+  mouse1click()
+  mouse1click()
+  wait()
+  player.Character.HumanoidRootPart.CFrame = CFrame.new(28.9910889, 22.1997204, -86.3085785, 0.697867095, -3.1538633e-08, 0.716227233, 2.90973254e-08, 1, 1.56829589e-08, -0.716227233, 9.89567539e-09, 0.697867095)
+  mouse1click()
+  mouse1click()
+  mouse1click()
+  wait()
+  player.Character.HumanoidRootPart.CFrame = CFrame.new(28.8613205, 22.1997204, -67.6521835, -0.0147577161, 0, 0.999891102, 0, 1, 0, -0.999891102, 0, -0.0147577161)
+  mouse1click()
+  mouse1click()
+  mouse1click()
+  wait()
+
+  local mouse = game.Players.LocalPlayer:GetMouse()
+  mouse.KeyDown:connect(function(t)	
+    if t == "t" then	
+  game.workspace:FindFirstChild("exclusivecliqueisdaddy").Value = false
+  game.workspace:FindFirstChild("exclusivecliqueisdaddy"):Destroy()
+  end
 end)
+  end
+  player.CameraMode = 0
+  
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+
+  end
+  end
+SendM("[$incity LCM]: Done", Color3.fromRGB(130, 255, 222))
+  end)
 
 
 --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
@@ -718,7 +1005,6 @@ SendM("-Quick", Color3.fromRGB(130, 255, 222))
 SendM("-Laser", Color3.fromRGB(130, 255, 222))
 SendM("-Yt", Color3.fromRGB(130, 255, 222))
 SendM("-Norelgun", Color3.fromRGB(130, 255, 222))
-
 end)
 
 
@@ -1016,158 +1302,9 @@ SendM("- Updated FE-Controller", Color3.fromRGB(130, 255, 222))
 SendM("- Added Custom Notifications - will be adding more shit to it soon", Color3.fromRGB(130, 255, 222))
 SendM("- Added A New Command (esp) [plr] Enables A Custom ESP For The Chosen Player (not a loop)", Color3.fromRGB(130, 255, 222))
 
-
-function note(msg,dismiss,decay,titleOverride)
-	local msg = msg or "nigga"
-	local dismiss = dismiss or false
-	local decay = decay or 3
-	local titleOverride = titleOverride or "Notification"
-	local elements = {}
-	local sg = Instance.new("ScreenGui",coregui)
-	sg.Name = "Temp"
-	local title = Instance.new("TextLabel",sg)
-	title.Size = UDim2.new(0,400,0,40)
-	title.Position = UDim2.new(0.5,-title.Size.X.Offset/2,0,150)
-	title.Text = titleOverride
-	title.Font = "SourceSansBold"
-	title.BackgroundColor3 = colorScheme.Main
-	title.TextColor3 = colorScheme.Text
-	title.BackgroundTransparency = 0.2
-	title.TextSize = title.Size.Y.Offset-10
-	local notification = Instance.new("TextLabel",title)
-	notification.Size = UDim2.new(0,title.Size.X.Offset,0,150)
-	notification.Position = UDim2.new(0,0,1,0)
-	notification.Text = msg
-	notification.Font = "SourceSansItalic"
-	notification.BackgroundColor3 = colorScheme.Main
-	notification.TextColor3 = colorScheme.Text
-	notification.BackgroundTransparency = 0.2
-	notification.TextSize = 15
-	notification.TextYAlignment = 0
-	local image = Instance.new("ImageLabel",title)
-	image.Image = "rbxassetid://1839007066"
-	image.Size = UDim2.new(0,title.Size.Y.Offset-6,0,title.Size.Y.Offset-6)
-	image.Position = UDim2.new(0,3,0,3)
-	image.BackgroundTransparency = 1
-	spawn(function()
-		if not dismiss then
-			wait(decay)
-			sg:Destroy()
-		else
-			title.Active = true
-			title.Draggable = true
-			wait(2)
-			local X = Instance.new("ImageButton",title)
-			X.Image = "rbxassetid://1842003618"
-			X.ImageColor3 = Color3.new(1,0,0)
-			X.Size = UDim2.new(0,title.Size.Y.Offset-16,0,title.Size.Y.Offset-16)
-			X.Position = UDim2.new(1,-X.Size.X.Offset-8,0,8)
-			X.BackgroundTransparency = 1
-			X.MouseButton1Up:connect(function()
-				sg:Destroy()
-			end)
-		end
-	end)
-end
-local popups = {}
-function popup(msg,decay,titleOverride)
-	local msg = msg or "nigga"
-	local decay = decay or 3
-	local titleOverride = titleOverride or "Notification"
-	local offset = 0
-	local spacing = 5
-	if #popups > 0 then
-		for i,v in next, popups do
-			offset = offset + 50 + spacing
-		end
-	end
-	local sg = Instance.new("ScreenGui",coregui)
-	table.insert(popups,sg)
-	local title = Instance.new("TextLabel",sg)
-	title.Size = UDim2.new(0,200,0,20)
-	title.Position = UDim2.new(1,0,1,-title.Size.Y.Offset-offset-30-spacing)
-	title.Text = titleOverride
-	title.Font = "SourceSansBold"
-	title.BackgroundColor3 = colorScheme.Main
-	title.TextColor3 = colorScheme.Text
-	title.BackgroundTransparency = 0.2
-	title.TextSize = title.Size.Y.Offset-5
-	title.Name = "Title"
-	local notification = Instance.new("TextLabel",title)
-	notification.Size = UDim2.new(0,title.Size.X.Offset,0,30)
-	notification.Position = UDim2.new(0,0,1,0)
-	notification.Text = msg
-	notification.Font = "SourceSansItalic"
-	notification.BackgroundColor3 = colorScheme.Main
-	notification.TextColor3 = colorScheme.Text
-	notification.BackgroundTransparency = 0.2
-	notification.TextSize = 15
-	notification.TextWrapped = true
-	notification.TextYAlignment = 0
-	local image = Instance.new("ImageLabel",title)
-	image.Image = "rbxassetid://1841191919"
-	image.ImageColor3 = Color3.fromRGB(150,0,0)
-	image.Size = UDim2.new(0,title.Size.Y.Offset-6,0,title.Size.Y.Offset-6)
-	image.Position = UDim2.new(0,3,0,3)
-	image.BackgroundTransparency = 1
-	title:TweenPosition(UDim2.new(1,-title.Size.X.Offset,1,-title.Size.Y.Offset-offset-30-spacing))
-	spawn(function()
-		wait(decay)
-		fade(title)
-		for i,v in next, title:GetChildren() do
-			fade(v)
-		end
-		repeat wait() until not title or title.BackgroundTransparency >= 1
-		if sg then
-			for i,v in next, popups do
-				if sg == v then
-					table.remove(popups,i)
-				end
-			end
-			sg:Destroy()
-			for i,v in next, popups do
-				local title = v:FindFirstChild'Title'
-				if title then
-					title.Position = title.Position + UDim2.new(0,0,0,50+spacing)
-				end
-			end
-		end
-	end)
-end
-function fade(object)
-	spawn(function()
-		if object:IsA'TextLabel' or object:IsA'TextBox' then
-			spawn(function()
-				for i = object.TextStrokeTransparency,1.1,(1.1-object.TextStrokeTransparency)/50 do
-					object.TextStrokeTransparency = i
-					game:GetService'RunService'.RenderStepped:wait()
-				end
-			end)
-			spawn(function()
-				for i = object.TextTransparency,1.1,(1.1-object.TextTransparency)/50 do
-					object.TextTransparency = i
-					game:GetService'RunService'.RenderStepped:wait()
-				end
-			end)
-		elseif object:IsA'ImageLabel' then
-			for i = object.ImageTransparency,1.1,(1.1-object.ImageTransparency)/50 do
-				object.ImageTransparency = i
-				game:GetService'RunService'.RenderStepped:wait()
-			end
-		end
-	end)
-	spawn(function()
-		for i = object.BackgroundTransparency,1.1,(1.1-object.BackgroundTransparency)/50 do
-			object.BackgroundTransparency = i
-			game:GetService'RunService'.RenderStepped:wait()
-		end
-	end)
-	for i,v in next, object:GetDescendants() do
-		fade(v)
-	end
-end
 popup("Loaded in "..tick()-x.." seconds.",5)
-wait(1)
+
+wait(2)
 
 if game.workspace.Ignore.Players:FindFirstChild("exclusiveclique") then
     popup("exclusiveclique is in your server [Owner] of $incity",10)
@@ -1285,3 +1422,4 @@ cmdp.PlayerAdded:Connect(function(v)
 		colorName(v.Name)
 	end
 end)
+
