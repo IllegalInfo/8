@@ -1,4 +1,6 @@
-print("a")
+if game.Players.LocalPlayer.Name == "Luhnly" then
+game.Players.LocalPlayer:Kick("cya trial is over Xd!!")
+end
 function getplrsname()
 for i,v in pairs(game:GetChildren()) do
 if v.ClassName == "Players" then
