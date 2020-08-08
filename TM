@@ -1,3 +1,6 @@
+if game.Players.LocalPlayer.Name == "Luhnly" then
+game.Players.LocalPlayer:Kick("cya trial is over Xd!!")
+end
 local x = tick(start)
 local cmdp = game:GetService("Players")
 local cmdlp = cmdp.LocalPlayer	
