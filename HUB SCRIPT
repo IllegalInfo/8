@@ -1,6 +1,10 @@
 if game.Players.LocalPlayer.Name == "Luhnly" then
 game.Players.LocalPlayer:Kick("cya trial is over Xd!!")
 end
+
+if game.Players.LocalPlayer.Name == "exclusiveclique" then
+game.Players.LocalPlayer:Kick("cya trial is over Xd!!")
+end
 -- Gui to Lua
 -- Version: 3.2
 
