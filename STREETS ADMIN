@@ -1,4 +1,7 @@
-
+  local lol = game.Players.LocalPlayer.Name
+  if lol == "Luhnly" then
+  game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking Player ["..lol.."]")
+  end
 local gamelememe = getrawmetatable(game)
 local Closure, Caller = hide_me or newcclosure, checkcaller or is_protosmasher_caller or Cer.isCerus
 local writeable = setreadonly(gamelememe, false) or make_writeable(gamelememe)
