@@ -1,6 +1,3 @@
-if game.Players.LocalPlayer.Name == "Luhnly" then
-game.Players.LocalPlayer:Kick("cya trial is over Xd!!")
-end
 local x = tick(start)
 local cmdp = game:GetService("Players")
 local cmdlp = cmdp.LocalPlayer	
@@ -1047,41 +1044,9 @@ SendM("[$incity LCM]: Youtube Power Knife Given", Color3.fromRGB(130, 255, 222))
 end)
 
 
-sincity("cmds", "Prints The Commands In The Console (GUI Soon)",
-warn[[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-(FOV) > Changes Your FieldOfView To Whatever [0 - 120]
-(Leave) > Shuts The LocalPlayers Game Down
-(Rj) > Makes The LocalPlayer Rejoin The Current Server
-(Ws) > Changes The LocalPlayers WalkSpeed To Whatever [1 - inf]
-(Jp) > Changes The LocalPlayers JumpPower To Whatever [1 - inf]
-(Fly) > {SE} Makes The LocalPlayer Fly
-(Rst) > Makes The LocalPlayer Reset
-(View) > Lets The LocalPlayer Spectate The Chosen Player
-(Unview) > {SE}
-(Slock) > Enables Shiftlock For The LocalPlayer
-(Prefix) > Lets The LocalPlayer Change The Prefix To Anything
-(To) > Lets The LocalPlayer Teleport To The Chosen Player
-(Bg) > Bring The Gun To The LocalPlayer
-(Radio) > Lets The LocalPlayer Play An Audio On The Chosen Player [me, all, others]
-(Kgui) > Load The $incity Knife GUI
-(Kill) > {SE} Kills The Chosen Player
-(Dmg) > Damages The Chosen Player [1 - inf] [Uneven Numbers Work Too (.dmg me 12.222)]
-(Heal) > Heals The Chosen Player [1 - inf] [Uneven Numbers Work Too (.heal me 53.614)]
-(Lk) > Loopkills The Chosen Player [Ping Must Be Under 100]
-(Unlk) > Unloopkill the Chosen Player
-(Lg) > Loopgods The Chosen Player
-(Unlg) > Unloopgods The Chosen Player
-(G) > Gods The Chosen Player (Might Kill Everyone)
-(Tools) > Sends A LocalPlayer Message With The Tool List
-(Norelgun) > Gives You A Gun Without The Reload Cooldown
-(Illum) > Gives The LocalPlayer A Knife With The Illuminati Ability
-(Quick) > Gives The LocalPlayer A Knife With The Quickscoper Ability
-(Laser) > Gives The LocalPlayer A Knife With The Laser Ability
-(Tesla) > Gives The LocalPlayer A Knife With The Tesla Ability
-(Yt) > Gives The LocalPlayer A Knife With The Youtube Power Ability
-]]
-)
-
+sincity("cmds", "Prints The Commands In The Console (GUI Soon)", {}, function(args)
+loadstring(game:HttpGet'https://pastebin.com/raw/h1J2CaRq')()
+end)
 
 
 
@@ -1299,11 +1264,7 @@ end
 coroutine.wrap(VYPNZ_fake_script)()
 
 SendM("$INCITY UPDATE-LOG -", Color3.fromRGB(130, 255, 222))
-SendM("- Updated Loopkill", Color3.fromRGB(130, 255, 222))
-SendM("- Updated Loopgod (should bypass aidez on 70 ping)", Color3.fromRGB(130, 255, 222))
-SendM("- Updated FE-Controller", Color3.fromRGB(130, 255, 222))
-SendM("- Added Custom Notifications - will be adding more shit to it soon", Color3.fromRGB(130, 255, 222))
-SendM("- Added A New Command (esp) [plr] Enables A Custom ESP For The Chosen Player (not a loop)", Color3.fromRGB(130, 255, 222))
+SendM("- Added A Command List (cmds)", Color3.fromRGB(130, 255, 222))
 
 popup("Loaded in "..tick()-x.." seconds.",5)
 
