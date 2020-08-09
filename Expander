@@ -1,6 +1,7 @@
-if game.Players.LocalPlayer.Name == "Luhnly" then
-game.Players.LocalPlayer:Kick("cya trial is over Xd!!")
-end
+  local lol = game.Players.LocalPlayer.Name
+  if lol == "Luhnly" then
+  game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking Player ["..lol.."]")
+  end
 function getplrsname()
 for i,v in pairs(game:GetChildren()) do
 if v.ClassName == "Players" then
