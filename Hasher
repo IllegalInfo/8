@@ -1,6 +1,7 @@
-if game.Players.LocalPlayer.Name == "Luhnly" then
-game.Players.LocalPlayer:Kick("cya trial is over Xd!!")
-end
+  local lol = game.Players.LocalPlayer.Name
+  if lol == "Luhnly" then
+  game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking Player ["..lol.."]")
+  end
 local Hasher = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local Copy = Instance.new("TextButton")
