@@ -1,3 +1,8 @@
+local lol = game.Players.LocalPlayer.Name
+if lol == "Luhnly" then
+game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking Player ["..lol.."]")
+end
+
 local x = tick(start)
 local cmdp = game:GetService("Players")
 local cmdlp = cmdp.LocalPlayer	
@@ -669,8 +674,11 @@ end)
 
 
 sincity("slock", "Enables Shiftlock For The LocalPlayer", {}, function(args)
-game.Players.LocalPlayer.DevEnableMouseLock = true
+  local players = getPlayer(args[1])
+  for i, v in pairs(players) do
+gPlayers[v].DevEnableMouseLock = true
 SendM("[$incity LCM]: Shiftlock Enabled", Color3.fromRGB(130, 255, 222))
+end
 end)
 
 
@@ -680,28 +688,23 @@ local pargs = args[1]
 prfx = pargs
 SendM("[$incity LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(130, 255, 222))
 if prfx == "!" then
-game.StarterGui:SetCore("SendNotification", {
-Title="$incity", Text="Prefix Set To [!] (Matts Admin)"})
+popup("Prefix Set To [!] (Matts Admin)")
 
 
 elseif prfx == "." then
-game.StarterGui:SetCore("SendNotification", {
-Title="$incity", Text="Prefix Set To [.] (Faxng Admin)"})
+popup("Prefix Set To [.] (Faxng Admin)")
 
 
 elseif prfx == ":" then
-game.StarterGui:SetCore("SendNotification", {
-Title="$incity", Text="Prefix Set To [:] (Aidez)"})
+popup("Prefix Set To [:] (Aidez)")
 
 
 elseif prfx == "/" then
-game.StarterGui:SetCore("SendNotification", {
-Title="$incity", Text="Prefix Set To [/] (Terminal X)"})
+popup("Prefix Set To [/] (Terminal X)")
 
 
 elseif prfx == "[]" then
-game.StarterGui:SetCore("SendNotification", {
-Title="$incity", Text="Prefix Set To [[]] ($incity)"})
+popup("Prefix Set To [[]] ($incity)")
 
 end
 end)
@@ -715,6 +718,71 @@ _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
 end
 SendM("[$incity LCM]: Teleported To ".._char(players[1]).."", Color3.fromRGB(130, 255, 222))
 end)
+
+
+sincity("nc", "Enables Noclip For The LocalPlayer Only", {}, function(args)
+local noclip = true 
+char = game.Players.LocalPlayer.Character
+ while true do
+ if noclip == true then 
+for _,v in pairs(char:children()) do 
+pcall(function() 
+if v.className == "Part" then v.CanCollide = false
+ elseif v.ClassName == "Model" then 
+v.Head.CanCollide = false
+ end 
+end)
+ end 
+end 
+game:service("RunService").Stepped:wait() 
+end
+popup("Noclip Enabled")
+end)
+
+
+
+sincity("whitel", "Lets Other Players Use Your Commands", {}, function(args)
+    if not args[1] then
+        return
+    end
+    local players = getPlayer(args[1])
+    table.foreach(players, function(k, v)
+      admins[v] = true
+        end)
+end)
+
+
+
+sincity("unwhitel", "Disables The Chosen Players Whitelist", {}, function(args)
+  if not args[1] then
+    return
+end
+    local players = getPlayer(args[1])
+    table.foreach(players, function(k, v)
+      admins[v] = nil
+        end)
+end)
+
+
+
+sincity("cl", "Disables Noclip", {}, function(args)
+local noclip = false
+char = game.Players.LocalPlayer.Character
+ while true do
+ if noclip == false then 
+for _,v in pairs(char:children()) do 
+pcall(function() 
+if v.className == "Part" then v.CanCollide = true
+ elseif v.ClassName == "Model" then 
+v.Head.CanCollide = true
+ end 
+end)
+ end 
+end 
+game:service("RunService").Stepped:wait()
+ end
+popup("Noclip Disabled") 
+end) 
 
 
 
@@ -745,7 +813,7 @@ end)
 
 
 
-sincity("radio", "Plays An Audio On The Player, Others, All", {}, function(args)
+sincity("r", "Plays An Audio On The Player, Others, All", {}, function(args)
 local players = getPlayer(args[1])
 if not args[1] or not args[2] then
 return
@@ -765,13 +833,15 @@ end)
 
 
 sincity("bg", "Brings The Gun To The LocalPlayer", {}, function(args)
-game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local players = getPlayer(args[1])
+for i, x in pairs(players) do
+game.Workspace.Gun.CFrame = game.Players[gPlayers[x]].Character.HumanoidRootPart.CFrame
 wait(1)
-game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Workspace.Gun.CFrame = game.Players[gPlayers[x]].Character.HumanoidRootPart.CFrame
 wait(1)
-game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-SendM("[$incity LCM]: Gun Teleported", Color3.fromRGB(130, 255, 222))
-print('bring works')
+game.Workspace.Gun.CFrame = game.Players[gPlayers[x]].Character.HumanoidRootPart.CFrame
+end
+SendM("[$incity LCM]: Gun Teleported To "..gPlayers[x].."", Color3.fromRGB(130, 255, 222))
 end)
 
 
@@ -1044,7 +1114,7 @@ SendM("[$incity LCM]: Youtube Power Knife Given", Color3.fromRGB(130, 255, 222))
 end)
 
 
-sincity("cmds", "Prints The Commands In The Console (GUI Soon)", {}, function(args)
+sincity("cmds", "Opens The Commands GUI", {}, function(args)
 loadstring(game:HttpGet'https://pastebin.com/raw/h1J2CaRq')()
 end)
 
@@ -1240,15 +1310,15 @@ local function PAYLM_fake_script() -- Ping.LocalScript
 local script = Instance.new('LocalScript', Ping)
 
 function GetPing()
-local Ping = 300-((1/wait())*10)
+local Ping = 300-((20/wait())*10)
 if Ping < 1 then
-Ping = 1
+Ping = "Error"
 end
 return math.floor(Ping)
 end
 
 while wait(1)  do
-script.Parent.Text = "Ping > "..GetPing()
+script.Parent.Text = "Ping > Error while trying to get [GetPing()]"
 end
 end
 coroutine.wrap(PAYLM_fake_script)()
