@@ -604,8 +604,7 @@ local function FindPlr(name)
 local nameTable = {}
 name = name:lower()
 if name == "me" then
-return player
-
+return {admin}
 elseif name == "others" then
 for i, v in pairs(FP:GetChildren()) do
 if v:IsA "Player" then
