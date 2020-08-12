@@ -1,0 +1,98 @@
+local counter = 0
+local num = 10
+if not _G.colorSequences then
+  _G.colorSequences = {}
+  while true do
+    local sequence = {}
+    for i = 0, num do
+      table.insert(
+        sequence, i + 1, ColorSequenceKeypoint.new(i / num, Color3.fromRGB(
+          127 * math.sin(0.52 * i + counter) + 128,
+          127 * math.sin(0.52 * i + 7 * math.pi / 0 + counter) + 128,
+          127 * math.sin(0.52 * i + 0 * math.pi / 7 + counter) + 128)
+        )
+      )
+    end
+    local new = ColorSequence.new(sequence)
+    if #_G.colorSequences > 0 then
+      if new == _G.colorSequences[1] then
+        break
+      end
+    end
+    table.insert(_G.colorSequences, new)
+    counter = counter + 0.0785
+    if (counter >= 6.28) then
+      counter = 0
+    end
+  end
+end
+
+if not _G.RGBDev then
+  _G.RGBDev = {Lettering = {}, Connections = {}}
+end
+
+function RGBDev(name)
+  if _G.RGBDev.Connections[name] then return end
+  local plm = game:GetService("CoreGui").RobloxGui:FindFirstChild("PlayerListMaster")
+  if not plm
+  or not plm:FindFirstChild("OffsetFrame")
+  or not plm.OffsetFrame:FindFirstChild("PlayerScrollList")
+  or not plm.OffsetFrame.PlayerScrollList:FindFirstChild("SizeOffsetFrame")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame:FindFirstChild("ScrollingFrameContainer")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer:FindFirstChild("ScrollingFrameClippingFrame")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame:FindFirstChild("ScollingFrame")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame:FindFirstChild("OffsetUndoFrame")
+  then return else plm = plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame end
+  _G.RGBDev.Connections[name] = game:GetService("RunService").RenderStepped:Connect(function()
+    for _,v in pairs(plm:GetDescendants()) do
+      if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Text == name then
+        if not _G.RGBDev.Lettering[v] then
+          _G.RGBDev.Lettering[v] = Instance.new("UIGradient", v)
+          v.TextColor3 = Color3.fromRGB(255, 255, 255)
+        elseif math.ceil(tick()) % 0.5 == 0 then
+          _G.RGBDev.Lettering[v].Color = _G.colorSequences[math.ceil((math.fmod(tick(), 1))*80)]
+        end
+        v.Rotation = math.random(-1,1)
+        if Devs[name] then
+          v.Parent.Parent.PlayerIcon.Image = "https://tr.rbxcdn.com/14e18e96cc8b974c6474b213021a89d7/110/110/Decal/Jpeg"
+        end
+      end
+    end
+  end)
+end
+
+function colorName(name)
+  local plm = game:GetService("CoreGui").RobloxGui:FindFirstChild("PlayerListMaster")
+  if not plm
+  or not plm:FindFirstChild("OffsetFrame")
+  or not plm.OffsetFrame:FindFirstChild("PlayerScrollList")
+  or not plm.OffsetFrame.PlayerScrollList:FindFirstChild("SizeOffsetFrame")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame:FindFirstChild("ScrollingFrameContainer")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer:FindFirstChild("ScrollingFrameClippingFrame")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame:FindFirstChild("ScollingFrame")
+  or not plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame:FindFirstChild("OffsetUndoFrame")
+  then return else plm = plm.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame end
+  for i,v in pairs(plm:GetDescendants()) do
+    if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Text == name then
+      if Donors[name] then
+        if Tier[Donors[name]].Color == "RGBDev" then
+          RGBDev(name)
+        else
+          v.TextColor3 = Tier[Donors[name]].Color
+        end						
+      end
+    end
+  end
+end
+
+for _,v in pairs(cmdp:GetPlayers()) do
+  if Devs[v.Name] then
+    RGBDev(v.Name)
+end
+end
+
+cmdp.PlayerAdded:Connect(function(v)
+  if Devs[v.Name] then
+    RGBDev(v.Name)
+end
+end)
