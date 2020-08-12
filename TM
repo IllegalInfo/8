@@ -10,7 +10,7 @@ local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 local Devs = {
   ["exclusiveclique"] = "Owner",
-  ["Heyhoe_s"] = "Owner",
+  ["qtiepies"] = "Owner",
 }
 
 DevCords = {
@@ -87,8 +87,9 @@ end)
 function start()
   game:GetService('RunService').Stepped:connect(function()
   local n=game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("GUI") if n then for i, x in pairs(n.Chats:GetChildren()) do
-    if x.Name=="Chat" then if string.find(x.Text, "exclusiveclique")then x.Text=string.gsub(x.Text, "exclusiveclique", "[Owner] Zack")x.TextColor3=Color3.fromRGB(0, 144, 163)
+    if x.Name=="Chat" then if string.find(x.Text, "exclusiveclique")then x.Text=string.gsub(x.Text, "exclusiveclique", "[Owner] Zack")x.TextColor3=Color3.fromRGB(50, 168, 143)
     elseif string.find(x.Text, "Jay_Trvp")then x.Text=string.gsub(x.Text, "Jay_Trvp", "[crodie] Jay")x.TextColor3=Color3.fromRGB(0, 220, 0)
+    elseif string.find(x.Text, "qtiepies")then x.Text=string.gsub(x.Text, "qtiepies", "[Angel] qtiepies ")x.TextColor3=Color3.fromRGB(239, 66, 245)
   end
 end
 end
@@ -787,17 +788,17 @@ end)
 sincity("esp", "Enables A Custom ESP For The Chosen Player", {}, function(args)
 local players = getPlayer(args[1])
 for i, v in pairs(players) do
-  for b,n in pairs(gPlayers[v].Character:GetChildren()) do
-  for i,m in pairs(gPlayers[v].Character:GetChildren()) do
-              if m:IsA("Part") or m:IsA("MeshPart") then
-                if m.Name ~= "HumanoidRootPart" and m.Name ~= "Handle" or (m:IsA("Part")) then
-                  m.Material = "ForceField"
-                  m.BrickColor = BrickColor.new("Baby Blue")
-                end
-              end
-            end
-          end
-        if gPlayers[v].Name == "exclusiveclique" then 
+for b,n in pairs(gPlayers[v].Character:GetChildren()) do
+for i,m in pairs(gPlayers[v].Character:GetChildren()) do
+if m:IsA("Part") or m:IsA("MeshPart") then
+if m.Name ~= "HumanoidRootPart" and m.Name ~= "Handle" or (m:IsA("Part")) then
+m.Material = "ForceField"
+m.BrickColor = BrickColor.new("Baby Blue")
+end
+end
+end
+end
+if game.Players[gPlayers[v]].Name == "exclusiveclique" then 
 m.BrickColor = BrickColor.new("Really Black")
 end
 end
@@ -933,17 +934,17 @@ local god = Instance.new("BoolValue")
 god.Parent = gPlayers[v]
 god.Value = true
 god.Name = "god"
-game:GetService("RunService").RenderStepped:connect(
-function()
 if gPlayers[v]:FindFirstChild("god") then
+while god.Value == true do
+  wait(.001)
 game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, gPlayers[v].Character:FindFirstChild("Humanoid"))
 game.ReplicatedStorage.Event:FireServer("TPD", math.huge, gPlayers[v].Character and gPlayers[v].Character:FindFirstChild "Humanoid" or gPlayers[v].CharacterAdded:wait():FindFirstChild("Humanoid"))
 end
 end
-)
 end
 SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(130, 255, 222))
 end)
+
 
 
 sincity("unlg", "Unloopgods The Chosen Player", {}, function(args)
@@ -983,7 +984,7 @@ sincity("poison", "Poisons The Chosen Player", {}, function(args)
 local players = getPlayer(args[1])
 for i, p in pairs(players) do
 while wait(.1) do
-  game.ReplicatedStorage.Event:FireServer("TPD", 1, gPlayers[p].Character.Humanoid)
+  game.ReplicatedStorage.Event:FireServer("TPD", 0.5, gPlayers[p].Character.Humanoid)
   if gPlayers[p].Character.Humanoid.Health == 0 then
     break
 end
@@ -993,7 +994,7 @@ end)
 
 
 
-sincity("sptrap", "swewaewaed", {}, function(args)
+sincity("sptrap", "Teleports The LocalPlayer To 4 Different Corners n Auto Throws Tesla Knives", {}, function(args)
   local player = game.Players.LocalPlayer
   local pos = player.Character.HumanoidRootPart.CFrame
 
@@ -1042,9 +1043,7 @@ sincity("sptrap", "swewaewaed", {}, function(args)
 end)
   end
   player.CameraMode = 0
-  
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
-
   end
   end
 SendM("[$incity LCM]: Done", Color3.fromRGB(130, 255, 222))
@@ -1517,8 +1516,8 @@ if not _G.colorSequences then
       table.insert(
         sequence, i + 1, ColorSequenceKeypoint.new(i / num, Color3.fromRGB(
           127 * math.sin(0.52 * i + counter) + 128,
-          127 * math.sin(0.52 * i + 2 * math.pi / 0 + counter) + 128,
-          127 * math.sin(0.52 * i + 4 * math.pi / 0 + counter) + 128)
+          127 * math.sin(0.52 * i + 7 * math.pi / 0 + counter) + 128,
+          127 * math.sin(0.52 * i + 0 * math.pi / 7 + counter) + 128)
         )
       )
     end
@@ -1588,7 +1587,7 @@ function colorName(name)
           RGBDev(name)
         else
           v.TextColor3 = Tier[Donors[name]].Color
-        end
+        end						
       end
     end
   end
@@ -1596,21 +1595,12 @@ end
 
 for _,v in pairs(cmdp:GetPlayers()) do
   if Devs[v.Name] then
-    print'made by exclusiveclique :D'
     RGBDev(v.Name)
-  elseif Donors[v.Name] then
-    print'made by exclusiveclique Cx'
-    colorName(v.Name)
-  end
+end
 end
 
 cmdp.PlayerAdded:Connect(function(v)
   if Devs[v.Name] then
-    print'made by exclusiveclique xD'
     RGBDev(v.Name)
-  elseif Donors[v.Name] then
-    print'made by exclusiveclique :-)'
-    colorName(v.Name)
-  end
+end
 end)
-
