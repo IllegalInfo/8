@@ -984,7 +984,7 @@ sincity("poison", "Poisons The Chosen Player", {}, function(args)
 local players = getPlayer(args[1])
 for i, p in pairs(players) do
 while wait(.1) do
-  game.ReplicatedStorage.Event:FireServer("TPD", 0.5, gPlayers[p].Character.Humanoid)
+  game.ReplicatedStorage.Event:FireServer("TPD", 1, gPlayers[p].Character.Humanoid)
   if gPlayers[p].Character.Humanoid.Health == 0 then
     break
 end
