@@ -198,7 +198,7 @@
   ------------------------------------------------------------------------------------------------------------
   
   if game.Lighting:FindFirstChild("already_loaded") then
-  popup("[$incity v2]: Already Loaded >:I", 5)
+  popup("[ZANEXX v2]: Already Loaded >:I", 5)
   Stop()
   end
   
@@ -350,8 +350,8 @@
   
   ------------------------------------------------------------------------------------------------------------
   
-  SendM("[$incity v2 LCM]: $incity v2 Loaded", Color3.fromRGB(172, 31, 255))
-  SendM("[$incity v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: None", Color3.fromRGB(172, 31, 255))
+  SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded", Color3.fromRGB(172, 31, 255))
+  SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: None", Color3.fromRGB(172, 31, 255))
   
   ------------------------------------------------------------------------------------------------------------
   
@@ -646,7 +646,7 @@
   if v:IsA "Player" then
   if v.Name == plr_name then return v end end end return end
   
-  function Sincity(name, desc, func)
+  function Zanexx(name, desc, func)
   cmds[#cmds + 1] = {
   NAME = name,
   DESC = desc,
@@ -818,85 +818,85 @@
   
   
   
-  Sincity("fov", "Changes Your FOV", function(args)
+  Zanexx("fov", "Changes Your FOV", function(args)
   local fval = args[1]
   game.workspace.Camera.FieldOfView = fval
-  SendM("[$incity LCM]: LP FOV Changed To ["..fval.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: LP FOV Changed To ["..fval.."]", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("leave", "Shuts The LocalPlayers Game Down", function(args)
-  SendM("[$incity LCM]: Leaving Please Wait", Color3.fromRGB(87, 0, 138))
+  Zanexx("leave", "Shuts The LocalPlayers Game Down", function(args)
+  SendM("[ZANEXX LCM]: Leaving Please Wait", Color3.fromRGB(87, 0, 138))
   game:Shutdown("Gtfo newgen skid LMAOO")
   end)
   
   
   
-  Sincity("rj", "Rejoins The Current Server You Are In", function(args)
-  SendM("[$incity LCM]: Rejoining Please Wait", Color3.fromRGB(87, 0, 138))
+  Zanexx("rj", "Rejoins The Current Server You Are In", function(args)
+  SendM("[ZANEXX LCM]: Rejoining Please Wait", Color3.fromRGB(87, 0, 138))
   game:GetService("TeleportService"):Teleport(game.PlaceId)
   end)
   
   
   
-  Sincity("ws", "Changes The LocalPlayers WalkSpeed", function(args)
+  Zanexx("ws", "Changes The LocalPlayers WalkSpeed", function(args)
   local wval = args[1]
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = wval
-  SendM("[$incity LCM]: WalkSpeed Changed To ["..wval.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: WalkSpeed Changed To ["..wval.."]", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("jp", "Changes The LocalPlayers Jump Height", function(args)
+  Zanexx("jp", "Changes The LocalPlayers Jump Height", function(args)
   local jval = args[1]
   game.Players.LocalPlayer.Character.Humanoid.JumpPower = jval
-  SendM("[$incity LCM]: JumpPower Changed To ["..jval.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: JumpPower Changed To ["..jval.."]", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("Fly", "Makes The LocalPlayer Fly", function(args)
-  SendM("[$incity LCM]: Press F Twice To Start Flying", Color3.fromRGB(87, 0, 138))
+  Zanexx("Fly", "Makes The LocalPlayer Fly", function(args)
+  SendM("[ZANEXX LCM]: Press F Twice To Start Flying", Color3.fromRGB(87, 0, 138))
   Fly()
   end)
   
   
   
-  Sincity("rst", "Makes The LocalPlayer Reset", function(args)
+  Zanexx("rst", "Makes The LocalPlayer Reset", function(args)
   game.Players.LocalPlayer.Character:BreakJoints()
-  SendM("[$incity LCM]: Clapped XD", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Clapped XD", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("view", "Spectates The Chosen Player", function(args)
+  Zanexx("view", "Spectates The Chosen Player", function(args)
   local players = FindPlr(args[1])
   workspace.CurrentCamera.CameraSubject = game.Players[players[1]].Character
-  SendM("[$incity LCM]: Fucking Pedo Smh..", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Fucking Pedo Smh..", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("unview", "UnSpectates The Chosen Player", function(args)
+  Zanexx("unview", "UnSpectates The Chosen Player", function(args)
   game.workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
   end)
   
   
   
-  Sincity("slock", "Enables Shiftlock For The LocalPlayer", function(args)
+  Zanexx("slock", "Enables Shiftlock For The LocalPlayer", function(args)
   local plr = game.Players.LocalPlayer
   plr.DevEnableMouseLock = true
-  SendM("[$incity LCM]: Shiftlock Enabled", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Shiftlock Enabled", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("prefix", "Lets The LocalPlayer Change The Prefix To Anything", function(args)
-  SendM("[$incity LCM]: Prefix Before: "..prfx.."", Color3.fromRGB(87, 0, 138))
+  Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything", function(args)
+  SendM("[ZANEXX LCM]: Prefix Before: "..prfx.."", Color3.fromRGB(87, 0, 138))
   local pargs = args[1]
   prfx = pargs
-  SendM("[$incity LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(87, 0, 138))
   
   if prfx == "!" then
   popup("Prefix Set To [!] (Matts Admin)")
@@ -911,23 +911,23 @@
   popup("Prefix Set To [/] (Terminal X)")
   
   elseif prfx == "[]" then
-  popup("Prefix Set To [[]] ($incity)")
+  popup("Prefix Set To [[]] (ZANEXX)")
   end
   end)
   
   
   
-  Sincity("to", "Lets The LocalPlayer Teleport To Anyone", function(args)
+  Zanexx("to", "Lets The LocalPlayer Teleport To Anyone", function(args)
   local players=FindPlr(args[1])
   if players ~= nil and _char(players[1]):FindFirstChild("HumanoidRootPart") then
   _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
   end
-  SendM("[$incity LCM]: Teleported To ".._char(players[1]).."", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Teleported To ".._char(players[1]).."", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("nc", "Enables Noclip For The LocalPlayer Only", function(args)
+  Zanexx("nc", "Enables Noclip For The LocalPlayer Only", function(args)
   local noclip = true 
   char = game.Players.LocalPlayer.Character
   while true do
@@ -948,7 +948,7 @@
   
   
   
-  Sincity("whitel", "Lets Other Players Use Your Commands", function(args)
+  Zanexx("whitel", "Lets Other Players Use Your Commands", function(args)
       if not args[1] then
           return
       end
@@ -960,7 +960,7 @@
   
   
   
-  Sincity("unwhitel", "Disables The Chosen Players Whitelist", function(args)
+  Zanexx("unwhitel", "Disables The Chosen Players Whitelist", function(args)
     if not args[1] then
       return
   end
@@ -972,7 +972,7 @@
   
   
   
-  Sincity("cl", "Disables Noclip", function(args)
+  Zanexx("cl", "Disables Noclip", function(args)
   local noclip = false
   char = game.Players.LocalPlayer.Character
   while true do
@@ -993,7 +993,7 @@
   
   
   
-  Sincity("esp", "Enables A Custom ESP For The Chosen Player", function(args)
+  Zanexx("esp", "Enables A Custom ESP For The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
   for b,n in pairs(FP[v].Character:GetChildren()) do
@@ -1026,7 +1026,7 @@
   
   
   
-  Sincity("r", "Plays An Audio On The Player, Others, All", function(args)
+  Zanexx("r", "Plays An Audio On The Player, Others, All", function(args)
   local players = FindPlr(args[1])
   if not args[1] or not args[2] then
   return
@@ -1035,27 +1035,27 @@
   for i, v in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("PlayRadio", FP[v], num)
   end
-  SendM("[$incity LCM]: Now Playing ["..num.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Now Playing ["..num.."]", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("Kgui", "Opens the $incity knife gui", function(args)
-  SendM("[$incity LCM]: Knife Gui Loaded", Color3.fromRGB(87, 0, 138))
+  Zanexx("Kgui", "Opens the ZANEXX knife gui", function(args)
+  SendM("[ZANEXX LCM]: Knife Gui Loaded", Color3.fromRGB(87, 0, 138))
   loadstring(game:HttpGet("https://pastebin.com/raw/SN5BmNtD"))()
   end)
   
   
-  Sincity("bg", "Brings The Gun To The LocalPlayer", function(args)
+  Zanexx("bg", "Brings The Gun To The LocalPlayer", function(args)
   game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
   wait(1)
   game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
   wait(1)
   game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-  SendM("[$incity LCM]: Gun Teleported", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Gun Teleported", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("cloak", "Makes The Chosen Player(-s) Invisible", function(args)
+  Zanexx("cloak", "Makes The Chosen Player(-s) Invisible", function(args)
     local players = FindPlr(args[1])
     for i, p in pairs(players) do
       local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
@@ -1065,7 +1065,7 @@
     
     
     
-  Sincity("uncloak", "Makes The Chosen Player(-s) Invisible", function(args)
+  Zanexx("uncloak", "Makes The Chosen Player(-s) Invisible", function(args)
   local players = FindPlr(args[1])
   for i, p in pairs(players) do
   local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
@@ -1075,13 +1075,13 @@
   
       
   
-  Sincity("cmds", "Opens The Commands GUI", function(args)
+  Zanexx("cmds", "Opens The Commands GUI", function(args)
   loadstring(game:HttpGet'https://pastebin.com/raw/9HVdZTQr')()
   end)
         
         
         
-  Sincity("roles", "Opens The Role GUI", function(args)
+  Zanexx("roles", "Opens The Role GUI", function(args)
   loadstring(game:HttpGet'https://pastebin.com/raw/bkJkeBth')()
   end)
   
@@ -1093,38 +1093,38 @@
   
   
   
-  Sincity("kill", "Kills The Chosen Player(-s)", function(args)
+  Zanexx("kill", "Kills The Chosen Player(-s)", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", math.huge, FP[v].Character.Humanoid)
   end
-  SendM("[$incity LCM]: Player(-s) Killed", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Killed", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("dmg", "SE Damages The Chosen Player", function(args)
+  Zanexx("dmg", "SE Damages The Chosen Player", function(args)
   local players = FindPlr(args[1])
   if not args[1] or not args[2] then return end
   local dmgp = args[2]
   for i, p in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", dmgp, FP[p].Character.Humanoid)
   end
-  SendM("[$incity LCM]: Player(-s) Damaged For ["..dmgp.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Damaged For ["..dmgp.."]", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("heal", "SE Heals The Chosen Player", function(args)
+  Zanexx("heal", "SE Heals The Chosen Player", function(args)
   local players = FindPlr(args[1])
   if not args[1] or not args[2] then return end
   local healn = args[2]
   for i, p in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", -healn, FP[p].Character.Humanoid)
   end
-  SendM("[$incity LCM]: Player(-s) Healed For ["..healn.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Healed For ["..healn.."]", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("lk", "Loopkills The Chosen Player", function(args)
+  Zanexx("lk", "Loopkills The Chosen Player", function(args)
     local players = FindPlr(args[1])
     for i, v in pairs(players) do
       if FP[v]:FindFirstChild("ml") then
@@ -1142,33 +1142,33 @@
     end
     end
     end
-    SendM("[$incity LCM]: Player(-s) Loopkilled", Color3.fromRGB(87, 0, 138))
+    SendM("[ZANEXX LCM]: Player(-s) Loopkilled", Color3.fromRGB(87, 0, 138))
     end)
   
   
-  Sincity("unlk", "Unloopkills The Chosen Player", function(args)
+  Zanexx("unlk", "Unloopkills The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
     if FP[v]:FindFirstChild("ml") then
       FP[v]:FindFirstChild("ml"):Destroy()
     end
   end
-  SendM("[$incity LCM]: Player(-s) Unloopkilled", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Unloopkilled", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("g", "Gods The Chosen Player", function(args)
+  Zanexx("g", "Gods The Chosen Player", function(args)
   local players = FindPlr(args[1])
   RA()
   for i, h in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, FP[h].Character.Humanoid)
   end
-  SendM("[$incity LCM]: Player(-s) Godded", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Godded", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("lg", "Loopgods The Chosen Player", function(args)
+  Zanexx("lg", "Loopgods The Chosen Player", function(args)
   local players = FindPlr(args[1])
   RA()
   for i, v in pairs(players) do
@@ -1184,23 +1184,23 @@
   game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, FP[v].Character.Humanoid)
   end)
   end
-  SendM("[$incity LCM]: Player(-s) Loopgodded", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Loopgodded", Color3.fromRGB(87, 0, 138))
   end)
     
   
-  Sincity("unlg", "Unloopgods The Chosen Player", function(args)
+  Zanexx("unlg", "Unloopgods The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
   if FP[v]:FindFirstChild("god") then
   FP[v]:FindFirstChild("god"):Destroy()
   end
   end
-  SendM("[$incity LCM]: Player(-s) Unloopgodded", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Unloopgodded", Color3.fromRGB(87, 0, 138))
   end)
   
   
   
-  Sincity("poison", "Poisons The Chosen Player", function(args)
+  Zanexx("poison", "Poisons The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, p in pairs(players) do
   while wait(.1) do
@@ -1214,7 +1214,7 @@
 
 
   
-  Sincity("sptrap", "Teleports The LocalPlayer To 4 Different Corners n Auto Throws Tesla Knives", function(args)
+  Zanexx("sptrap", "Teleports The LocalPlayer To 4 Different Corners n Auto Throws Tesla Knives", function(args)
     local player = game.Players.LocalPlayer
     local pos = player.Character.HumanoidRootPart.CFrame
   
@@ -1266,12 +1266,12 @@
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
     end
     end
-  SendM("[$incity LCM]: Done", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Done", Color3.fromRGB(87, 0, 138))
     end)
 
   
   
-    Sincity("rban", "Radio Bans The Chosen Player(-s)", function(args)
+    Zanexx("rban", "Radio Bans The Chosen Player(-s)", function(args)
       local players = FindPlr(args[1])
       for i, v in pairs(players) do
       if FP[v]:FindFirstChild("rban") then
@@ -1287,19 +1287,19 @@
       end
       end)
       end
-      SendM("[$incity LCM]: Player(-s) Radio-banned", Color3.fromRGB(87, 0, 138))
+      SendM("[ZANEXX LCM]: Player(-s) Radio-banned", Color3.fromRGB(87, 0, 138))
       end)
       
       
       
-      Sincity("unrban", "Removes The Radio Ban For The Chosen Player(-s)", function(args)
+      Zanexx("unrban", "Removes The Radio Ban For The Chosen Player(-s)", function(args)
         local players = FindPlr(args[1])
         for i, v in pairs(players) do
         if FP[v]:FindFirstChild("rban") then
         FP[v]:FindFirstChild("rban"):Destroy()
         end
         end
-        SendM("[$incity LCM]: Player(-s) UnRadio-banned", Color3.fromRGB(87, 0, 138))
+        SendM("[ZANEXX LCM]: Player(-s) UnRadio-banned", Color3.fromRGB(87, 0, 138))
         end)
 
 
@@ -1316,7 +1316,7 @@
   
   
   
-  Sincity("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", function(args)
+  Zanexx("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", function(args)
   SendM("-Tesla", Color3.fromRGB(87, 0, 138))
   SendM("-Illum", Color3.fromRGB(87, 0, 138))
   SendM("-Quick", Color3.fromRGB(87, 0, 138))
@@ -1326,39 +1326,39 @@
   end)
   
   
-  Sincity("norelgun", "Gives The LocalPlayer A No-Reload Gun", function(args)
+  Zanexx("norelgun", "Gives The LocalPlayer A No-Reload Gun", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/nVy1rVNP'),true))()
-  SendM("[$incity LCM]: No-Reload Gun Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: No-Reload Gun Given", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("illum", "Gives The LocalPlayer A Knife With The Illuminati Ability", function(args)
+  Zanexx("illum", "Gives The LocalPlayer A Knife With The Illuminati Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/8Ag2jaCD'),true))()
-  SendM("[$incity LCM]: Illuminati Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Illuminati Knife Given", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("Quick", "Gives The LocalPlayer A Knife With The Quickscoper Ability", function(args)
+  Zanexx("Quick", "Gives The LocalPlayer A Knife With The Quickscoper Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/Sn1SsSCi'),true))()
-  SendM("[$incity LCM]: Quickscoper Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Quickscoper Knife Given", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("Laser", "Gives The LocalPlayer A Knife With The Laser Ability", function(args)
+  Zanexx("Laser", "Gives The LocalPlayer A Knife With The Laser Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/aavyXdmC'),true))()
-  SendM("[$incity LCM]: Laser Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Laser Knife Given", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("Tesla", "Gives The LocalPlayer A Knife With The Tesla Ability", function(args)
+  Zanexx("Tesla", "Gives The LocalPlayer A Knife With The Tesla Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/CdUMRVmq'),true))()
-  SendM("[$incity LCM]: Tesla Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Tesla Knife Given", Color3.fromRGB(87, 0, 138))
   end)
   
   
-  Sincity("Yt", "Gives The LocalPlayer A Knife With The Youtube Power Ability", function(args)
+  Zanexx("Yt", "Gives The LocalPlayer A Knife With The Youtube Power Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/CSaF8Szi'),true))()
-  SendM("[$incity LCM]: Youtube Power Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Youtube Power Knife Given", Color3.fromRGB(87, 0, 138))
   end)
   
   
@@ -1372,7 +1372,7 @@
   local dsc = 'https://discord.gg/YwAekbT'
   
   if game.workspace.Ignore.Players:FindFirstChild("exclusiveclique") then
-    popup("exclusiveclique is in your server [Owner] of $incity", 10)
+    popup("exclusiveclique is in your server [Owner] of ZANEXX", 10)
   end
   
   popup("NEW DISCORD SERVER "..dsc.." Copied",10)
@@ -1384,10 +1384,10 @@
   
   wait(1)
   
-  SendM("$INCITY UPDATE-LOG -", Color3.fromRGB(127, 0, 138))
-  SendM("- 08/12 Updated Loopkill", Color3.fromRGB(107, 0, 138))
-  SendM("- 08/12 Updated Loopgod", Color3.fromRGB(107, 0, 138))
-  SendM("- 08/14 Updated FE Controller", Color3.fromRGB(107, 0, 138))
-  SendM("- 08/14 Updated Loopgod", Color3.fromRGB(107, 0, 138))
-  SendM("- 08/14 Added (rban) [Radio Ban]", Color3.fromRGB(107, 0, 138))
-  SendM("- 08/14 Added (unrban) [UnRadio Ban]", Color3.fromRGB(107, 0, 138))
+  SendM("ZANEXX UPDATE-LOG -", Color3.fromRGB(87, 0, 138))
+  SendM("- 08/12 Updated Loopkill", Color3.fromRGB(87, 0, 138))
+  SendM("- 08/12 Updated Loopgod", Color3.fromRGB(87, 0, 138))
+  SendM("- 08/14 Updated FE Controller", Color3.fromRGB(87, 0, 138))
+  SendM("- 08/14 Updated Loopgod", Color3.fromRGB(87, 0, 138))
+  SendM("- 08/14 Added (rban) [Radio Ban]", Color3.fromRGB(87, 0, 138))
+  SendM("- 08/14 Added (unrban) [UnRadio Ban]", Color3.fromRGB(87, 0, 138))
