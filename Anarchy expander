@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Xi$tence", Text = "Press e to enable, f to disable."})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "ZANEXX", Text = "Press e to enable, f to disable."})
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 
@@ -66,7 +66,7 @@ end)
 local val = math.random()
 	
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Xi$tence";    --Name your script here!
+    Title = "ZANEXX";    --Name your script here!
     Text = "Script loaded in "..val.." Seconds enjoy";
     Duration = 5;
     })
