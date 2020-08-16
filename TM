@@ -1158,6 +1158,30 @@
     SendM("[ZANEXX LCM]: Player(-s) Loopkilled", Color3.fromRGB(87, 0, 138))
     end)
   
+
+
+    Zanexx("lg", "Loopgods The Chosen Player", function(args)
+      local players = FindPlr(args[1])
+      for i, v in pairs(players) do
+        if FP[v]:FindFirstChild("lg") then
+        FP[v]:FindFirstChild("lg"):Destroy()
+        end
+        local lg = Instance.new("BoolValue")
+        lg.Parent = FP[v]
+        lg.Value = true
+        lg.Name = "lg"
+        while FP[v]:FindFirstChild("lg") do
+        if FP[v]:FindFirstChild("lg") then
+      wait()
+          local plrs = game:GetService("Players"):FindFirstChild(FP[v].Name).Character:FindFirstChild("Humanoid")
+          game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, plrs)
+      end
+      end
+      end
+      SendM("[ZANEXX LCM]: Player(-s) Loopkilled", Color3.fromRGB(87, 0, 138))
+      end)
+
+
   
   Zanexx("unlk", "Unloopkills The Chosen Player", function(args)
   local players = FindPlr(args[1])
@@ -1401,8 +1425,6 @@ end
   wait(1)
   
   SendM("ZANEXX UPDATE-LOG -", Color3.fromRGB(87, 0, 138))
-  SendM("- 08/12 Updated Loopkill", Color3.fromRGB(87, 0, 138))
-  SendM("- 08/12 Updated Loopgod", Color3.fromRGB(87, 0, 138))
   SendM("- 08/14 Updated FE Controller", Color3.fromRGB(87, 0, 138))
   SendM("- 08/14 Updated Loopgod", Color3.fromRGB(87, 0, 138))
   SendM("- 08/14 Added (rban) [Radio Ban]", Color3.fromRGB(87, 0, 138))
