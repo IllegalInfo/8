@@ -1,4 +1,5 @@
-  
+
+
   local lol = game.Players.LocalPlayer.Name
   if lol == "Luhnly" then
   game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking Player ["..lol.."]")
@@ -317,6 +318,18 @@
         
         elseif string.find(x.Text, "Jay_Trvp") then 
         x.Text = string.gsub(x.Text, "Jay_Trvp", "[crodie] Jay") 
+        x.TextColor3 = Color3.fromRGB(0, 220, 0)
+
+        elseif string.find(x.Text, "versacari") then
+        x.Text = string.gsub(x.Text, "versacari", "[LOOPKILL] versacarl" )
+        x.TextColor3 = Color3.fromRGB(255, 0, 0)
+
+        elseif string.find(x.Text, "holylust") then
+        x.Text = string.gsub(x.Text, "holylust", "[LOOPKILL] hoIylust" )
+        x.TextColor3 = Color3.fromRGB(255, 0, 0)
+
+        elseif string.find(x.Text, "LILEDDY03") then
+        x.Text = string.gsub(x.Text, "LILEDDY03", "[Buyer] LlLEDDY03" )
         x.TextColor3 = Color3.fromRGB(0, 220, 0)
         
         
@@ -1168,21 +1181,24 @@
   end)
   
   
-  Zanexx("lg", "Loopgods The Chosen Player", function(args)
+  Zanexx("brl", "Loopgods The Chosen Player", function(args)
   local players = FindPlr(args[1])
   RA()
   for i, v in pairs(players) do
-  if FP[v]:FindFirstChild("god") then
-  FP[v]:FindFirstChild("god"):Destroy()
+  if FP[v]:FindFirstChild("lgod") then
+  FP[v]:FindFirstChild("lgod"):Destroy()
   end
-  local god = Instance.new("BoolValue")
-  god.Parent = FP[v]
-  god.Value = true
-  god.Name = "god"
-  game:GetService("RunService").RenderStepped:connect(function()
+  local lgod = Instance.new("BoolValue")
+  lgod.Parent = FP[v]
+  lgod.Value = true
+  lgod.Name = "lgod"
+  if FP[v]:FindFirstChild("lgod") then do
+  game:GetService("RunService").Stepped:connect(function()
   game.ReplicatedStorage.Event:FireServer("TPD", math.huge / 1.45, FP[v].Character.Humanoid)
   game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, FP[v].Character.Humanoid)
   end)
+end
+end
   end
   SendM("[ZANEXX LCM]: Player(-s) Loopgodded", Color3.fromRGB(87, 0, 138))
   end)
@@ -1191,8 +1207,8 @@
   Zanexx("unlg", "Unloopgods The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
-  if FP[v]:FindFirstChild("god") then
-  FP[v]:FindFirstChild("god"):Destroy()
+  if FP[v]:FindFirstChild("lgod") then
+  FP[v]:FindFirstChild("lgod"):Destroy()
   end
   end
   SendM("[ZANEXX LCM]: Player(-s) Unloopgodded", Color3.fromRGB(87, 0, 138))
@@ -1391,3 +1407,4 @@
   SendM("- 08/14 Updated Loopgod", Color3.fromRGB(87, 0, 138))
   SendM("- 08/14 Added (rban) [Radio Ban]", Color3.fromRGB(87, 0, 138))
   SendM("- 08/14 Added (unrban) [UnRadio Ban]", Color3.fromRGB(87, 0, 138))
+  SendM("- 08/16 Added (breakloop [plr])", Color3.fromRGB(87, 0, 138))
