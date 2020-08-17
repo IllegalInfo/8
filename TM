@@ -87,7 +87,7 @@
   end
   
   local popups = {}  
-  -------------------------------------------------------------------------------------------------------------
+
   function popup(msg,decay,titleOverride)
     local msg = msg or "nigga"
     local decay = decay or 3
@@ -317,7 +317,7 @@
     
         
         elseif string.find(x.Text, "Jay_Trvp") then 
-        x.Text = string.gsub(x.Text, "Jay_Trvp", "[crodie] Jay") 
+        x.Text = string.gsub(x.Text, "Jay_Trvp", "[croo] Jay") 
         x.TextColor3 = Color3.fromRGB(0, 220, 0)
 
         elseif string.find(x.Text, "versacari") then
@@ -343,9 +343,9 @@
               for i=-1,1,1/changeSpeed do
                   local f = math.abs(i)
                   x.TextStrokeColor3 = Color3.fromRGB(
-                    255 * (color1.r + (color2.r - color1.r) * f), 
-                    255 * (color1.g + (color2.g - color1.g) * f), 
-                    255 * (color1.b + (color2.b - color1.b) * f))
+                      255 * (color1.r + (color2.r - color1.r) * f),
+                      255 * (color1.g + (color2.g - color1.g) * f), 
+                      255 * (color1.b + (color2.b - color1.b) * f))
                   wait(0.05)                          
               end
           end
@@ -363,8 +363,8 @@
   
   ------------------------------------------------------------------------------------------------------------
   
-  SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded", Color3.fromRGB(172, 31, 255))
-  SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: None", Color3.fromRGB(172, 31, 255))
+  SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded", Color3.fromRGB(0, 55, 200))
+  SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: None", Color3.fromRGB(0, 55, 220))
   
   ------------------------------------------------------------------------------------------------------------
   
@@ -834,20 +834,20 @@
   Zanexx("fov", "Changes Your FOV", function(args)
   local fval = args[1]
   game.workspace.Camera.FieldOfView = fval
-  SendM("[ZANEXX LCM]: LP FOV Changed To ["..fval.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: LP FOV Changed To ["..fval.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
   
   Zanexx("leave", "Shuts The LocalPlayers Game Down", function(args)
-  SendM("[ZANEXX LCM]: Leaving Please Wait", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Leaving Please Wait", Color3.fromRGB(0, 55, 240))
   game:Shutdown("Gtfo newgen skid LMAOO")
   end)
   
   
   
   Zanexx("rj", "Rejoins The Current Server You Are In", function(args)
-  SendM("[ZANEXX LCM]: Rejoining Please Wait", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Rejoining Please Wait", Color3.fromRGB(0, 55, 240))
   game:GetService("TeleportService"):Teleport(game.PlaceId)
   end)
   
@@ -856,7 +856,7 @@
   Zanexx("ws", "Changes The LocalPlayers WalkSpeed", function(args)
   local wval = args[1]
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = wval
-  SendM("[ZANEXX LCM]: WalkSpeed Changed To ["..wval.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: WalkSpeed Changed To ["..wval.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -864,21 +864,21 @@
   Zanexx("jp", "Changes The LocalPlayers Jump Height", function(args)
   local jval = args[1]
   game.Players.LocalPlayer.Character.Humanoid.JumpPower = jval
-  SendM("[ZANEXX LCM]: JumpPower Changed To ["..jval.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: JumpPower Changed To ["..jval.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
   
   Zanexx("Fly", "Makes The LocalPlayer Fly", function(args)
-  SendM("[ZANEXX LCM]: Press F Twice To Start Flying", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Press F Twice To Start Flying", Color3.fromRGB(0, 55, 240))
   Fly()
   end)
   
   
   
-  Zanexx("rst", "Makes The LocalPlayer Reset", function(args)
+  Zanexx("rs", "Makes The LocalPlayer Reset", function(args)
   game.Players.LocalPlayer.Character:BreakJoints()
-  SendM("[ZANEXX LCM]: Clapped XD", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Clapped XD", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -886,7 +886,7 @@
   Zanexx("view", "Spectates The Chosen Player", function(args)
   local players = FindPlr(args[1])
   workspace.CurrentCamera.CameraSubject = game.Players[players[1]].Character
-  SendM("[ZANEXX LCM]: Fucking Pedo Smh..", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Fucking Pedo Smh..", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -900,16 +900,16 @@
   Zanexx("slock", "Enables Shiftlock For The LocalPlayer", function(args)
   local plr = game.Players.LocalPlayer
   plr.DevEnableMouseLock = true
-  SendM("[ZANEXX LCM]: Shiftlock Enabled", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Shiftlock Enabled", Color3.fromRGB(0, 55, 240))
   end)
   
   
   
   Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything", function(args)
-  SendM("[ZANEXX LCM]: Prefix Before: "..prfx.."", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Prefix Before: "..prfx.."", Color3.fromRGB(0, 55, 240))
   local pargs = args[1]
   prfx = pargs
-  SendM("[ZANEXX LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(0, 55, 240))
   
   if prfx == "!" then
   popup("Prefix Set To [!] (Matts Admin)")
@@ -935,7 +935,7 @@
   if players ~= nil and _char(players[1]):FindFirstChild("HumanoidRootPart") then
   _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
   end
-  SendM("[ZANEXX LCM]: Teleported To ".._char(players[1]).."", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Teleported To ".._char(players[1]).."", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1048,12 +1048,12 @@
   for i, v in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("PlayRadio", FP[v], num)
   end
-  SendM("[ZANEXX LCM]: Now Playing ["..num.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Now Playing ["..num.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
   Zanexx("Kgui", "Opens the ZANEXX knife gui", function(args)
-  SendM("[ZANEXX LCM]: Knife Gui Loaded", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Knife Gui Loaded", Color3.fromRGB(0, 55, 240))
   loadstring(game:HttpGet("https://pastebin.com/raw/SN5BmNtD"))()
   end)
   
@@ -1064,7 +1064,7 @@
   game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
   wait(1)
   game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-  SendM("[ZANEXX LCM]: Gun Teleported", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Gun Teleported", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1111,8 +1111,8 @@
   for i, v in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", math.huge, FP[v].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Killed", Color3.fromRGB(87, 0, 138))
-  end)
+  SendM("[ZANEXX LCM]: Player(-s) Killed", Color3.fromRGB(0, 55, 240))
+  end)  
   
   
   Zanexx("dmg", "SE Damages The Chosen Player", function(args)
@@ -1122,7 +1122,7 @@
   for i, p in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", dmgp, FP[p].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Damaged For ["..dmgp.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Damaged For ["..dmgp.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1133,7 +1133,7 @@
   for i, p in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", -healn, FP[p].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Healed For ["..healn.."]", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Healed For ["..healn.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1155,7 +1155,7 @@
     end
     end
     end
-    SendM("[ZANEXX LCM]: Player(-s) Loopkilled", Color3.fromRGB(87, 0, 138))
+    SendM("[ZANEXX LCM]: Player(-s) Loopkilled", Color3.fromRGB(0, 55, 240))
     end)
   
 
@@ -1170,15 +1170,14 @@
         lg.Parent = FP[v]
         lg.Value = true
         lg.Name = "lg"
-        while FP[v]:FindFirstChild("lg") do
+        game:GetService("RunService").Heartbeat:Connect(function()
         if FP[v]:FindFirstChild("lg") then
       wait()
-          local plrs = game:GetService("Players"):FindFirstChild(FP[v].Name).Character:FindFirstChild("Humanoid")
-          game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, plrs)
+          game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
+        end
+      end)
       end
-      end
-      end
-      SendM("[ZANEXX LCM]: Player(-s) Loopkilled", Color3.fromRGB(87, 0, 138))
+      SendM("[ZANEXX LCM]: Player(-s) Loopgodded", Color3.fromRGB(0, 55, 240))
       end)
 
 
@@ -1190,7 +1189,7 @@
       FP[v]:FindFirstChild("ml"):Destroy()
     end
   end
-  SendM("[ZANEXX LCM]: Player(-s) Unloopkilled", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Unloopkilled", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1201,7 +1200,7 @@
   for i, h in pairs(players) do
   game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, FP[h].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Godded", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Godded", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1217,25 +1216,25 @@
   lgod.Value = true
   lgod.Name = "lgod"
   if FP[v]:FindFirstChild("lgod") then do
-  game:GetService("RunService").Stepped:connect(function()
+  game:GetService("RunService").Heartbeat:connect(function()
   game.ReplicatedStorage.Event:FireServer("TPD", math.huge / 1.45, FP[v].Character.Humanoid)
   game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, FP[v].Character.Humanoid)
   end)
 end
 end
   end
-  SendM("[ZANEXX LCM]: Player(-s) Loopgodded", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Loopgodded", Color3.fromRGB(0, 55, 240))
   end)
     
   
   Zanexx("unlg", "Unloopgods The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
-  if FP[v]:FindFirstChild("lgod") then
-  FP[v]:FindFirstChild("lgod"):Destroy()
+  if FP[v]:FindFirstChild("lg") then
+  FP[v]:FindFirstChild("lg"):Destroy()
   end
   end
-  SendM("[ZANEXX LCM]: Player(-s) Unloopgodded", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Player(-s) Unloopgodded", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1306,7 +1305,7 @@ end
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
     end
     end
-  SendM("[ZANEXX LCM]: Done", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Done", Color3.fromRGB(0, 55, 240))
     end)
 
   
@@ -1327,7 +1326,7 @@ end
       end
       end)
       end
-      SendM("[ZANEXX LCM]: Player(-s) Radio-banned", Color3.fromRGB(87, 0, 138))
+      SendM("[ZANEXX LCM]: Player(-s) Radio-banned", Color3.fromRGB(0, 55, 240))
       end)
       
       
@@ -1339,7 +1338,7 @@ end
         FP[v]:FindFirstChild("rban"):Destroy()
         end
         end
-        SendM("[ZANEXX LCM]: Player(-s) UnRadio-banned", Color3.fromRGB(87, 0, 138))
+        SendM("[ZANEXX LCM]: Player(-s) UnRadio-banned", Color3.fromRGB(0, 55, 240))
         end)
 
 
@@ -1357,48 +1356,48 @@ end
   
   
   Zanexx("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", function(args)
-  SendM("-Tesla", Color3.fromRGB(87, 0, 138))
-  SendM("-Illum", Color3.fromRGB(87, 0, 138))
-  SendM("-Quick", Color3.fromRGB(87, 0, 138))
-  SendM("-Laser", Color3.fromRGB(87, 0, 138))
-  SendM("-Yt", Color3.fromRGB(87, 0, 138))
-  SendM("-Norelgun", Color3.fromRGB(87, 0, 138))
+  SendM("-Tesla", Color3.fromRGB(0, 55, 240))
+  SendM("-Illum", Color3.fromRGB(0, 55, 240))
+  SendM("-Quick", Color3.fromRGB(0, 55, 240))
+  SendM("-Laser", Color3.fromRGB(0, 55, 240))
+  SendM("-Yt", Color3.fromRGB(0, 55, 240))
+  SendM("-Norelgun", Color3.fromRGB(0, 55, 240))
   end)
   
   
   Zanexx("norelgun", "Gives The LocalPlayer A No-Reload Gun", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/nVy1rVNP'),true))()
-  SendM("[ZANEXX LCM]: No-Reload Gun Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: No-Reload Gun Loaded", Color3.fromRGB(0, 55, 240))
   end)
   
   
   Zanexx("illum", "Gives The LocalPlayer A Knife With The Illuminati Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/8Ag2jaCD'),true))()
-  SendM("[ZANEXX LCM]: Illuminati Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Illuminati Knife Loaded", Color3.fromRGB(0, 55, 240))
   end)
   
   
   Zanexx("Quick", "Gives The LocalPlayer A Knife With The Quickscoper Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/Sn1SsSCi'),true))()
-  SendM("[ZANEXX LCM]: Quickscoper Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Quickscoper Knife Loaded", Color3.fromRGB(0, 55, 240))
   end)
   
   
   Zanexx("Laser", "Gives The LocalPlayer A Knife With The Laser Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/aavyXdmC'),true))()
-  SendM("[ZANEXX LCM]: Laser Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Laser Knife Loaded", Color3.fromRGB(0, 55, 240))
   end)
   
   
   Zanexx("Tesla", "Gives The LocalPlayer A Knife With The Tesla Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/CdUMRVmq'),true))()
-  SendM("[ZANEXX LCM]: Tesla Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Tesla Knife Loaded", Color3.fromRGB(0, 55, 240))
   end)
   
   
   Zanexx("Yt", "Gives The LocalPlayer A Knife With The Youtube Power Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/CSaF8Szi'),true))()
-  SendM("[ZANEXX LCM]: Youtube Power Knife Given", Color3.fromRGB(87, 0, 138))
+  SendM("[ZANEXX LCM]: Youtube Power Knife Loaded", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1424,9 +1423,10 @@ end
   
   wait(1)
   
-  SendM("ZANEXX UPDATE-LOG -", Color3.fromRGB(87, 0, 138))
-  SendM("- 08/14 Updated FE Controller", Color3.fromRGB(87, 0, 138))
-  SendM("- 08/14 Updated Loopgod", Color3.fromRGB(87, 0, 138))
-  SendM("- 08/14 Added (rban) [Radio Ban]", Color3.fromRGB(87, 0, 138))
-  SendM("- 08/14 Added (unrban) [UnRadio Ban]", Color3.fromRGB(87, 0, 138))
-  SendM("- 08/16 Added (breakloop [plr])", Color3.fromRGB(87, 0, 138))
+  SendM("ZANEXX UPDATE-LOG -", Color3.fromRGB(0, 55, 240))
+  SendM("- 08/16 Added (brl [plr])", Color3.fromRGB(0, 55, 240))
+  SendM("- 08/17 Updated Loopgod", Color3.fromRGB(0, 55, 240))
+  SendM("- 08/17 Updated Loopkill (idk if i can make it better fuck off xD)", Color3.fromRGB(0, 55, 240))
+
+game:GetService("TestService"):Message('Successfully loaded')
+game:GetService("TestService"):Message('Created by Zack || exclusiveclique || exclusiveclique#1444')
