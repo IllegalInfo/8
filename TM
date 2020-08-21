@@ -328,6 +328,10 @@
         x.Text = string.gsub(x.Text, "holylust", "[LOOPKILL] hoIylust" )
         x.TextColor3 = Color3.fromRGB(255, 0, 0)
 
+        elseif string.find(x.Text, "sofieIove") then
+        x.Text = string.gsub(x.Text, "sofieIove", "[LOOPKILL] sofielove" )
+        x.TextColor3 = Color3.fromRGB(255, 0, 0)
+
         elseif string.find(x.Text, "LILEDDY03") then
         x.Text = string.gsub(x.Text, "LILEDDY03", "[Buyer] LlLEDDY03" )
         x.TextColor3 = Color3.fromRGB(0, 220, 0)
@@ -460,21 +464,6 @@
       end
   -------------------------------------------------------------------------------------------------------------------
   
-  local LOL = [[
-    sSSs  S.       .S       S.    .S   .S_sSSs     .S  sdSS_SSSSSSbs   .S S.   
-   d%%SP  SS.     .SS       SS.  .SS  .SS~YS%%b   .SS  YSSS~S%SSSSSP  .SS SS.  
-  d%S'    S%S     S%S       S%S  S%S  S%S   `S%b  S%S       S%S       S%S S%S  
-  S%S     S%S     S%S       S%S  S%S  S%S    S%S  S%S       S%S       S%S S%S  
-  S&S     S&S     S&S       S&S  S&S  S%S    S&S  S&S       S&S       S%S S%S  
-  S&S_Ss  S&S     S&S       S&S  S&S  S&S    S&S  S&S       S&S        SS SS   
-  S&S~SP  S&S     S&S       S&S  S&S  S&S    S&S  S&S       S&S         S S    
-  S&S     S&S     S&S       S&S  S&S  S&S    S&S  S&S       S&S         SSS    
-  S*b     S*b     S*b       d*S  S*S  S*S    d*S  S*S       S*S         S*S    
-  S*S     S*S.    S*S.     .S*S  S*S  S*S   .S*S  S*S       S*S         S*S    
-  S*S      SSSbs   SSSbs_sdSSS   S*S  S*S_sdSSS   S*S       S*S         S*S    
-  S*S       YSSP    YSSP~YSSY    S*S  SSS~YSSY    S*S       S*S         S*S    
-  SP                             SP               SP        SP          SP     
-  Y                              Y                Y         Y           Y      ]]
 
   local prfx = ""
   local scripprfx = ""
@@ -822,9 +811,9 @@
   --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
   --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ DEVELOPER RGB NAMES ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
   --<<<<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^>>>>--
-  
-  
-  
+
+
+
   --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
   --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv COMMANDS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
   --<<<<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv>>>>--
@@ -935,7 +924,7 @@
   if players ~= nil and _char(players[1]):FindFirstChild("HumanoidRootPart") then
   _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
   end
-  SendM("[ZANEXX LCM]: Teleported To ".._char(players[1]).."", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Teleported To ".._char(players[1]).Name.."", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -961,7 +950,7 @@
   
   
   
-  Zanexx("whitel", "Lets Other Players Use Your Commands", function(args)
+  Zanexx("wl", "Lets Other Players Use Your Commands", function(args)
       if not args[1] then
           return
       end
@@ -969,11 +958,15 @@
       table.foreach(players, function(k, v)
         whitelisted[v] = true
           end)
+          for i, v in pairs(players) do
+          local plrn = FP[v].Name
+          SendM("[ZANEXX LCM]: "..plrn.." Whitelisted", Color3.fromRGB(0, 55, 240))
+          end
   end)
   
   
   
-  Zanexx("unwhitel", "Disables The Chosen Players Whitelist", function(args)
+  Zanexx("unwl", "Disables The Chosen Players Whitelist", function(args)
     if not args[1] then
       return
   end
@@ -981,6 +974,10 @@
       table.foreach(players, function(k, v)
         whitelisted[v] = nil
           end)
+                    for i, v in pairs(players) do
+          local plrn = FP[v].Name
+          SendM("[ZANEXX LCM]: "..plrn.." UnWhitelisted", Color3.fromRGB(0, 55, 240))
+          end
   end)
   
   
@@ -1046,9 +1043,10 @@
   end
   local num = args[2]
   for i, v in pairs(players) do
+  local plrn = FP[v].Name
+  SendM("[ZANEXX LCM]: Now Playing ["..num.."] On "..plrn.."", Color3.fromRGB(0, 55, 240))
   game.ReplicatedStorage.Event:FireServer("PlayRadio", FP[v], num)
   end
-  SendM("[ZANEXX LCM]: Now Playing ["..num.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1071,6 +1069,8 @@
   Zanexx("cloak", "Makes The Chosen Player(-s) Invisible", function(args)
     local players = FindPlr(args[1])
     for i, p in pairs(players) do
+      local plrn = FP[p].Name
+      SendM("[ZANEXX LCM]: "..plrn.." Cloaked", Color3.fromRGB(0, 55, 240))
       local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
       game.ReplicatedStorage.Event:FireServer("Cloak", x)
     end
@@ -1081,6 +1081,8 @@
   Zanexx("uncloak", "Makes The Chosen Player(-s) Invisible", function(args)
   local players = FindPlr(args[1])
   for i, p in pairs(players) do
+    local plrn = FP[p].Name
+  SendM("[ZANEXX LCM]: "..plrn.." UnCloaked", Color3.fromRGB(0, 55, 240))
   local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
   game.ReplicatedStorage.Event:FireServer("UnCloak", x)
   end
@@ -1109,9 +1111,10 @@
   Zanexx("kill", "Kills The Chosen Player(-s)", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
+  local plrn = FP[v].Name
+  SendM("[ZANEXX LCM]: "..plrn.." Killed", Color3.fromRGB(0, 55, 240))
   game.ReplicatedStorage.Event:FireServer("TPD", math.huge, FP[v].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Killed", Color3.fromRGB(0, 55, 240))
   end)  
   
   
@@ -1120,9 +1123,10 @@
   if not args[1] or not args[2] then return end
   local dmgp = args[2]
   for i, p in pairs(players) do
+  local plrn = FP[p].Name
+  SendM("[ZANEXX LCM]: "..plrn.." Damaged By ["..dmgp.."HP]", Color3.fromRGB(0, 55, 240))
   game.ReplicatedStorage.Event:FireServer("TPD", dmgp, FP[p].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Damaged For ["..dmgp.."]", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1131,15 +1135,19 @@
   if not args[1] or not args[2] then return end
   local healn = args[2]
   for i, p in pairs(players) do
+    local plrn = FP[p].Name
+  SendM("[ZANEXX LCM]: "..plrn.." Healed By ["..dmgp.."HP]", Color3.fromRGB(0, 55, 240))
   game.ReplicatedStorage.Event:FireServer("TPD", -healn, FP[p].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Healed For ["..healn.."]", Color3.fromRGB(0, 55, 240))
+
   end)
   
   
   Zanexx("lk", "Loopkills The Chosen Player", function(args)
     local players = FindPlr(args[1])
     for i, v in pairs(players) do
+    local plrn = FP[v].Name
+    SendM("[ZANEXX LCM]: "..plrn.." Loopkilled", Color3.fromRGB(0, 55, 240))
       if FP[v]:FindFirstChild("ml") then
       FP[v]:FindFirstChild("ml"):Destroy()
       end
@@ -1155,7 +1163,6 @@
     end
     end
     end
-    SendM("[ZANEXX LCM]: Player(-s) Loopkilled", Color3.fromRGB(0, 55, 240))
     end)
   
 
@@ -1163,6 +1170,8 @@
     Zanexx("lg", "Loopgods The Chosen Player", function(args)
       local players = FindPlr(args[1])
       for i, v in pairs(players) do
+      local plrn = FP[v].Name
+      SendM("[ZANEXX LCM]: "..plrn.." Loopgodded", Color3.fromRGB(0, 55, 240))
         if FP[v]:FindFirstChild("lg") then
         FP[v]:FindFirstChild("lg"):Destroy()
         end
@@ -1177,7 +1186,6 @@
         end
       end)
       end
-      SendM("[ZANEXX LCM]: Player(-s) Loopgodded", Color3.fromRGB(0, 55, 240))
       end)
 
 
@@ -1185,11 +1193,12 @@
   Zanexx("unlk", "Unloopkills The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
+        local plrn = FP[v].Name
+    SendM("[ZANEXX LCM]: "..plrn.." UnLoopkilled", Color3.fromRGB(0, 55, 240))
     if FP[v]:FindFirstChild("ml") then
       FP[v]:FindFirstChild("ml"):Destroy()
     end
   end
-  SendM("[ZANEXX LCM]: Player(-s) Unloopkilled", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1198,9 +1207,10 @@
   local players = FindPlr(args[1])
   RA()
   for i, h in pairs(players) do
+  local plrn = FP[h].Name
+  SendM("[ZANEXX LCM]: "..plrn.." Godded", Color3.fromRGB(0, 55, 240))
   game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, FP[h].Character.Humanoid)
   end
-  SendM("[ZANEXX LCM]: Player(-s) Godded", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1208,6 +1218,8 @@
   local players = FindPlr(args[1])
   RA()
   for i, v in pairs(players) do
+  local plrn = FP[v].Name
+  SendM("[ZANEXX LCM]: "..plrn.." Loopgodded", Color3.fromRGB(0, 55, 240))
   if FP[v]:FindFirstChild("lgod") then
   FP[v]:FindFirstChild("lgod"):Destroy()
   end
@@ -1223,18 +1235,18 @@
 end
 end
   end
-  SendM("[ZANEXX LCM]: Player(-s) Loopgodded", Color3.fromRGB(0, 55, 240))
   end)
     
   
   Zanexx("unlg", "Unloopgods The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
+  local plrn = FP[v].Name
+  SendM("[ZANEXX LCM]: "..plrn.." Unloopgodded", Color3.fromRGB(0, 55, 240))
   if FP[v]:FindFirstChild("lg") then
   FP[v]:FindFirstChild("lg"):Destroy()
   end
   end
-  SendM("[ZANEXX LCM]: Player(-s) Unloopgodded", Color3.fromRGB(0, 55, 240))
   end)
   
   
@@ -1242,7 +1254,9 @@ end
   Zanexx("poison", "Poisons The Chosen Player", function(args)
   local players = FindPlr(args[1])
   for i, p in pairs(players) do
-  while wait(.1) do
+  local plrn = FP[p].Name
+  SendM("[ZANEXX LCM]: "..plrn.." Poisoned", Color3.fromRGB(0, 55, 240))
+  while wait() do
     game.ReplicatedStorage.Event:FireServer("TPD", 1, FP[p].Character.Humanoid)
     if FP[p].Character.Humanoid.Health == 0 then
       break
@@ -1254,7 +1268,7 @@ end
 
   
   Zanexx("sptrap", "Teleports The LocalPlayer To 4 Different Corners n Auto Throws Tesla Knives", function(args)
-    local player = game.Players.LocalPlayer
+    local player = game.Players.LocalPlayer 
     local pos = player.Character.HumanoidRootPart.CFrame
   
     local exclusivecliqueisdaddy = Instance.new("BoolValue")
@@ -1307,12 +1321,14 @@ end
     end
   SendM("[ZANEXX LCM]: Done", Color3.fromRGB(0, 55, 240))
     end)
-
+    
   
   
     Zanexx("rban", "Radio Bans The Chosen Player(-s)", function(args)
       local players = FindPlr(args[1])
       for i, v in pairs(players) do
+      local plrn = FP[v].Name
+      SendM("[ZANEXX LCM]: "..plrn.." Radio-Banned", Color3.fromRGB(0, 55, 240))
       if FP[v]:FindFirstChild("rban") then
       FP[v]:FindFirstChild("rban"):Destroy()
       end
@@ -1334,11 +1350,12 @@ end
       Zanexx("unrban", "Removes The Radio Ban For The Chosen Player(-s)", function(args)
         local players = FindPlr(args[1])
         for i, v in pairs(players) do
+        local plrn = FP[v].Name
+        SendM("[ZANEXX LCM]: "..plrn.." UnRadio-Banned", Color3.fromRGB(0, 55, 240))
         if FP[v]:FindFirstChild("rban") then
         FP[v]:FindFirstChild("rban"):Destroy()
         end
         end
-        SendM("[ZANEXX LCM]: Player(-s) UnRadio-banned", Color3.fromRGB(0, 55, 240))
         end)
 
 
@@ -1427,6 +1444,8 @@ end
   SendM("- 08/16 Added (brl [plr])", Color3.fromRGB(0, 55, 240))
   SendM("- 08/17 Updated Loopgod", Color3.fromRGB(0, 55, 240))
   SendM("- 08/17 Updated Loopkill (idk if i can make it better fuck off xD)", Color3.fromRGB(0, 55, 240))
-
+  SendM("- 08/20 Updated FE-Controller (Now Shows The Player Names)", Color3.fromRGB(0, 55, 240))
+  
+  
 game:GetService("TestService"):Message('Successfully loaded')
-game:GetService("TestService"):Message('Created by Zack || exclusiveclique || exclusiveclique#1444')
+game:GetService("TestService"):Message('Created by Zack || exclusiveclique // axxturell // Heyhoe_s || exclusiveclique#1444')
