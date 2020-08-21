@@ -649,11 +649,7 @@
   if v.Name == plr_name then return v end end end return end
   
   function Zanexx(name, desc, func)
-  cmds[#cmds + 1] = {
-  NAME = name,
-  DESC = desc,
-  FUNC = func
-  }
+  cmds[#cmds + 1] = {NAME = name, DESC = desc, FUNC = func}
   end
   
   local function FindPlr(name)
@@ -828,13 +824,6 @@
   
   
   
-  Zanexx("leave", "Shuts The LocalPlayers Game Down", function(args)
-  SendM("[ZANEXX LCM]: Leaving Please Wait", Color3.fromRGB(0, 55, 240))
-  game:Shutdown("Gtfo newgen skid LMAOO")
-  end)
-  
-  
-  
   Zanexx("rj", "Rejoins The Current Server You Are In", function(args)
   SendM("[ZANEXX LCM]: Rejoining Please Wait", Color3.fromRGB(0, 55, 240))
   game:GetService("TeleportService"):Teleport(game.PlaceId)
@@ -865,7 +854,7 @@
   
   
   
-  Zanexx("rs", "Makes The LocalPlayer Reset", function(args)
+  Zanexx("rst", "Makes The LocalPlayer Reset", function(args)
   game.Players.LocalPlayer.Character:BreakJoints()
   SendM("[ZANEXX LCM]: Clapped XD", Color3.fromRGB(0, 55, 240))
   end)
@@ -1434,7 +1423,7 @@ end
   popup("NEW DISCORD SERVER "..dsc.." Copied",10)
   setclipboard(dsc)
   
-  loadstring(game:HttpGet'https://pastebin.com/raw/caegHMks')()
+  loadstring(game:HttpGet'https://pastebin.com/raw/bnQqCSic')()
   
   popup("Loaded in "..tick()-x.." seconds.", 5)
   
@@ -1445,7 +1434,8 @@ end
   SendM("- 08/17 Updated Loopgod", Color3.fromRGB(0, 55, 240))
   SendM("- 08/17 Updated Loopkill (idk if i can make it better fuck off xD)", Color3.fromRGB(0, 55, 240))
   SendM("- 08/20 Updated FE-Controller (Now Shows The Player Names)", Color3.fromRGB(0, 55, 240))
+  SendM("- 08/20 ZANEXX V2 Coming Soon???? O_O", Color3.fromRGB(0, 55, 240))
   
   
 game:GetService("TestService"):Message('Successfully loaded')
-game:GetService("TestService"):Message('Created by Zack || exclusiveclique // axxturell // Heyhoe_s || exclusiveclique#1444')
+game:GetService("TestService"):Message('Created by Zack || exclusiveclique || exclusiveclique#1444')
