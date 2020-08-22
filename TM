@@ -34,7 +34,7 @@ wait(1)
 if plr == "LILEDDY03" then
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "Welcome, [Buyer] "..plr..", ZANEXX Made By >exclusiveclique<",
+        [1] = "Welcome, "..plr.." [VIP], ZANEXX Made By >exclusiveclique<",
         [2] = "All"}
     remote:FireServer(unpack(args))
     
@@ -51,7 +51,14 @@ elseif plr == "exclusiveclique" then
     elseif plr == "Jay_Trvp" then
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "Welcome, "..plr.." [croodieeeeeeeeeee]",
+        [1] = "Welcome, "..plr.." [croodieeeeeeeeeee], ZANEXX Made By >exclusiveclique<",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+
+    elseif plr == "qtiepies" then
+      local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "Welcome, "..plr.." [Co-Owner], ZANEXX Made By >exclusiveclique<",
         [2] = "All"}
     remote:FireServer(unpack(args))
     
@@ -59,14 +66,14 @@ elseif plr == "exclusiveclique" then
     elseif plr == ""..plr.."" then
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "Welcome, "..plr.." [Buyer]",
+        [1] = "Welcome, "..plr.." [Buyer], ZANEXX Made By >exclusiveclique<",
         [2] = "All"}
     remote:FireServer(unpack(args))
     end
 
   local lol = game.Players.LocalPlayer.Name
   if lol == "Luhnly" then
-  game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking Player ["..lol.."]")
+  game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking user ["..lol.."]")
   end
   
   ------------------------------------------------------------------------------------------------------------
