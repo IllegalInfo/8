@@ -3,7 +3,7 @@ local rnd1 = math.random(21,60)
 local rnd2 = math.random(61,97)
 local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "                             >LOADING  ZANEXX V2<    ["..rnd1.."%]                     ",
+        [1] = "                             >LOADING  ZANEXX    ["..rnd1.."%]                     ",
         [2] = "All"}
     remote:FireServer(unpack(args))
     
@@ -13,7 +13,7 @@ wait(.5)
 
 local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "                             >LOADING<  ZANEXX V2    ["..rnd2.."%]                    ",
+        [1] = "                             >LOADING<  ZANEXX    ["..rnd2.."%]                    ",
         [2] = "All"}
      remote:FireServer(unpack(args))
      
@@ -23,7 +23,7 @@ wait(.5)
 
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
-        [1] = "                               >ZANEXX V2 Loaded<                                ",
+        [1] = "                               >ZANEXX Loaded<                                ",
         [2] = "All"}
     remote:FireServer(unpack(args))
     
@@ -403,26 +403,26 @@ elseif plr == "exclusiveclique" then
         
         elseif string.find(x.Text, "qtiepies") then 
         x.Text = string.gsub(x.Text, "qtiepies", "[Angel] Emmie") 
-        x.TextStrokeTransparency = .1
-        x.TextColor3 = Color3.fromRGB(255, 255, 255)
-        spawn(function()
-          local i = -1
-          while true do
-              for i=-1,1,1/changeSpeed do
-                  local f = math.abs(i)
-                  x.TextStrokeColor3 = Color3.fromRGB(
-                      255 * (color1.r + (color2.r - color1.r) * f),
-                      255 * (color1.g + (color2.g - color1.g) * f), 
-                      255 * (color1.b + (color2.b - color1.b) * f))
-                  wait(0.05)
-end
-end
-end)
-end
-end
-end
-end
-end)
+          x.TextStrokeTransparency = .1
+          x.TextColor3 = Color3.fromRGB(255, 255, 255)
+          spawn(function()
+            local i = -1
+            while true do
+                for i=-1,1,1/changeSpeed do
+                    local f = math.abs(i)
+                    x.TextStrokeColor3 = Color3.fromRGB(
+                        255 * (color1.r + (color2.r - color1.r) * f),
+                        255 * (color1.g + (color2.g - color1.g) * f), 
+                        255 * (color1.b + (color2.b - color1.b) * f))
+                    wait(0.05)
+  end
+  end
+  end)
+  end
+  end
+  end
+  end
+  end)
 end
   ------------------------------------------------------------------------------------------------------------
 
@@ -620,7 +620,7 @@ end
   -------------------------------------------------------------------------------------------------------------------
   
 
-  local prfx = ""
+  local prfx = "]"
   local scripprfx = ""
   local split = " "
   local localplayer = game.Players.LocalPlayer
@@ -1057,12 +1057,24 @@ end
   
   elseif prfx == ":" then
   popup("Prefix Set To [:] (Aidez)")
-  
+
+  elseif prfx == ";" then
+  popup("Prefix Set To [;] (DrPoppa's Admin)")
+
   elseif prfx == "/" then
   popup("Prefix Set To [/] (Terminal X)")
   
-  elseif prfx == "[]" then
-  popup("Prefix Set To [[]] (ZANEXX)")
+  elseif prfx == "-" then
+  popup("Prefix Set To [-] (Fates Admin)")
+
+  elseif prfx == "+" then
+  popup("Prefix Set To [+] (Clouds Admin)")
+
+  elseif prfx == "'" then
+  popup("Prefix Set To ['] (q5ep's Admin)")
+
+  elseif prfx == "" then
+  popup("Prefix Set To []] (ZANEXX)")
   end
   end)
   
@@ -1240,7 +1252,7 @@ end
       
   
   Zanexx("cmds", "Opens The Commands GUI", function(args)
-  loadstring(game:HttpGet'https://pastebin.com/raw/9HVdZTQr')()
+  loadstring(game:HttpGet'https://raw.githubusercontent.com/IllegalInfo/8/master/CommandListTM')()
   end)
         
         
@@ -1529,30 +1541,6 @@ end
         end
       end
       end)
-      
-      
-            Zanexx("fh", "LoopHeals The Chosen Player", function(args)
-        local players = FindPlr(args[1])
-        local mouse = game.Players.LocalPlayer:GetMouse()
-        mouse.KeyDown:Connect(function(t)
-        for i, p in pairs(players) do
-          local plrn = FP[p].Name
-          SendM("[ZANEXX LCM]: Loophealing "..plrn.."", Color3.fromRGB(150, 122, 150))
-          repeat
-          wait()
-          game.ReplicatedStorage.Event:FireServer("TPD", 1, FP[p].Character.Humanoid)
-          until 
-          FP[p].Character.Humanoid.Health == 20
-          if FP[p].Character.Humanoid.Health == 20 then
-          repeat
-          game.ReplicatedStorage.Event:FireServer("TPD", 1, FP[p].Character.Humanoid)
-          until 
-          FP[p].Character.Humanoid.Health == 20
-          end
-	      end
-          end)
-          end)
-
 
       
       
@@ -1773,7 +1761,11 @@ end
   SendM("ZANEXX UPDATE-LOG -", Color3.fromRGB(150, 122, 150))
   SendM("- 08/20 Updated FE-Controller (Now Shows The Player Names)", Color3.fromRGB(150, 122, 150))
   SendM("- 08/21 ZANEXX V2 Coming Soon???? O_O", Color3.fromRGB(150, 122, 150))
-  SendM("- 08/21 Updated Loopgod (dont spam it)", Color3.fromRGB(150, 122, 150))
+  SendM("- 08/22 Added A New Updated Command List", Color3.fromRGB(150, 122, 150))
+  SendM("- 08/22 Added A New Command (LH) [LoopHeal [plr]]", Color3.fromRGB(150, 122, 150))
+  SendM("- 08/22 Added A New Command (cc) [Clear Chat]", Color3.fromRGB(150, 122, 150))
+  SendM("- 08/22 Added A New Command (advertise) [Advertise ZANEXX (+clout if u advertise it B) ]", Color3.fromRGB(150, 122, 150))
+  
   
 game:GetService("TestService"):Message('Successfully loaded')
 game:GetService("TestService"):Message('Created by Zack || exclusiveclique || exclusiveclique#1444')
