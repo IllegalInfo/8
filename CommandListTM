@@ -1,0 +1,1641 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Cmds = Instance.new("ScreenGui")
+local HolderFrame = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local TextLabel_11 = Instance.new("TextLabel")
+local TextLabel_12 = Instance.new("TextLabel")
+local TextLabel_13 = Instance.new("TextLabel")
+local TextLabel_14 = Instance.new("TextLabel")
+local TextLabel_15 = Instance.new("TextLabel")
+local TextLabel_16 = Instance.new("TextLabel")
+local TextLabel_17 = Instance.new("TextLabel")
+local TextLabel_18 = Instance.new("TextLabel")
+local TextLabel_19 = Instance.new("TextLabel")
+local TextLabel_20 = Instance.new("TextLabel")
+local TextLabel_21 = Instance.new("TextLabel")
+local TextLabel_22 = Instance.new("TextLabel")
+local TextLabel_23 = Instance.new("TextLabel")
+local TextLabel_24 = Instance.new("TextLabel")
+local TextLabel_25 = Instance.new("TextLabel")
+local TextLabel_26 = Instance.new("TextLabel")
+local TextLabel_27 = Instance.new("TextLabel")
+local TextLabel_28 = Instance.new("TextLabel")
+local TextLabel_29 = Instance.new("TextLabel")
+local TextLabel_30 = Instance.new("TextLabel")
+local TextLabel_31 = Instance.new("TextLabel")
+local TextLabel_32 = Instance.new("TextLabel")
+local TextLabel_33 = Instance.new("TextLabel")
+local TextLabel_34 = Instance.new("TextLabel")
+local TextLabel_35 = Instance.new("TextLabel")
+local TextLabel_36 = Instance.new("TextLabel")
+local TextLabel_37 = Instance.new("TextLabel")
+local TextLabel_38 = Instance.new("TextLabel")
+local TextLabel_39 = Instance.new("TextLabel")
+local TextLabel_40 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+Cmds.Name = "Cmds"
+Cmds.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Cmds.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+HolderFrame.Name = "HolderFrame"
+HolderFrame.Parent = Cmds
+HolderFrame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+HolderFrame.BorderSizePixel = 0
+HolderFrame.Position = UDim2.new(0.167500004, 0, 0.215246633, 0)
+HolderFrame.Size = UDim2.new(0, 211, 0, 271)
+
+ScrollingFrame.Parent = HolderFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 0.0405904055, 0)
+ScrollingFrame.Size = UDim2.new(0, 211, 0, 249)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 835)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 0.900
+TextLabel.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel.Size = UDim2.new(0, 200, 0, 25)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "\"fov\", \"Changes Your FOV\""
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 0.900
+TextLabel_2.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_2.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "\"rj\", \"Rejoins The Current Server You Are In\""
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = ScrollingFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 0.900
+TextLabel_3.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_3.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "\"ws\", \"Changes The LocalPlayers WalkSpeed\""
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = ScrollingFrame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 0.900
+TextLabel_4.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_4.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "\"jp\", \"Changes The LocalPlayers Jump Height\""
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+TextLabel_5.Parent = ScrollingFrame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 0.900
+TextLabel_5.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_5.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_5.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "\"Fly\", \"Makes The LocalPlayer Fly\""
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+TextLabel_6.Parent = ScrollingFrame
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 0.900
+TextLabel_6.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_6.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_6.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "\"ffly\", \"Makes The LocalPlayer Fly Faster\""
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = ScrollingFrame
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 0.900
+TextLabel_7.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_7.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_7.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "\"rst\", \"Makes The LocalPlayer Reset\""
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = ScrollingFrame
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 0.900
+TextLabel_8.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_8.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_8.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "\"view\", \"Spectates The Chosen Player\""
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+
+TextLabel_9.Parent = ScrollingFrame
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 0.900
+TextLabel_9.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_9.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_9.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "\"unview\", \"UnSpectates The Chosen Player\""
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
+
+TextLabel_10.Parent = ScrollingFrame
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 0.900
+TextLabel_10.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_10.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_10.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "\"slock\", \"Enables Shiftlock For The LocalPlayer\""
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextWrapped = true
+
+TextLabel_11.Parent = ScrollingFrame
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 0.900
+TextLabel_11.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_11.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_11.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "\"prefix\", \"Lets The LocalPlayer Change The Prefix To Anything\""
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextWrapped = true
+
+TextLabel_12.Parent = ScrollingFrame
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 0.900
+TextLabel_12.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_12.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_12.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_12.Font = Enum.Font.SourceSans
+TextLabel_12.Text = "\"to\", \"Lets The LocalPlayer Teleport To Any Player\""
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 14.000
+TextLabel_12.TextWrapped = true
+
+TextLabel_13.Parent = ScrollingFrame
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 0.900
+TextLabel_13.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_13.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_13.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_13.Font = Enum.Font.SourceSans
+TextLabel_13.Text = "\"nc\", \"Enables Noclip For The LocalPlayer\""
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 14.000
+TextLabel_13.TextWrapped = true
+
+TextLabel_14.Parent = ScrollingFrame
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 0.900
+TextLabel_14.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_14.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_14.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = "\"wl\", \"Lets Other Players Use Your Commands\""
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextScaled = true
+TextLabel_14.TextSize = 14.000
+TextLabel_14.TextWrapped = true
+
+TextLabel_15.Parent = ScrollingFrame
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 0.900
+TextLabel_15.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_15.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_15.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_15.Font = Enum.Font.SourceSans
+TextLabel_15.Text = "\"unwl\", \"Disables The Chosen Players Whitelist\""
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextScaled = true
+TextLabel_15.TextSize = 14.000
+TextLabel_15.TextWrapped = true
+
+TextLabel_16.Parent = ScrollingFrame
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 0.900
+TextLabel_16.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_16.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_16.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_16.Font = Enum.Font.SourceSans
+TextLabel_16.Text = "\"cl\", \"Disables Noclip >Buggy<\""
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextScaled = true
+TextLabel_16.TextSize = 14.000
+TextLabel_16.TextWrapped = true
+
+TextLabel_17.Parent = ScrollingFrame
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 0.900
+TextLabel_17.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_17.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_17.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_17.Font = Enum.Font.SourceSans
+TextLabel_17.Text = "\"esp\", \"Enables A Custom ESP For The Chosen Player >Update Needed<\""
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextScaled = true
+TextLabel_17.TextSize = 14.000
+TextLabel_17.TextWrapped = true
+
+TextLabel_18.Parent = ScrollingFrame
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 0.900
+TextLabel_18.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_18.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_18.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_18.Font = Enum.Font.SourceSans
+TextLabel_18.Text = "\"r\", \"Plays An Audio On The Chosen Player  >Others,  All<\""
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextScaled = true
+TextLabel_18.TextSize = 14.000
+TextLabel_18.TextWrapped = true
+
+TextLabel_19.Parent = ScrollingFrame
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.BackgroundTransparency = 0.900
+TextLabel_19.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_19.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_19.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_19.Font = Enum.Font.SourceSans
+TextLabel_19.Text = "\"kgui\", \"Opens the ZANEXX knife gui\""
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextScaled = true
+TextLabel_19.TextSize = 14.000
+TextLabel_19.TextWrapped = true
+
+TextLabel_20.Parent = ScrollingFrame
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.BackgroundTransparency = 0.900
+TextLabel_20.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_20.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_20.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_20.Font = Enum.Font.SourceSans
+TextLabel_20.Text = "\"bg\", \"Brings The Gun To The LocalPlayer\""
+TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.TextScaled = true
+TextLabel_20.TextSize = 14.000
+TextLabel_20.TextWrapped = true
+
+TextLabel_21.Parent = ScrollingFrame
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.BackgroundTransparency = 0.900
+TextLabel_21.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_21.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_21.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_21.Font = Enum.Font.SourceSans
+TextLabel_21.Text = "\"cloak\", \"Makes The Chosen Player(-s) Invisible >You Can't See It<\""
+TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.TextScaled = true
+TextLabel_21.TextSize = 14.000
+TextLabel_21.TextWrapped = true
+
+TextLabel_22.Parent = ScrollingFrame
+TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.BackgroundTransparency = 0.900
+TextLabel_22.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_22.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_22.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_22.Font = Enum.Font.SourceSans
+TextLabel_22.Text = "\"uncloak\", \"Makes The Chosen Player(-s) Visible\""
+TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.TextScaled = true
+TextLabel_22.TextSize = 14.000
+TextLabel_22.TextWrapped = true
+
+TextLabel_23.Parent = ScrollingFrame
+TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.BackgroundTransparency = 0.900
+TextLabel_23.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_23.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_23.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_23.Font = Enum.Font.SourceSans
+TextLabel_23.Text = "\"cmds\", \"absolute fucking buffoon.\""
+TextLabel_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.TextScaled = true
+TextLabel_23.TextSize = 14.000
+TextLabel_23.TextWrapped = true
+
+TextLabel_24.Parent = ScrollingFrame
+TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.BackgroundTransparency = 0.900
+TextLabel_24.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_24.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_24.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_24.Font = Enum.Font.SourceSans
+TextLabel_24.Text = "\"roles\", \"Opens The ZANEXX Role GUI\""
+TextLabel_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.TextScaled = true
+TextLabel_24.TextSize = 14.000
+TextLabel_24.TextWrapped = true
+
+TextLabel_25.Parent = ScrollingFrame
+TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.BackgroundTransparency = 0.900
+TextLabel_25.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_25.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_25.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_25.Font = Enum.Font.SourceSans
+TextLabel_25.Text = "\"kill\", \"Kills The Chosen Player(-s)\""
+TextLabel_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.TextScaled = true
+TextLabel_25.TextSize = 14.000
+TextLabel_25.TextWrapped = true
+
+TextLabel_26.Parent = ScrollingFrame
+TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.BackgroundTransparency = 0.900
+TextLabel_26.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_26.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_26.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_26.Font = Enum.Font.SourceSans
+TextLabel_26.Text = "\"dmg\", \"{SE} Damages The Chosen Player\""
+TextLabel_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.TextScaled = true
+TextLabel_26.TextSize = 14.000
+TextLabel_26.TextWrapped = true
+
+TextLabel_27.Parent = ScrollingFrame
+TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.BackgroundTransparency = 0.900
+TextLabel_27.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_27.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_27.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_27.Font = Enum.Font.SourceSans
+TextLabel_27.Text = "\"sptrap\", \"Spawn-Traps The Whole Server\""
+TextLabel_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.TextScaled = true
+TextLabel_27.TextSize = 14.000
+TextLabel_27.TextWrapped = true
+
+TextLabel_28.Parent = ScrollingFrame
+TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.BackgroundTransparency = 0.900
+TextLabel_28.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_28.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_28.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_28.Font = Enum.Font.SourceSans
+TextLabel_28.Text = "\"advertise\", \"Advertises ZANEXX (ty)\""
+TextLabel_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.TextScaled = true
+TextLabel_28.TextSize = 14.000
+TextLabel_28.TextWrapped = true
+
+TextLabel_29.Parent = ScrollingFrame
+TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.BackgroundTransparency = 0.900
+TextLabel_29.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_29.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_29.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_29.Font = Enum.Font.SourceSans
+TextLabel_29.Text = "\"unlk\", \"Unloopkills The Chosen Player\""
+TextLabel_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.TextScaled = true
+TextLabel_29.TextSize = 14.000
+TextLabel_29.TextWrapped = true
+
+TextLabel_30.Parent = ScrollingFrame
+TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_30.BackgroundTransparency = 0.900
+TextLabel_30.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_30.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_30.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_30.Font = Enum.Font.SourceSans
+TextLabel_30.Text = "\"lg\", \"Loopgods The Chosen Player(-s)\""
+TextLabel_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_30.TextScaled = true
+TextLabel_30.TextSize = 14.000
+TextLabel_30.TextWrapped = true
+
+TextLabel_31.Parent = ScrollingFrame
+TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.BackgroundTransparency = 0.900
+TextLabel_31.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_31.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_31.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_31.Font = Enum.Font.SourceSans
+TextLabel_31.Text = "\"unlg\", \"Unloopgods The Chosen Player(-s)\""
+TextLabel_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.TextScaled = true
+TextLabel_31.TextSize = 14.000
+TextLabel_31.TextWrapped = true
+
+TextLabel_32.Parent = ScrollingFrame
+TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_32.BackgroundTransparency = 0.900
+TextLabel_32.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_32.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_32.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_32.Font = Enum.Font.SourceSans
+TextLabel_32.Text = "\"g\", \"Gods The Chosen Player(-s)\""
+TextLabel_32.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_32.TextScaled = true
+TextLabel_32.TextSize = 14.000
+TextLabel_32.TextWrapped = true
+
+TextLabel_33.Parent = ScrollingFrame
+TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_33.BackgroundTransparency = 0.900
+TextLabel_33.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_33.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_33.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_33.Font = Enum.Font.SourceSans
+TextLabel_33.Text = "\"brl\", \"Perm-Gods The Chosen Player(-s)\""
+TextLabel_33.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_33.TextScaled = true
+TextLabel_33.TextSize = 14.000
+TextLabel_33.TextWrapped = true
+
+TextLabel_34.Parent = ScrollingFrame
+TextLabel_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_34.BackgroundTransparency = 0.900
+TextLabel_34.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_34.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_34.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_34.Font = Enum.Font.SourceSans
+TextLabel_34.Text = "\"poison\", \"{SE} Poisons The Chosen Player\""
+TextLabel_34.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_34.TextScaled = true
+TextLabel_34.TextSize = 14.000
+TextLabel_34.TextWrapped = true
+
+TextLabel_35.Parent = ScrollingFrame
+TextLabel_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_35.BackgroundTransparency = 0.900
+TextLabel_35.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_35.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_35.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_35.Font = Enum.Font.SourceSans
+TextLabel_35.Text = "\"rban\", \"Radio Bans The Chosen Player(-s)\""
+TextLabel_35.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_35.TextScaled = true
+TextLabel_35.TextSize = 14.000
+TextLabel_35.TextWrapped = true
+
+TextLabel_36.Parent = ScrollingFrame
+TextLabel_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_36.BackgroundTransparency = 0.900
+TextLabel_36.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_36.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_36.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_36.Font = Enum.Font.SourceSans
+TextLabel_36.Text = "\"unrban\", \"Removes The Radio Ban For The Chosen Player(-s)\""
+TextLabel_36.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_36.TextScaled = true
+TextLabel_36.TextSize = 14.000
+TextLabel_36.TextWrapped = true
+
+TextLabel_37.Parent = ScrollingFrame
+TextLabel_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_37.BackgroundTransparency = 0.900
+TextLabel_37.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_37.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_37.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_37.Font = Enum.Font.SourceSans
+TextLabel_37.Text = "\"cc\", \"Clears The Chat\""
+TextLabel_37.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_37.TextScaled = true
+TextLabel_37.TextSize = 14.000
+TextLabel_37.TextWrapped = true
+
+TextLabel_38.Parent = ScrollingFrame
+TextLabel_38.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_38.BackgroundTransparency = 0.900
+TextLabel_38.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_38.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_38.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_38.Font = Enum.Font.SourceSans
+TextLabel_38.Text = "\"lh\", \"LoopHeals The Chosen Player\""
+TextLabel_38.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_38.TextScaled = true
+TextLabel_38.TextSize = 14.000
+TextLabel_38.TextWrapped = true
+
+TextLabel_39.Parent = ScrollingFrame
+TextLabel_39.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_39.BackgroundTransparency = 0.900
+TextLabel_39.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_39.Position = UDim2.new(0, 0, 0.0504305065, 0)
+TextLabel_39.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_39.Font = Enum.Font.SourceSans
+TextLabel_39.Text = "\"lk\", \"Loopkills The Chosen Player(-s)\""
+TextLabel_39.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_39.TextScaled = true
+TextLabel_39.TextSize = 14.000
+TextLabel_39.TextWrapped = true
+
+TextLabel_40.Parent = ScrollingFrame
+TextLabel_40.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_40.BackgroundTransparency = 0.900
+TextLabel_40.BorderColor3 = Color3.fromRGB(85, 85, 255)
+TextLabel_40.Position = UDim2.new(-0.00499999989, 0, 0.970430493, 0)
+TextLabel_40.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_40.Font = Enum.Font.SourceSans
+TextLabel_40.Text = "\"heal\", \"{SE} Heals The Chosen Player\""
+TextLabel_40.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_40.TextScaled = true
+TextLabel_40.TextSize = 14.000
+TextLabel_40.TextWrapped = true
+
+TextButton.Parent = ScrollingFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 0.900
+TextButton.Position = UDim2.new(0, 0, 0.662650466, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 25)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Close"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 25.000
+
+-- Scripts:
+
+local function NIMMC_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(NIMMC_fake_script)()
+local function GGCTJXP_fake_script() -- TextLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_2)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(GGCTJXP_fake_script)()
+local function GGEJDU_fake_script() -- TextLabel_3.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_3)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(GGEJDU_fake_script)()
+local function LEPBG_fake_script() -- TextLabel_4.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_4)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(LEPBG_fake_script)()
+local function PWLVLPO_fake_script() -- TextLabel_5.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_5)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(PWLVLPO_fake_script)()
+local function KXQA_fake_script() -- TextLabel_6.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_6)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(KXQA_fake_script)()
+local function SMCY_fake_script() -- TextLabel_7.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_7)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(SMCY_fake_script)()
+local function PRWMSP_fake_script() -- TextLabel_8.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_8)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(PRWMSP_fake_script)()
+local function UVZL_fake_script() -- TextLabel_9.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_9)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(UVZL_fake_script)()
+local function UDWBW_fake_script() -- TextLabel_10.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_10)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(UDWBW_fake_script)()
+local function LYGGGJJ_fake_script() -- TextLabel_11.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_11)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(LYGGGJJ_fake_script)()
+local function MVEEMNQ_fake_script() -- TextLabel_12.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_12)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(MVEEMNQ_fake_script)()
+local function SUYTG_fake_script() -- TextLabel_13.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_13)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(SUYTG_fake_script)()
+local function AVBDJYO_fake_script() -- TextLabel_14.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_14)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(AVBDJYO_fake_script)()
+local function PHLFZX_fake_script() -- TextLabel_15.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_15)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(PHLFZX_fake_script)()
+local function SSRCCT_fake_script() -- TextLabel_16.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_16)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(SSRCCT_fake_script)()
+local function AKEEFR_fake_script() -- TextLabel_17.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_17)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(AKEEFR_fake_script)()
+local function JGTI_fake_script() -- TextLabel_18.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_18)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(JGTI_fake_script)()
+local function DETNXS_fake_script() -- TextLabel_19.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_19)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(DETNXS_fake_script)()
+local function LYICHH_fake_script() -- TextLabel_20.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_20)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(LYICHH_fake_script)()
+local function FDXJBX_fake_script() -- TextLabel_21.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_21)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(FDXJBX_fake_script)()
+local function TLTB_fake_script() -- TextLabel_22.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_22)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(TLTB_fake_script)()
+local function ZMKTJJD_fake_script() -- TextLabel_23.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_23)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(ZMKTJJD_fake_script)()
+local function HTQS_fake_script() -- TextLabel_24.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_24)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(HTQS_fake_script)()
+local function RAIVMY_fake_script() -- TextLabel_25.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_25)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(RAIVMY_fake_script)()
+local function HXZAULC_fake_script() -- TextLabel_26.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_26)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(HXZAULC_fake_script)()
+local function SZVZH_fake_script() -- TextLabel_27.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_27)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(SZVZH_fake_script)()
+local function KWIEO_fake_script() -- TextLabel_28.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_28)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(KWIEO_fake_script)()
+local function BQRPD_fake_script() -- TextLabel_29.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_29)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(BQRPD_fake_script)()
+local function TKHYKBS_fake_script() -- TextLabel_30.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_30)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(TKHYKBS_fake_script)()
+local function ZXTWPCO_fake_script() -- TextLabel_31.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_31)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(ZXTWPCO_fake_script)()
+local function WRTD_fake_script() -- TextLabel_32.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_32)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(WRTD_fake_script)()
+local function MNLS_fake_script() -- TextLabel_33.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_33)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(MNLS_fake_script)()
+local function CPGMSD_fake_script() -- TextLabel_34.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_34)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(CPGMSD_fake_script)()
+local function OYFN_fake_script() -- TextLabel_35.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_35)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(OYFN_fake_script)()
+local function GFMXLO_fake_script() -- TextLabel_36.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_36)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(GFMXLO_fake_script)()
+local function UQXXR_fake_script() -- TextLabel_37.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_37)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(UQXXR_fake_script)()
+local function CNTX_fake_script() -- TextLabel_38.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_38)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(CNTX_fake_script)()
+local function AGRV_fake_script() -- TextLabel_39.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_39)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(AGRV_fake_script)()
+local function BFZSTJ_fake_script() -- TextLabel_40.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_40)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+end
+coroutine.wrap(BFZSTJ_fake_script)()
+local function ITMMW_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local color1 = Color3.fromRGB(0, 0, 0)
+	local color2 = Color3.fromRGB(36, 167, 255)
+	local changeSpeed = 10
+	
+	script.Parent.TextStrokeTransparency = .1
+	        script.Parent.TextColor3 = Color3.fromRGB(0, 0, 0)
+	        spawn(function()
+	          local i = -1
+	          while true do
+	              for i=-1,1,1/changeSpeed do
+	                  local f = math.abs(i)
+	                  script.Parent.TextStrokeColor3 = Color3.fromRGB(
+	                      255 * (color1.r + (color2.r - color1.r) * f),
+	                      255 * (color1.g + (color2.g - color1.g) * f), 
+	                      255 * (color1.b + (color2.b - color1.b) * f))
+	                  wait(0.05)
+	end
+	end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Cmds:Destroy()
+	end)
+end
+coroutine.wrap(ITMMW_fake_script)()
+local function NVKLOK_fake_script() -- HolderFrame.Script 
+	local script = Instance.new('Script', HolderFrame)
+
+	function dragify(Frame)
+			dragToggle = nil
+			dragSpeed = .15 -- You can edit this.
+			dragInput = nil
+			dragStart = nil
+			dragPos = nil
+			
+			function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(dragSpeed), {Position = Position}):Play()
+			end
+			
+			Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = Frame.Position
+			input.Changed:Connect(function()
+			if (input.UserInputState == Enum.UserInputState.End) then
+			dragToggle = false
+			end
+			end)
+			end
+			end)
+			
+			Frame.InputChanged:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			dragInput = input
+			end
+			end)
+			
+			game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if (input == dragInput and dragToggle) then
+			updateInput(input)
+			end
+			end)
+			end
+			
+			dragify(script.Parent)
+	
+end
+coroutine.wrap(NVKLOK_fake_script)()
