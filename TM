@@ -1765,7 +1765,7 @@ end
   SendM("- 08/22 Added A New Command (LH) [LoopHeal [plr]]", Color3.fromRGB(150, 122, 150))
   SendM("- 08/22 Added A New Command (cc) [Clear Chat]", Color3.fromRGB(150, 122, 150))
   SendM("- 08/22 Added A New Command (advertise) [Advertise ZANEXX (+clout if u advertise it B) ]", Color3.fromRGB(150, 122, 150))
-  
+  SendM("- 08/22 DEFAULT PREFIX IS SET TO ] IF U THINK ITS GAY THEN FUCK YOU NIGGA", Color3.fromRGB(255, 0, 0))
   
 game:GetService("TestService"):Message('Successfully loaded')
 game:GetService("TestService"):Message('Created by Zack || exclusiveclique || exclusiveclique#1444')
