@@ -37,6 +37,13 @@ if plr == "LILEDDY03" then
         [1] = "Welcome, "..plr.." [VIP], ZANEXX Made By >exclusiveclique<",
         [2] = "All"}
     remote:FireServer(unpack(args))
+
+elseif plr == "lozUwUzol" then
+    local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "Welcome, "..plr.." [Buyer], ZANEXX Made By >exclusiveclique<",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
     
     
 elseif plr == "exclusiveclique" then
@@ -1548,6 +1555,21 @@ end
         end
       end
       end)
+
+
+Zanexx("gay", "Shows A Random Gay% For The Chosen Player", function(args)
+    local players = FindPlr(args[1])
+    local rnd = math.random(22, 101)
+    local lp = game.Players.LocalPlayer
+    for i, v in pairs(players) do
+    local pn = FP[v].Name
+    if pn == lp then
+        game.Players:Chat(""..pn.." Is 0% gay")
+ else
+        game.Players:Chat(""..pn.." Is "..rnd.."% gay")
+      end
+      end
+end)
 
       
       
