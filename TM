@@ -392,7 +392,7 @@ elseif plr == "exclusiveclique" then
         if x.Name == "Chat" then 
         
             if string.find(x.Text, "exclusiveclique") then 
-                x.Text = string.gsub(x.Text, "", "[Owner] Zack") 
+                x.Text = string.gsub(x.Text, "exclusiveclique", "[Owner] Zack") 
                 x.TextTransparency = 0
                 x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
                 x.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -446,7 +446,7 @@ elseif plr == "exclusiveclique" then
             end)
             end
   ------------------------------------------------------------------------------------------------------------
-
+start()
   
   ------------------------------------------------------------------------------------------------------------
   
