@@ -1,94 +1,5 @@
 local plr = game.Players.LocalPlayer.Name
-local rnd1 = math.random(21,60)
-local rnd2 = math.random(61,97)
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "                             >LOADING  ZANEXX    ["..rnd1.."%]                     ",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-    
-    
-wait(.5)
 
-
-local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "                             >LOADING<  ZANEXX    ["..rnd2.."%]                    ",
-        [2] = "All"}
-     remote:FireServer(unpack(args))
-     
-     
-wait(.5)
-
-
-	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "                               >ZANEXX Loaded<                                ",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-    
-    
-wait(1)	
-
-
-if plr == "LILEDDY03" then
-	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "Welcome, "..plr.." [VIP], ZANEXX Made By >exclusiveclique<",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-
-elseif plr == "lozUwUzol" then
-    local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "Welcome, "..plr.." [Buyer], ZANEXX Made By >exclusiveclique<",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-    
-    
-elseif plr == "exclusiveclique" then
-	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "Welcome, "..plr.." [Owner]",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-
-    
-    elseif plr == "Jay_Trvp" then
-	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "Welcome, "..plr.." [croodieeeeeeeeeee], ZANEXX Made By >exclusiveclique<",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-
-    elseif plr == "AWPISOPAF" then
-	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "Welcome, "..plr.." [VIP], ZANEXX Made By >exclusiveclique<",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-
-    elseif plr == "qtiepies" then
-      local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "Welcome, "..plr.." [Co-Owner], ZANEXX Made By >exclusiveclique<",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-    
-    
-    elseif plr == ""..plr.."" then
-	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
-    local args = {
-        [1] = "Welcome, "..plr.." [Buyer], ZANEXX Made By >exclusiveclique<",
-        [2] = "All"}
-    remote:FireServer(unpack(args))
-    end
-
-  local lol = game.Players.LocalPlayer.Name
-  if lol == "Luhnly" then
-  game.Players.LocalPlayer:Kick("Error while trying to get (whitelistTimer()). Kicking user ["..lol.."]")
-  end
-  
   ------------------------------------------------------------------------------------------------------------
   local mr = math.random(100, 255)
    local x = tick(start)
@@ -1364,7 +1275,7 @@ start()
         game:GetService("RunService").Stepped:Connect(function()
         if FP[v]:FindFirstChild("lg") then
       wait()
-          game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
+          game.ReplicatedStorage.Event:FireServer("TPD", (-0.53220192342997) ^ 1.45, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
         end
       end)
       end
