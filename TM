@@ -385,59 +385,55 @@ elseif plr == "exclusiveclique" then
       for i, x in pairs(n.Chats:GetChildren()) do
         if x.Name == "Chat" then 
         
-
-        if string.find(x.Text, "exclusiveclique") then 
-        x.Text = string.gsub(x.Text, "exclusiveclique", "[Owner] Zack") 
-        x.TextTransparency = 0
-        x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-        x.TextColor3 = Color3.fromRGB(0, 0, 0)
-        while true do
-         for a = 1,360,1 do wait(.01)
-          x.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
-         end
-        end
-        
-
-        elseif string.find(x.Text, "IustangeI") then
-        x.Text = string.gsub(x.Text, "IustangeI", "[LOOPKILL] Iustangel" )
-        x.TextColor3 = Color3.fromRGB(255, 0, 0)
-
-        elseif string.find(x.Text, "holylust") then
-        x.Text = string.gsub(x.Text, "holylust", "[LOOPKILL] hoIylust" )
-        x.TextColor3 = Color3.fromRGB(255, 0, 0)
-
-        elseif string.find(x.Text, "sofieIove") then
-        x.Text = string.gsub(x.Text, "sofieIove", "[LOOPKILL] sofielove" )
-        x.TextColor3 = Color3.fromRGB(255, 0, 0)
-
-        elseif string.find(x.Text, "LILEDDY03") then
-        x.Text = string.gsub(x.Text, "LILEDDY03", "[Buyer] LlLEDDY03" )
-        x.TextColor3 = Color3.fromRGB(0, 220, 0)
-        
-        
-        elseif string.find(x.Text, "qtiepies") then 
-        x.Text = string.gsub(x.Text, "qtiepies", "[Angel] Emmie") 
-          x.TextStrokeTransparency = .1
-          x.TextColor3 = Color3.fromRGB(255, 255, 255)
-          spawn(function()
-            local i = -1
-            while true do
-                for i=-1,1,1/changeSpeed do
-                    local f = math.abs(i)
-                    x.TextStrokeColor3 = Color3.fromRGB(
-                        255 * (color1.r + (color2.r - color1.r) * f),
-                        255 * (color1.g + (color2.g - color1.g) * f), 
-                        255 * (color1.b + (color2.b - color1.b) * f))
-                    wait(0.05)
-  end
-  end
-  end)
-  end
-  end
-  end
-  end
-  end)
-end
+            if string.find(x.Text, "exclusiveclique") then 
+                x.Text = string.gsub(x.Text, "exclusiveclique", "[Owner] Zack") 
+                x.TextTransparency = 0
+                x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+                x.TextColor3 = Color3.fromRGB(0, 0, 0)
+                while true do
+                 for a = 1,360,1 do wait(.01)
+                  x.TextStrokeColor3 = Color3.fromHSV(a/360,1,1)
+                 end
+                end
+                
+                elseif string.find(x.Text, "SenpaiiBailey") then
+                    x.Text = string.gsub(x.Text, "SenpaiiBailey", "[VIP] SenpaiiBaiIey" )
+                    x.TextColor3 = Color3.fromRGB(52, 128, 235)
+            
+                elseif string.find(x.Text, "lozUwUzol") then
+                    x.Text = string.gsub(x.Text, "lozUwUzol", "[VIP] IozUwUzoI")
+                    x.TextColor3 = Color3.fromRGB(52, 128, 235)
+            
+            
+                elseif string.find(x.Text, "LILEDDY03") then
+                    x.Text = string.gsub(x.Text, "LILEDDY03", "[VIP] LlLEDDY03" )
+                    x.TextColor3 = Color3.fromRGB(52, 128, 235)
+                
+                
+                elseif string.find(x.Text, "qtiepies") then 
+                    x.Text = string.gsub(x.Text, "qtiepies", "[Angel] Emmie") 
+                     x.TextStrokeTransparency = .1
+                      x.TextColor3 = Color3.fromRGB(255, 255, 255)
+                      spawn(function()
+                        local i = -1
+                        while true do
+                            for i=-1,1,1/changeSpeed do
+                            local f = math.abs(i)
+                            x.TextStrokeColor3 = Color3.fromRGB(
+                                255 * (color1.r + (color2.r - color1.r) * f),
+                                255 * (color1.g + (color2.g - color1.g) * f), 
+                                255 * (color1.b + (color2.b - color1.b) * f))
+                            wait(0.05)
+            end
+            end
+            end)
+            end
+            -----------------------------------------------------------------
+            end
+            end
+            end
+            end)
+            end
   ------------------------------------------------------------------------------------------------------------
 
   
@@ -1558,17 +1554,14 @@ end
 
 
 Zanexx("gay", "Shows A Random Gay% For The Chosen Player", function(args)
-    local players = FindPlr(args[1])
+    local plr = FindPlr(args[1])
     local rnd = math.random(22, 101)
-    local lp = game.Players.LocalPlayer
-    for i, v in pairs(players) do
-    local pn = FP[v].Name
-    if pn == lp then
-        game.Players:Chat(""..pn.." Is 0% gay")
- else
+    local pn = plr.Name
+    if pn == "exclusiveclique" then 
+        game.Players:Chat("exclusiveclique is 0% gay")
+    else
         game.Players:Chat(""..pn.." Is "..rnd.."% gay")
-      end
-      end
+    end
 end)
 
       
