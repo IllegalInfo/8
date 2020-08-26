@@ -54,11 +54,17 @@ elseif plr == "exclusiveclique" then
     remote:FireServer(unpack(args))
 
     
-    
     elseif plr == "Jay_Trvp" then
 	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
     local args = {
         [1] = "Welcome, "..plr.." [croodieeeeeeeeeee], ZANEXX Made By >exclusiveclique<",
+        [2] = "All"}
+    remote:FireServer(unpack(args))
+
+    elseif plr == "AWPISOPAF" then
+	local remote = Game["ReplicatedStorage"]["DefaultChatSystemChatEvents"]["SayMessageRequest"]
+    local args = {
+        [1] = "Welcome, "..plr.." [VIP], ZANEXX Made By >exclusiveclique<",
         [2] = "All"}
     remote:FireServer(unpack(args))
 
@@ -386,7 +392,7 @@ elseif plr == "exclusiveclique" then
         if x.Name == "Chat" then 
         
             if string.find(x.Text, "exclusiveclique") then 
-                x.Text = string.gsub(x.Text, "exclusiveclique", "[Owner] Zack") 
+                x.Text = string.gsub(x.Text, "", "[Owner] Zack") 
                 x.TextTransparency = 0
                 x.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
                 x.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -402,6 +408,11 @@ elseif plr == "exclusiveclique" then
             
                 elseif string.find(x.Text, "lozUwUzol") then
                     x.Text = string.gsub(x.Text, "lozUwUzol", "[VIP] IozUwUzoI")
+                    x.TextColor3 = Color3.fromRGB(52, 128, 235)
+
+
+                elseif string.find(x.Text, "AWPISOPAF") then
+                    x.Text = string.gsub(x.Text, "AWPISOPAF", "[VIP] AWPlSOPAF")
                     x.TextColor3 = Color3.fromRGB(52, 128, 235)
             
             
@@ -1350,11 +1361,10 @@ elseif plr == "exclusiveclique" then
         lg.Parent = FP[v]
         lg.Value = true
         lg.Name = "lg"
-        game:GetService("RunService").Heartbeat:Connect(function()
+        game:GetService("RunService").Stepped:Connect(function()
         if FP[v]:FindFirstChild("lg") then
       wait()
-          game.ReplicatedStorage.Event:FireServer("TPD", -math.huge, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
-          game.ReplicatedStorage.Event:FireServer("TPD", math.huge ^ 1.45, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
+          game.ReplicatedStorage.Event:FireServer("TPD", -math.huge ^ 1.45, game.Players:FindFirstChild(FP[v].Name).Character.Humanoid)
         end
       end)
       end
