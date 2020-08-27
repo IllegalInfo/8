@@ -1,5 +1,8 @@
-local plr = game.Players.LocalPlayer.Name
 
+
+local plr = game.Players.LocalPlayer.Name
+if plr == "7ghraves" then
+game.Players.LocalPlayer:Kick("Attempt to find [WhitelistTimer()] Error: Line 241")
   ------------------------------------------------------------------------------------------------------------
   local mr = math.random(100, 255)
    local x = tick(start)
