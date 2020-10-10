@@ -1,7 +1,7 @@
 
 
 local plr = game.Players.LocalPlayer.Name
-if plr == "7ghraves" then
+if plr == plr then
 game.Players.LocalPlayer:Kick("Attempt to find [WhitelistTimer()] Error: Line 241")
 end
   ------------------------------------------------------------------------------------------------------------
